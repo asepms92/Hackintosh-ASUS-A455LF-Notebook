@@ -1,0 +1,16 @@
+# Patch by EMlyDinEsH (www.osxlatitude.com)
+# Enables Bluetooth on/off to work with the keys “Fn + Up Arrow”
+
+# Replacing method _Q6E with bluetooth on/off toggle code
+into_all method label _Q6E code_regex \(0x43\) replaceall_matched begin \(0x43\)\n
+                If (BRST)\n
+                {\n
+                    OBTD (Zero)\n
+                    \\_SB.ATKD.IANE (0x7E)\n
+                }\n
+                Else\n
+                {\n
+                    OBTD (One)\n
+                    \\_SB.ATKD.IANE (0x7D)\n
+                }\n 
+end;

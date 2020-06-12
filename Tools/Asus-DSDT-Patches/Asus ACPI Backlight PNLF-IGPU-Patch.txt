@@ -1,0 +1,41 @@
+# Patch by EMlyDinEsH from OSXLatitude.com
+
+# This patch enables the brightness control to work with
+# the ACPI backlight driver AsusACPIBacklightPanel from 
+# the link: http://forum.osxlatitude.com/index.php?/topic/2167-display-backlight-driver-for-asus-notebooks/
+# and activates brightness slider for Intel GPU device IGPU.
+# Tested only on Intel HD3000.
+
+into device label PNLF remove_entry;
+into definitionblock code_regex . insert
+begin
+Scope (\_SB)\n
+{\n
+    Device (PNLF)\n
+    {\n
+            Name (_HID, EisaId ("APP0002"))\n
+            Name (_CID, "backlight")\n
+            Name (_UID, 0x0E)\n
+            Name (_STA, 0x0B)\n
+            Method (_BCL, 0, NotSerialized)\n
+            {\n
+                Return (\_SB.PCI0.IGPU.LCDD._BCL ())\n
+            }\n
+            Method (_BCM, 1, NotSerialized)\n
+            {\n
+                Store (One, \_SB.PCI0.IGPU.BCMD)\n
+                Store (\_SB.PCI0.IGPU.GCBL (Arg0), Local0)\n
+                Subtract (0x0A, Local0, LBTN)\n
+                STBR () // \_SB.PCI0.LPCB.EC0.STBR()\n
+            }\n
+            Method (_BQC, 0, NotSerialized)\n
+            {\n
+                Return (\_SB.PCI0.IGPU.LCDD._BQC ())\n
+            }\n
+            Method (_DOS, 1, NotSerialized)\n
+            {\n
+                \_SB.PCI0.IGPU._DOS (Arg0)\n
+            }\n
+    }\n
+}\n
+end;

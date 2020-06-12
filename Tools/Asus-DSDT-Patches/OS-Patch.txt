@@ -1,0 +1,26 @@
+# Patch by EMlyDinEsH from OSXLatitude.com
+
+# This patch enables OS X to be detected as Windows 2006
+# for better ACPI support.
+
+# Update existing Darwin patch
+into method label _INI parent_label _SB.PCI0 code_regex If\s+\(_OSI\s+\(\"Darwin\"\)\)\s+\{\s*Store\s\(0x2710 replace_matched
+begin If (_OSI ("Darwin")) { Store (0x07D6 end;
+
+# Patch _INI() Method
+into method label _INI parent_label _SB.PCI0 code_regex If\s+\(_OSI\s+\(\"Windows\s2006\"\)\) replace_matched
+begin If(LOr(_OSI("Darwin"),_OSI("Windows 2006"))) end;
+
+# Patch MSOS() Method
+into method label MSOS code_regex If\s+\(LGreaterEqual\s+\(OSYS,\s+0x07DC\)\) replace_matched
+begin If (LGreaterEqual (OSYS, 0x07D6)) end;
+
+into method label MSOS code_regex If\s+\(_OSI\s+\(\"Windows\s2006\"\)\) replace_matched
+begin If(LOr(_OSI("Darwin"),_OSI("Windows 2006"))) end;
+
+# Patch OSYS() Method
+into method label OSYS code_regex If\s+\(LGreaterEqual\s+\(OSYS,\s+0x07DC\)\) replace_matched
+begin If (LGreaterEqual (OSYS, 0x07D6)) end;
+
+into method label OSYS code_regex If\s+\(_OSI\s+\(\"Windows\s2006\"\)\) replace_matched
+begin If(LOr(_OSI("Darwin"),_OSI("Windows 2006"))) end;

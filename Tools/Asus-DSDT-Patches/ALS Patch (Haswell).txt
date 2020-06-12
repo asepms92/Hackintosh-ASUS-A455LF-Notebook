@@ -1,0 +1,46 @@
+# Patch by EMlyDinEsH (www.osxlatitude.com)
+# Enables Asus Ambient Light Sensor to work using my AsusNBFnKeys driver
+
+# Modify method RALS which reads ALS to work with my driver
+into Method label RALS replace_content begin
+                If (ALAE)\n
+                {\n
+                    Store (RRAM (0x02A3), Local0)\n
+                    Store (RRAM (0x02A4), Local1)\n
+                    ShiftLeft (Local0, 0x08, Local0)\n
+                    Add (Local0, Local1, Local0)\n
+                    Multiply (Local0, 0x03E8, Local1)\n
+                    Divide (Local1, ALSA, Local2, Local3)\n
+                }\n
+                Else\n
+                {\n
+                    Return (0x012C)\n
+                }\n
+                Return (Local3)\n            
+ end;
+
+# Modify ALS notifier methods _QDD and _QCD methods to notify event
+into Method label _QDD replace_content begin
+             Notify (ALS, 0x80)\n
+             If (ATKP)\n
+             {\n
+                 ^^^^ATKD.IANE (0xC6)\n
+             }
+end;
+
+into Method label _QCD replace_content begin
+            Notify (ALS, 0x80)\n
+             If (ATKP)\n
+             {\n
+                 ^^^^ATKD.IANE (0xC7)\n
+             }
+end;
+
+# Insert method ALSS into ATKD device for reading ambient illuminance values in my driver
+into method label ALSS parent_label ATKD remove_entry;
+into device label ATKD insert begin
+Method (ALSS, 0, NotSerialized)\n
+            {\n
+                Return (^^PCI0.LPCB.EC0.RALS ())\n
+            }
+end;

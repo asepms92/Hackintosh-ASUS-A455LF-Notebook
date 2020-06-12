@@ -1,0 +1,5 @@
+# Patch by EMlyDinEsH (www.osxlatitude.com)
+# Fixes WiFi/BT LED status (use only if needed)
+
+# Remove the code which reverses the WiFi/BT LED Status 
+into_all method label OWLD code_regex XOr\s\(Arg0,\sOne,\sArg0\) remove_matched;
