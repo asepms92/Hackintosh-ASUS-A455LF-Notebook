@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>DeviceMergeNub</string>
+	<key>CFBundleGetInfoString</key>
+	<string>DeviceMergeNub V1.00, Copyright © 2010 AnV Software.</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.AnV_Software.driver.DeviceMergeNub</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>I/O Kit Driver for PCI Devices</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.00</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.00</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>AirPort Atheros AR9565ID</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.AnV_Software.driver.DeviceMergeNub</string>
+			<key>IOClass</key>
+			<string>DeviceMergeNub</string>
+			<key>IOPCIPrimaryMatch</key>
+			<string>0x36168C</string>
+			<key>IOProbeScore</key>
+			<integer>700</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>IOName</key>
+				<string>pci168c,36</string>
+				<key>device-id</key>
+				<data>
+				NgAAAA==
+				</data>
+				<key>name</key>
+				<string>AirPort</string>
+				<key>subsystem-id</key>
+				<data>
+				OiEAAA==
+				</data>
+				<key>subsystem-vendor-id</key>
+				<data>
+				OxoAAA==
+				</data>
+			</dict>
+		</dict>
+		<key>AirPort AtherosNewma40Interface</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.AnV_Software.driver.DeviceMergeNub</string>
+			<key>IOClass</key>
+			<string>DeviceMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>AtherosNewma40Interface</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>IO80211CountryCode</key>
+				<string>ID</string>
+				<key>IO80211Locale</key>
+				<string>FCC</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>OSBundleCompatibleVersion</key>
+	<string>1.00</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>1.0.0b1</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>9.0.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>9.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>9.0.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>

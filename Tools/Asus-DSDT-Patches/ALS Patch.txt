@@ -1,0 +1,71 @@
+# Patch by EMlyDinEsH (www.osxlatitude.com)
+# Enables Asus Ambient Light Sensor to work using my AsusNBFnKeys driver
+
+# Modify method RALS which reads ALS to work with my driver
+into Method label RALS replace_content begin
+            If (ALAE)\n
+            {\n
+                Store (RRAM (0x04C9), Local0)\n
+                And (Local0, 0x0F, Local0)\n
+                If (LLessEqual (Local0, One))\n
+                {\n
+                    Store (0x32, Local1)\n
+                }\n
+                Else\n
+                {\n
+                    If (LLessEqual (Local0, 0x06))\n
+                    {\n
+                        Store (0xC8, Local1)\n
+                    }\n
+                    Else\n
+                    {\n
+                        If (LLessEqual (Local0, 0x0A))\n
+                        {\n
+                            Store (0x0190, Local1)\n
+                        }\n
+                        Else\n
+                        {\n
+                            If (LLessEqual (Local0, 0x0E))\n
+                            {\n
+                                Store (0x0258, Local1)\n
+                            }\n
+                            Else\n
+                            {\n
+                                Store (0x0320, Local1)\n
+                            }\n
+                        }\n
+                    }\n
+                }\n
+                Return (Local1)\n
+            }\n
+            Else\n
+            {\n
+                Return (0xC8)\n
+            }
+ end;
+
+# Modify ALS notifier methods _QDD and _QCD methods to notify event
+into Method label _QDD replace_content begin
+             Notify (ALS, 0x80)\n
+             If (ATKP)\n
+             {\n
+                 ^^^^ATKD.IANE (0xC6)\n
+             }
+end;
+
+into Method label _QCD replace_content begin
+            Notify (ALS, 0x80)\n
+             If (ATKP)\n
+             {\n
+                 ^^^^ATKD.IANE (0xC7)\n
+             }
+end;
+
+# Insert method ALSS into ATKD device for reading ambient illuminance values in my driver
+into method label ALSS parent_label ATKD remove_entry;
+into device label ATKD insert begin
+Method (ALSS, 0, NotSerialized)\n
+            {\n
+                Return (^^PCI0.LPCB.EC0.RALS ())\n
+            }
+end;

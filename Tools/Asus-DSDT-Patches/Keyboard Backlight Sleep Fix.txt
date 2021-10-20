@@ -1,0 +1,10 @@
+# Patch originally discovered by RehabMan and 68x
+
+into Method label _WAK code_regex WAK\s+\(Arg0\) replace_matched begin
+
+        If (LOr (LLess(Arg0, 1), LGreater(Arg0,5))) \n
+        { \n
+            Store(3, Arg0) \n
+        } \n
+        WAK(Arg0)\n
+end;

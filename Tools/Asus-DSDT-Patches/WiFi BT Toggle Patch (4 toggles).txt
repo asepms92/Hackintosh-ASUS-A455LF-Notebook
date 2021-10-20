@@ -1,0 +1,52 @@
+# Patch by EMlyDinEsH (www.osxlatitude.com)
+# Enables Asus WiFi/BT Fn key to work with four toggles of WiFi/BT on/off 
+# Toggle#1 Enables WiFi and BT
+# Toggle#2 Enables WiFi and Disables BT
+# Toggle#3 Enables BT and Disables WiFi
+# Toggle#4 Disables WiFi and BT
+# Use this patch only if its not working.
+
+# Replacing method _Q0B with WiFi/BT 4 toggles
+# by removing the code which prevents 
+into Method label _Q0B replace_content begin
+                	    Store (WRST, Local0)\n
+                            Or (ShiftLeft (BRST, One), Local0, Local0)\n
+                            Increment (Local0)\n
+                            If (LGreater (Local0, 0x03))\n
+                            {\n
+                                Store (Zero, Local0)\n
+                            }\n
+                            Store (DerefOf (Index (WBTL, Local0)), Local1)\n
+                            If (LEqual (Local1, Zero))\n
+                            {\n
+                                OWLD (One)\n
+                                ^^^^ATKD.IANE (0x5F)\n
+                                Sleep (0x0DAC)\n
+                                OBTD (One)\n
+                                ^^^^ATKD.IANE (0x7E)\n
+                            }\n
+                            If (LEqual (Local1, One))\n
+                            {\n
+                                OWLD (One)\n
+                                ^^^^ATKD.IANE (0x5E)\n
+                                Sleep (0x0DAC)\n
+                                OBTD (Zero)\n
+                                ^^^^ATKD.IANE (0x7E)\n
+                            }\n
+                            If (LEqual (Local1, 0x02))\n
+                            {\n
+                                OWLD (Zero)\n
+                                ^^^^ATKD.IANE (0x5F)\n
+                                Sleep (0x0DAC)\n
+                                OBTD (One)\n
+                                ^^^^ATKD.IANE (0x7D)\n
+                            }\n
+                            If (LEqual (Local1, 0x03))\n
+                            {\n
+                                OWLD (Zero)\n
+                                ^^^^ATKD.IANE (0x5E)\n
+                                Sleep (0x0DAC)\n
+                                OBTD (Zero)\n
+                                ^^^^ATKD.IANE (0x7D)\n
+                            }
+ end;

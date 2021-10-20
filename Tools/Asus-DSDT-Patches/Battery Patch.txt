@@ -1,0 +1,46 @@
+# Patch by EMlyDinEsH (www.osxlatitude.com)
+# Patch which enables ACPI EC reads to work with battery manager kext
+# by Converting battery fields from 16-bit to 8-bit
+
+# Change battery register fields from 16-bit to 8-bit
+into device label EC0 code_regex TAH0,\s+16 replace_matched begin TH00, 8,\nTH01, 8 end;
+into device label EC0 code_regex TAH1,\s+16 replace_matched begin TH10, 8,\nTH11, 8 end;
+into device label EC0 code_regex DT2B,\s+16 replace_matched begin DTB0, 8,\nDTB1, 8 end;
+into device label EC0 code_regex B0SN,\s+16 replace_matched begin B0S0, 8,\nB0S1, 8 end;
+into device label EC0 code_regex B1SN,\s+16 replace_matched begin B1S0, 8,\nB1S1, 8 end;
+into device label EC0 code_regex B0C3,\s+16 replace_matched begin BC30, 8,\nBC31, 8 end;
+
+# Change read registers from 16-bit to 8-bit
+into_all method label TACH code_regex \(TAH0, replaceall_matched begin (B1B2 (TH00, TH01), end;
+into_all method label TACH code_regex \(TAH1, replaceall_matched begin (B1B2 (TH10, TH11), end;
+into_all method label SMBR code_regex \(DT2B, replaceall_matched begin (B1B2 (DTB0, DTB1), end;
+into_all method label BIFA code_regex \(B1SN, replaceall_matched begin (B1B2 (B1S0, B1S1), end;
+into_all method label BIFA code_regex \(B0SN, replaceall_matched begin (B1B2 (B0S0, B0S1), end;
+
+into_all method label _BIX code_regex \(\^\^LPCB.EC0.B0C3, replaceall_matched begin (B1B2 (^^LPCB.EC0.BC30, ^^LPCB.EC0.BC31), end;
+into_all method label _BIX code_regex \(\\_SB.PCI0.LPCB.EC0.B0C3, replaceall_matched begin (B1B2 (\_SB.PCI0.LPCB.EC0.BC30, \_SB.PCI0.LPCB.EC0.BC31), end;
+
+# Change write registers from 16-bit to 8-bit
+# Replace DT2B with B1B2 (DTB0, DTB1) in Store (Arg4, DT2B)
+into_all method label SMBW code_regex \DT2B\) replaceall_matched begin 
+Local4)\n
+Store (Local4, DTB0)\n
+Store (ShiftRight (Local4, 8), DTB1) 
+end;
+
+# Removing unnecessary read
+into_all method label _BIF code_regex Store\s\(\^\^LPCB.EC0.BIF9\s\(\),\sIndex\s\(PBIF,\s0x09\)\) replaceall_matched begin \  end; 
+into_all method label _BIF code_regex Store\s\(\\_SB.PCI0.LPCB.EC0.BIF9\s\(\),\sIndex\s\(PBIF,\s0x09\)\) replaceall_matched begin \  end; 
+
+# Method to read EC for battery fields 
+# B1B2(lower byte, higher byte)
+into method label B1B2 remove_entry;
+into definitionblock code_regex . insert
+begin
+Method (B1B2, 2, NotSerialized)\n
+{\n
+	ShiftLeft (Arg1, 8, Local0)\n
+	Or (Arg0, Local0, Local0)\n
+	Return (Local0)\n
+}\n
+end;
