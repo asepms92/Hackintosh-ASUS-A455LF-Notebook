@@ -1,13 +1,13 @@
 # Hackintosh-ASUS-A455LF-Notebook
 
-My EFI Folder for ASUS-A455LF-WX039D Series with Clover Legacy or UEFI
+My EFI Folder for ASUS-A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
  
 <img src="/Images/Sept-MacBook-Images.png?raw=true" alt="macOS Mojave" align="center">
  
 ### How to Get it?
 
 - Open Terminal with Command: $ `git clone https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook.git`
-- Or Just [Clone/Download](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook.git) with Specific Folder Only
+- Or Just [Clone/Download](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/archive/refs/heads/master.zip) with Specific Folder Only
  
 --------------------------------------------------------------------------------------------
  
@@ -51,7 +51,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 - [x] FocalTech TouchPad PS/2 (ApplePS2SmartTouchpad.kext)
 - [x] Battery Indicator (DSDT RehabMan Battery Laptop Patch for ASUS + SMCBatteryManager.kext)
 - [x] WebCam OOB + Card Reader OOB
-- [x] USB3.0 Port + Power/Speed (USBPorts.kext/SSDT-EC-UIAC.aml)
+- [x] USB3.0 Port + Power/Speed (Disable XhciPortLimit + USBPorts.kext/SSDT-EC-UIAC.aml)
 - [x] Native Power Management CPU (SSDT.aml combine from [ssdtPRGen.sh](https://github.com/Piker-Alpha/ssdtPRGen.sh) Pike R. Alpha and [ssdt_data](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md#data-combination) PMheart + CPUFriend.kext + CPUFriendDataProvider.kext)
 - [x] Apple Graphics Power Management (dAGPM.kext) for Macbook Pro 12,1
 - [x] Etc..
@@ -73,11 +73,23 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 
 1. Don't use my patch [DSDT.aml and SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/EFI-Bootloader/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables/BIOS Version and Model/Freq CPU PM</b>
 
-2. If you get errors from config.plist. You need regenerate serial number for your mac, Use Clover Configurator or macserial from OC
+2. If you get errors from config.plist. You need regenerate serial number for your mac, Use Clover Configurator or [macserial](https://github.com/acidanthera/OpenCorePkg) from OC
 
 3. And many more [apps](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/Tools/Apps)
 --------------------------------------------------------------------------------------------
  
 ### Special Thanks and Credits to :
 
-[Apple](https://www.apple.com) | [Clover](https://sourceforge.net/projects/cloverefiboot) | [Acidanthera](https://github.com/acidanthera) | [Rehabman](https://github.com/RehabMan/Laptop-DSDT-Patch) | [Mieze](https://github.com/Mieze/RTL8111_driver_for_OS_X) | [Mirone](https://github.com/Mirone/AppleHDAPatcher) | [EmlyDinesh](https://osxlatitude.com/forums/topic/1948-elan-focaltech-and-synaptics-smart-touchpad-driver-mac-os-x) | [AnV](https://github.com/andyvand/FixEDID_Devel) | [Piker R. Alpha](https://github.com/Piker-Alpha/ssdtPRGen.sh) | [InsanelyMac](https://www.insanelymac.com/forum), [Olarila](http://olarila.com/forum) and [OSXLatitude](https://osxlatitude.com/forums) Forum | <b>And Other Developers</b> who aren't mentioned.
+- [Apple](https://www.apple.com)
+- [Clover](https:github.com/CloverHackyColor/CloverBootloader)
+- [Acidanthera](https://github.com/acidanthera)
+- [Rehabman](https://github.com/RehabMan/Laptop-DSDT-Patch)
+- [Mieze](https://github.com/Mieze/RTL8111_driver_for_OS_X)
+- [Mirone](https://github.com/Mirone/AppleHDAPatcher)
+- [EmlyDinesh](https://github.com/EMlyDinEsHMG)
+- [AnV](https://github.com/andyvand/FixEDID_Devel)
+- [Piker R. Alpha](https://github.com/Piker-Alpha/ssdtPRGen.sh)
+- [InsanelyMac](https://www.insanelymac.com/forum)
+- [Olarila](http://olarila.com/forum)
+- [OSXLatitude](https://osxlatitude.com/forums)
+- And Other Developers
