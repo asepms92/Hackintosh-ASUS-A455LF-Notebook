@@ -13,7 +13,7 @@ My EFI Folder for ASUS-A455LF-WX039D Series with Clover Legacy or UEFI
  
 ### Specs :
 
-- [x] <b>BIOS</b>: v300 (2016/12/2) American Megatrends Inc,
+- [x] <b>BIOS</b>: v300 (2019/06/04) American Megatrends Inc,
 - [x] <b>Model Laptop/Notebook</b>: Asus A455LF-WX039D Series
 - [x] <b>Processor</b>: Intel Core i5-5200U (4) @ 2.2GHz up to 2.7Ghz Broadwell
 - [x] <b>Graphics</b>: Intel HD Graphics 5500 + Nvidia Geforce 930M
