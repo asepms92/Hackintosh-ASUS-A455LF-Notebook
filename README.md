@@ -2,7 +2,7 @@
 
 My EFI Folder for ASUS-A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
  
-<img src="/Images/Sept-MacBook-Images.png?raw=true" alt="macOS Mojave" align="center">
+<img src="/Images/Sept-MacBook-Images.png?raw=true" alt="macOS Big Sur" align="center">
  
 ### How to Get it?
 
@@ -71,7 +71,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
  
 ### Notes
 
-1. Don't use my patch [DSDT.aml and SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/EFI-Bootloader/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables/BIOS Version and Model/Freq CPU PM</b>
+1. Don't use my patch [DSDT.aml and SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables/BIOS Version and Model/Freq CPU PM</b>
 
 2. If you get errors from config.plist. You need regenerate serial number for your mac, Use Clover Configurator or [macserial](https://github.com/acidanthera/OpenCorePkg) from OC
 
@@ -85,11 +85,11 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 - [Acidanthera](https://github.com/acidanthera)
 - [Rehabman](https://github.com/RehabMan)
 - [Mieze](https://github.com/Mieze)
-- [Mirone](https://github.com/Mirone/AppleHDAPatcher)
+- [Mirone](https://github.com/Mirone)
 - [EmlyDinesh](https://github.com/EMlyDinEsHMG)
 - [AnV](https://github.com/andyvand)
 - [Piker R. Alpha](https://github.com/Piker-Alpha)
-- [InsanelyMac](https://www.insanelymac.com/forum)
-- [Olarila](http://olarila.com/forum)
-- [OSXLatitude](https://osxlatitude.com/forums)
+- [InsanelyMac](https://www.insanelymac.com)
+- [Olarila](http://olarila.com)
+- [OSXLatitude](https://osxlatitude.com)
 - And Other Developers
