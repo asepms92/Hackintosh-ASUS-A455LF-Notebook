@@ -73,7 +73,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 
 1. Don't use my patch [DSDT.aml and SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables/BIOS Version and Model/Freq CPU PM</b>
 
-2. If you get errors from config.plist. You need regenerate serial number for your mac, Use Clover Configurator or [macserial](https://github.com/acidanthera/OpenCorePkg) from OC
+2. If you get errors from config.plist. You need regenerate serial number for your mac, Use Clover Configurator or [macserial](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/Utilities/macserial) from OC
 
 3. And many more [apps](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/Tools/Apps)
 --------------------------------------------------------------------------------------------
