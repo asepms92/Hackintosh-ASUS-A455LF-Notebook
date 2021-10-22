@@ -1015,7 +1015,7 @@
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
 		<key>MLB</key>
-		<string></string>
+		<string>00000000000000000</string>
 		<key>ROM</key>
 		<string>UseMacAddr0</string>
 	</dict>
@@ -1042,7 +1042,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string></string>
+		<string>00000000000000000</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -1082,7 +1082,7 @@
 		<key>Slots</key>
 		<array/>
 		<key>SmUUID</key>
-		<string></string>
+		<string>00000000-0000-0000-0000-000000000000</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>

@@ -1396,7 +1396,7 @@
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>model</key>
-				<string>Intel HD Graphics 5500 MBP12,1</string>
+				<string>Intel HD Graphics 5500</string>
 				<key>name</key>
 				<string>Display</string>
 				<key>vendor-id</key>
@@ -2763,7 +2763,7 @@
 			<key>SystemSerialNumber</key>
 			<string></string>
 			<key>SystemUUID</key>
-			<string></string>
+			<string>00000000-0000-0000-0000-000000000000</string>
 		</dict>
 		<key>Generic</key>
 		<dict>
@@ -2858,14 +2858,14 @@
 			f/8f/wgAAAA=
 			</data>
 			<key>MLB</key>
-			<string></string>
+			<string>00000000000000000</string>
 			<key>ROM</key>
 			<data>
 			</data>
 			<key>SystemSerialNumber</key>
 			<string></string>
 			<key>SystemUUID</key>
-			<string></string>
+			<string>00000000-0000-0000-0000-000000000000</string>
 		</dict>
 		<key>SMBIOS</key>
 		<dict>
@@ -2926,7 +2926,7 @@
 			<key>SystemSerialNumber</key>
 			<string></string>
 			<key>SystemUUID</key>
-			<string></string>
+			<string>00000000-0000-0000-0000-000000000000</string>
 			<key>SystemVersion</key>
 			<string>1.0</string>
 		</dict>
