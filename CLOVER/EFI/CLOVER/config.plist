@@ -1021,6 +1021,12 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>#BiosReleaseDate</key>
+		<string>06/13/2021</string>
+		<key>#EfiVersion</key>
+		<string>427.140.8.0.0</string>
+		<key>#MemoryRank</key>
+		<integer>2</integer>
 		<key>#NoRomInfo</key>
 		<true/>
 		<key>#OEMBoard</key>
@@ -1031,8 +1037,6 @@
 		<string>ASUSTeK COMPUTER INC.</string>
 		<key>#SmbiosVersion</key>
 		<string></string>
-		<key>BiosReleaseDate</key>
-		<string>06/13/2021</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
@@ -1053,8 +1057,6 @@
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
 		<string>0x09</string>
-		<key>EfiVersion</key>
-		<string>427.140.8.0.0</string>
 		<key>ExtendedFirmwareFeatures</key>
 		<string>0x00000008FD0FF576</string>
 		<key>ExtendedFirmwareFeaturesMask</key>
@@ -1070,7 +1072,10 @@
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
 		<key>Memory</key>
-		<dict/>
+		<dict>
+			<key>Modules</key>
+			<array/>
+		</dict>
 		<key>Mobile</key>
 		<true/>
 		<key>PlatformFeature</key>
