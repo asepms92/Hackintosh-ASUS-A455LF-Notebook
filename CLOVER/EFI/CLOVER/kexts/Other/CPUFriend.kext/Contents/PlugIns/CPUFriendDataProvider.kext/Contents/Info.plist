@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>20F71</string>
+	<string>20G224</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleIdentifier</key>
@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2.4</string>
+	<string>1.2.5</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -23,11 +23,11 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.2.4</string>
+	<string>1.2.5</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>12E262</string>
+	<string>13A233</string>
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
@@ -37,9 +37,9 @@
 	<key>DTSDKName</key>
 	<string>macosx11.3</string>
 	<key>DTXcode</key>
-	<string>1250</string>
+	<string>1300</string>
 	<key>DTXcodeBuild</key>
-	<string>12E262</string>
+	<string>13A233</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>CPUFriendDataProvider</key>
@@ -450,9 +450,17 @@
 			Y3Q+CgkJCQk8L2RpY3Q+CgkJCQk8a2V5PkdQVTwva2V5PgoJCQkJ
 			PGRpY3QvPgoJCQkJPGtleT5JTzwva2V5PgoJCQkJPGRpY3QvPgoJ
 			CQk8L2RpY3Q+CgkJPC9kaWN0PgoJCTxrZXk+VW5pZmllZFNsZWVw
-			U2xpZGVyUHJlZjwva2V5PgoJCTx0cnVlLz4KCTwvZGljdD4KCTxr
-			ZXk+cG1zcEZpbGU8L2tleT4KCTxpbnRlZ2VyPjY8L2ludGVnZXI+
-			CjwvZGljdD4KPC9wbGlzdD4K
+			U2xpZGVyUHJlZjwva2V5PgoJCTx0cnVlLz4KCQk8a2V5Pm9wdGlt
+			aXplZF9waG90b2Jvb3RoPC9rZXk+CgkJPHRydWUvPgoJCTxrZXk+
+			b3B0aW1pemVkX3NjcmVlbnNhdmVyczwva2V5PgoJCTx0cnVlLz4K
+			CQk8a2V5Pm9wdGltaXplZF9zbGlkZXNob3dzPC9rZXk+CgkJPHRy
+			dWUvPgoJCTxrZXk+b3B0aW1pemVkX3Zpc3VhbGl6ZXJzPC9rZXk+
+			CgkJPHRydWUvPgoJCTxrZXk+cG93ZXJfcmVkdWNlZF9wbGF5YmFj
+			azwva2V5PgoJCTx0cnVlLz4KCQk8a2V5PnRoZXJtYWxseV9vcHRp
+			bWl6ZWRfbWFwczwva2V5PgoJCTx0cnVlLz4KCQk8a2V5PnRoZXJt
+			YWxseV9vcHRpbWl6ZWRfeGNvZGU8L2tleT4KCQk8dHJ1ZS8+Cgk8
+			L2RpY3Q+Cgk8a2V5PnBtc3BGaWxlPC9rZXk+Cgk8aW50ZWdlcj42
+			PC9pbnRlZ2VyPgo8L2RpY3Q+CjwvcGxpc3Q+Cg==
 			</data>
 		</dict>
 	</dict>
