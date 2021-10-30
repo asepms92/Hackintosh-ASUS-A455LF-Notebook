@@ -1100,7 +1100,7 @@
 		<key>#CustomUUID</key>
 		<string></string>
 		<key>InjectKexts</key>
-		<string>Detect</string>
+		<true/>
 		<key>InjectSystemID</key>
 		<true/>
 		<key>NoCaches</key>

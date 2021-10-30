@@ -53,8 +53,8 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 - [x] WebCam OOB + Card Reader OOB
 - [x] USB3.0 Port + Power/Speed (Disable XhciPortLimit + USBPorts.kext/SSDT-EC-UIAC.aml)
 - [x] Native Power Management CPU (SSDT.aml combine from [ssdtPRGen.sh](https://github.com/Piker-Alpha/ssdtPRGen.sh) Pike R. Alpha and [ssdt_data](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md#data-combination) PMheart + CPUFriend.kext + CPUFriendDataProvider.kext)
-- [x] Apple Graphics Power Management (dAGPM.kext) for Macbook Pro 12,1
-- [x] Etc..
+- [x] Apple Graphics Power Management (Edit Info.plist VirtualSMC.kext) for Macbook Pro 12,1
+- [x] HDMI, Etc..
  
 --------------------------------------------------------------------------------------------
  
