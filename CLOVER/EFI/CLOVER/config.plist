@@ -12,6 +12,8 @@
 		<true/>
 		<key>DSDT</key>
 		<dict>
+			<key>#PNLF_UID</key>
+			<string></string>
 			<key>#Patches count</key>
 			<integer>24</integer>
 			<key>Debug</key>
@@ -98,6 +100,9 @@
 					<data>
 					WFNJRA==
 					</data>
+					<key>TgtBridge</key>
+					<data>
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -111,6 +116,9 @@
 					<key>Replace</key>
 					<data>
 					WE9TSQ==
+					</data>
+					<key>TgtBridge</key>
+					<data>
 					</data>
 				</dict>
 				<dict>
@@ -126,6 +134,9 @@
 					<data>
 					WERTTQ==
 					</data>
+					<key>TgtBridge</key>
+					<data>
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -139,6 +150,9 @@
 					<key>Replace</key>
 					<data>
 					RUNfXw==
+					</data>
+					<key>TgtBridge</key>
+					<data>
 					</data>
 				</dict>
 				<dict>
@@ -154,6 +168,9 @@
 					<data>
 					oAqRCv8L//8=
 					</data>
+					<key>TgtBridge</key>
+					<data>
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -167,6 +184,10 @@
 					<key>Replace</key>
 					<data>
 					WENSUwigSQ==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					SFBFVA==
 					</data>
 				</dict>
 				<dict>
@@ -182,6 +203,10 @@
 					<data>
 					IgAAeQA=
 					</data>
+					<key>TgtBridge</key>
+					<data>
+					UlRDXw==
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -195,6 +220,10 @@
 					<key>Replace</key>
 					<data>
 					IgAAeQA=
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					VElNUg==
 					</data>
 				</dict>
 				<dict>
@@ -210,6 +239,9 @@
 					<data>
 					WEhDXw==
 					</data>
+					<key>TgtBridge</key>
+					<data>
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -223,6 +255,9 @@
 					<key>Replace</key>
 					<data>
 					SUdQVQ==
+					</data>
+					<key>TgtBridge</key>
+					<data>
 					</data>
 				</dict>
 				<dict>
@@ -238,6 +273,9 @@
 					<data>
 					SERBVQ==
 					</data>
+					<key>TgtBridge</key>
+					<data>
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -251,6 +289,9 @@
 					<key>Replace</key>
 					<data>
 					SU1FSQ==
+					</data>
+					<key>TgtBridge</key>
+					<data>
 					</data>
 				</dict>
 				<dict>
@@ -266,6 +307,9 @@
 					<data>
 					U0FUQQ==
 					</data>
+					<key>TgtBridge</key>
+					<data>
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -279,6 +323,9 @@
 					<key>Replace</key>
 					<data>
 					WlBUUwE=
+					</data>
+					<key>TgtBridge</key>
+					<data>
 					</data>
 				</dict>
 				<dict>
@@ -294,6 +341,9 @@
 					<data>
 					WlBUUwk=
 					</data>
+					<key>TgtBridge</key>
+					<data>
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -307,6 +357,9 @@
 					<key>Replace</key>
 					<data>
 					WldBSwE=
+					</data>
+					<key>TgtBridge</key>
+					<data>
 					</data>
 				</dict>
 				<dict>
@@ -322,6 +375,9 @@
 					<data>
 					WldBSwk=
 					</data>
+					<key>TgtBridge</key>
+					<data>
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -335,6 +391,10 @@
 					<key>Replace</key>
 					<data>
 					WldBSwA=
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					WEhDXw==
 					</data>
 				</dict>
 				<dict>
@@ -350,6 +410,10 @@
 					<data>
 					WldBSwg=
 					</data>
+					<key>TgtBridge</key>
+					<data>
+					WEhDXw==
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -363,6 +427,10 @@
 					<key>Replace</key>
 					<data>
 					WFNFWgA=
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					WEhDXw==
 					</data>
 				</dict>
 				<dict>
@@ -378,6 +446,10 @@
 					<data>
 					WFNFWgg=
 					</data>
+					<key>TgtBridge</key>
+					<data>
+					WEhDXw==
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -391,6 +463,10 @@
 					<key>Replace</key>
 					<data>
 					RVNFWgA=
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					WEhDXw==
 					</data>
 				</dict>
 				<dict>
@@ -406,6 +482,10 @@
 					<data>
 					RVNFWgg=
 					</data>
+					<key>TgtBridge</key>
+					<data>
+					WEhDXw==
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -419,6 +499,9 @@
 					<key>Replace</key>
 					<data>
 					WFBSVwI=
+					</data>
+					<key>TgtBridge</key>
+					<data>
 					</data>
 				</dict>
 			</array>
@@ -446,6 +529,13 @@
 		<true/>
 		<key>PatchAPIC</key>
 		<false/>
+		<key>RenameDevices</key>
+		<dict>
+			<key>#_SB.PCI0.RP03.PXSX</key>
+			<string>GIGE</string>
+			<key>#_SB.PCI0.RP04.PXSX</key>
+			<string>ARPT</string>
+		</dict>
 		<key>SSDT</key>
 		<dict>
 			<key>#C3Latency</key>
@@ -615,7 +705,7 @@
 		<key>LANInjection</key>
 		<true/>
 		<key>NoDefaultProperties</key>
-		<true/>
+		<false/>
 		<key>Properties</key>
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
@@ -1010,6 +1100,8 @@
 	</dict>
 	<key>RtVariables</key>
 	<dict>
+		<key>Block</key>
+		<array/>
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
