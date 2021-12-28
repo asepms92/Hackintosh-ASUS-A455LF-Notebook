@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>#Comment</key>
-	<string>This file is for Broadwell graphics that are natively supported</string>
+	<string>This file is for ASUS Broadwell notebook that are natively supported</string>
 	<key>ACPI</key>
 	<dict>
 		<key>#Sorted ACPI tables Count</key>
@@ -13,9 +13,9 @@
 		<key>DSDT</key>
 		<dict>
 			<key>#PNLF_UID</key>
-			<string></string>
+			<string>0x0F</string>
 			<key>#Patches count</key>
-			<integer>24</integer>
+			<integer>20</integer>
 			<key>Debug</key>
 			<false/>
 			<key>Fixes</key>
@@ -89,7 +89,7 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>change OSID to XSID (to avoid match against _OSI XOSI patch)</string>
+					<string>Change OSID to XSID</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -106,7 +106,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _OSI to XOSI (pair with SSDT-XOSI.aml)</string>
+					<string>Change _OSI to XOSI</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -123,7 +123,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _DSM to XDSM</string>
+					<string>Change _DSM to XDSM</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -140,7 +140,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change EC0 to EC</string>
+					<string>Change EC0 to EC</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -157,7 +157,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Fix RTC _STA bug, optionally pair with SSDT-STAS.aml</string>
+					<string>Fix RTC _STA bug</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -170,24 +170,6 @@
 					</data>
 					<key>TgtBridge</key>
 					<data>
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>HPET _CRS to XCRS Rename</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X0NSUwigSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WENSUwigSQ==
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					SFBFVA==
 					</data>
 				</dict>
 				<dict>
@@ -205,7 +187,7 @@
 					</data>
 					<key>TgtBridge</key>
 					<data>
-					UlRDXw==
+					UlRDAA==
 					</data>
 				</dict>
 				<dict>
@@ -228,7 +210,42 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change XHCI to XHC</string>
+					<string>Change Method (HPET,_CRS) to XCRS</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X0NSUwigSQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WENSUwigSQ==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					SFBFVA==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change EHC1 to EH01</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RUhDMQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUgwMQ==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change XHCI to XHC</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -245,7 +262,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change GFX0 to IGPU</string>
+					<string>Change GFX0 to IGPU</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -262,7 +279,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change B0D3 to HDAU</string>
+					<string>Change B0D3 to HDAU</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -279,7 +296,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change HECI to IMEI</string>
+					<string>Change HECI to IMEI</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -296,7 +313,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change SAT0 to SATA</string>
+					<string>Change SAT0 to SATA</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -313,7 +330,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_PTS,1,N) to ZPTS, (pair with SSDT-PTSWAK.aml)</string>
+					<string>Change Method (_PTS,1,N) to ZPTS</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -330,24 +347,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_PTS,1,S) to ZPTS, (pair with SSDT-PTSWAK.aml)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1BUUwk=
-					</data>
-					<key>Replace</key>
-					<data>
-					WlBUUwk=
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(_WAK,1,N) to ZWAK, (pair with SSDT-PTSWAK.aml)</string>
+					<string>Change Method (_WAK,1,N) to ZWAK</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -364,42 +364,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_WAK,1,S) to ZWAK, (pair with SSDT-PTSWAK.aml)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1dBSwk=
-					</data>
-					<key>Replace</key>
-					<data>
-					WldBSwk=
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(XWAK,0,N) to ZWAK, (pair with SSDT-XWAK.aml)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					WFdBSwA=
-					</data>
-					<key>Replace</key>
-					<data>
-					WldBSwA=
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					WEhDXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(XWAK,0,S) to ZWAK, (pair with SSDT-XWAK.aml)</string>
+					<string>Change Method (XWAK,0,S) to ZWAK</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -412,30 +377,11 @@
 					</data>
 					<key>TgtBridge</key>
 					<data>
-					WEhDXw==
 					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(XSEL,0,N) to XSEZ, (pair with SSDT-XSEL.aml)</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					WFNFTAA=
-					</data>
-					<key>Replace</key>
-					<data>
-					WFNFWgA=
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					WEhDXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(XSEL,0,S) to XSEZ, (pair with SSDT-XSEL.aml)</string>
+					<string>Change Method (XSEL,0,S) to XSEZ</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -448,30 +394,11 @@
 					</data>
 					<key>TgtBridge</key>
 					<data>
-					WEhDXw==
 					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(ESEL,0,N) to ESEZ, (pair with SSDT-ESEL.aml)</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					RVNFTAA=
-					</data>
-					<key>Replace</key>
-					<data>
-					RVNFWgA=
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					WEhDXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(ESEL,0,S) to ESEZ, (pair with SSDT-ESEL.aml)</string>
+					<string>Change Method (ESEL,0,S) to ESEZ</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -484,12 +411,11 @@
 					</data>
 					<key>TgtBridge</key>
 					<data>
-					WEhDXw==
 					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(GPRW,2,N) to XPRW, (pair with SSDT-GPRW.aml)</string>
+					<string>Change Method (GPRW,2,N) to XPRW</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -584,19 +510,19 @@
 		<array>
 			<string>SSDT.aml</string>
 			<string>SSDT-CX207512.aml</string>
-			<string>SSDT-EC-UIAC.aml</string>
-			<string>SSDT-ESEL.aml</string>
 			<string>SSDT-FAN.aml</string>
 			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-MEM2.aml</string>
+			<string>SSDT-OSME.aml</string>
 			<string>SSDT-PMC.aml</string>
 			<string>SSDT-PTSWAK.aml</string>
 			<string>SSDT-RMCF.aml</string>
 			<string>SSDT-RMDT.aml</string>
 			<string>SSDT-STAS.aml</string>
+			<string>SSDT-UIAC.aml</string>
+			<string>SSDT-USBW.aml</string>
+			<string>SSDT-XEX.aml</string>
 			<string>SSDT-XOSI.aml</string>
-			<string>SSDT-XSEL.aml</string>
-			<string>SSDT-XWAK.aml</string>
 		</array>
 		<key>smartUPS</key>
 		<false/>
@@ -672,7 +598,16 @@
 	<dict>
 		<key>#DisableFunctions</key>
 		<string></string>
-		<key>#FakeID</key>
+		<key>Audio</key>
+		<dict>
+			<key>#ResetHDA</key>
+			<false/>
+			<key>AFGLowPowerState</key>
+			<true/>
+			<key>Inject</key>
+			<integer>21</integer>
+		</dict>
+		<key>FakeID</key>
 		<dict>
 			<key>#Broadwell-Comment</key>
 			<string>To avoid automatic Clover fake device-id (Broadwell) injection</string>
@@ -689,15 +624,6 @@
 			<key>#XHCI</key>
 			<string>0x9CB18086</string>
 		</dict>
-		<key>Audio</key>
-		<dict>
-			<key>#ResetHDA</key>
-			<false/>
-			<key>AFGLowPowerState</key>
-			<true/>
-			<key>Inject</key>
-			<integer>21</integer>
-		</dict>
 		<key>ForceHPET</key>
 		<false/>
 		<key>HDMIInjection</key>
@@ -708,10 +634,21 @@
 		<false/>
 		<key>Properties</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x1c,0x2)/Pci(0x1c,0x3)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>built-in</key>
+				<data>
+				AQ==
+				</data>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>#AAPL00,override-no-connect</key>
 				<data>
+				AP///////wANrpMUAAAAACgXAQSVHxF4An5Fk1VTlCgj
+				UFQAAAABAQEBAQEBAQEBAQEBAQEB2h1W4lAAIDBELUcA
+				Na0QAAAYAAAA/gBOMTQwQkdFLUU0MwogAAAA/gBDTU4K
+				ICAgICAgICAgAAAA/gBOMTQwQkdFLUU0MwogAJU=
 				</data>
 				<key>#AAPL00,override-no-edid</key>
 				<data>
@@ -1018,6 +955,8 @@
 	</dict>
 	<key>Quirks</key>
 	<dict>
+		<key>#ForceOcWriteFlash</key>
+		<false/>
 		<key>AppleXcpmExtraMsrs</key>
 		<false/>
 		<key>AppleXcpmForceBoost</key>
@@ -1126,11 +1065,11 @@
 		<key>#SmbiosVersion</key>
 		<string></string>
 		<key>BiosReleaseDate</key>
-		<string>09/25/2021</string>
+		<string>10/27/2021</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP121.88Z.F000.B00.2109250528</string>
+		<string>MBP121.88Z.F000.B00.2110271746</string>
 		<key>Board-ID</key>
 		<string>Mac-E43C1C25D4880AD6</string>
 		<key>BoardManufacturer</key>
@@ -1148,7 +1087,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>428.40.10.0.0</string>
+		<string>428.60.3.0.0</string>
 		<key>ExtendedFirmwareFeatures</key>
 		<string>0x00000008FD0FF576</string>
 		<key>ExtendedFirmwareFeaturesMask</key>

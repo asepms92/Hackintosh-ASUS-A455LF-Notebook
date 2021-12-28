@@ -12,7 +12,7 @@ Default Amp-In caps: N/A
 Default Amp-Out caps: N/A
 Node 0x10 [Audio Output] wcaps 0x00000C1D: Stereo Amp-Out R/L
   Amp-Out caps: ofs=0x4A, nsteps=0x4A, stepsize=03, mute=1
-  Amp-Out vals: [0x80 0x80]
+  Amp-Out vals: [0x37 0x37]
 Node 0x11 [Audio Output] wcaps 0x00000C1D: Stereo Amp-Out R/L
   Amp-Out caps: ofs=0x4A, nsteps=0x4A, stepsize=03, mute=1
   Amp-Out vals: [0x4A 0x4A]
@@ -39,7 +39,7 @@ Node 0x16 [Pin Complex] wcaps 0x00400581: Stereo
   Pin Default 0x03211040: [Jack] HP Out at Ext Left
     Conn = 1/8, Color = Black
     DefAssociation = 0x4, Sequence = 0x0
-  Pin-ctls: 0x40: OUT
+  Pin-ctls: 0x00:
   Connection: 2
      0x10 0x11
 Node 0x17 [Pin Complex] wcaps 0x00400501: Stereo
@@ -65,7 +65,7 @@ Node 0x19 [Pin Complex] wcaps 0x0040048B: Stereo Amp-In
   Pin Default 0x03A11030: [Jack] Mic at Ext Left
     Conn = 1/8, Color = Black
     DefAssociation = 0x3, Sequence = 0x0
-  Pin-ctls: 0x04: VREF
+  Pin-ctls: 0x24: VREF IN
 Node 0x1A [Pin Complex] wcaps 0x0040048B: Stereo Amp-In
   Amp-In caps: ofs=0x00, nsteps=0x03, stepsize=2F, mute=0
   Amp-In vals:

@@ -1,99 +1,99 @@
-24:220  0:079  Found BIOS RSDP at fd940
-24:220  0:000  Printing ACPI tables from RSDP fd940 ...
-24:220  0:000   fd940: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
-24:220  0:000    (Xsdt: cb38f0b0, Rsdt: cb38f028)
-24:220  0:000    cb38f0b0: 'XSDT', 'Notebook', Rev: 1, Len: 220
-24:220  0:000    cb38f028: 'RSDT', 'Notebook', Rev: 1, Len: 128
-24:220  0:000    Tables in Xsdt: 23
-24:220  0:000    0. cb3a6da0: 'FACP', 'Notebook', Rev: 5, Len: 268
-24:220  0:000        (Dsdt: CB38F228, Facs: CC41EF80, XDsdt: cb38f228, XFacs: 0)
-24:220  0:000        cb38f228: 'DSDT', 'Notebook', Rev: 2, Len: 97137
-24:220  0:000        cc41ef80: 'FACS', Ver: 2, Len: 64
-24:220  0:000    1. cb3a6eb0: 'APIC', 'Notebook', Rev: 3, Len: 132
-24:220  0:000    2. cb3a6f38: 'FPDT', 'Notebook', Rev: 1, Len: 68
-24:220  0:000    3. cb3a6f80: 'FIDT', 'Notebook', Rev: 1, Len: 156
-24:220  0:000    4. cb3a7020: 'ECDT', 'Notebook', Rev: 1, Len: 193
-24:220  0:000    5. cb3a70e8: 'MCFG', 'Notebook', Rev: 1, Len: 60
-24:220  0:000    6. cb3a7128: 'HPET', 'Notebook', Rev: 1, Len: 56
-24:220  0:000    7. cb3a7160: 'SSDT', 'SataTabl', Rev: 1, Len: 789
-24:220  0:000    8. cb3a7478: 'UEFI', '', Rev: 1, Len: 66
-24:220  0:000    9. cb3a74c0: 'SSDT', 'zpodd', Rev: 1, Len: 404
-24:220  0:000    10. cb3a7658: 'SSDT', 'Ther_Rvp', Rev: 2, Len: 3197
-24:220  0:000    11. cb3a82d8: 'ASF!', ' HCG', Rev: 32, Len: 160
-24:220  0:000    12. cb3a8378: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1337
-24:220  0:000    13. cb3a88b8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 2932
-24:220  0:000    14. cb3a9430: 'SSDT', 'DptfTabl', Rev: 2, Len: 12869
-24:220  0:000    15. cb3ac678: 'SSDT', 'CppcTabl', Rev: 2, Len: 916
-24:220  0:000    16. cb3aca10: 'PCCT', 'PcctTabl', Rev: 5, Len: 110
-24:220  0:000    17. cb3aca80: 'SSDT', 'Cpc_Tabl', Rev: 2, Len: 2756
-24:220  0:000    18. cb3ad548: 'SSDT', 'SaSsdt', Rev: 2, Len: 27934
-24:220  0:000    19. cb3b4268: 'SSDT', 'SgPch', Rev: 2, Len: 1890
-24:220  0:000    20. cb3b49d0: 'DMAR', 'BDW', Rev: 1, Len: 168
-24:220  0:000    21. cb3b4a78: 'BGRT', 'Notebook', Rev: 1, Len: 56
-24:220  0:000    22. cb3b4ab0: 'SSDT', 'OptTabl', Rev: 1, Len: 6640
-24:220  0:000  Found UEFI Acpi 2.0 RSDP at cb38f000
-24:220  0:000  Saving ACPI tables from RSDP cb38f000 to ACPI\origin ...
-24:220  0:000   cb38f000: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
-24:220  0:000    (Xsdt: cb38f0b0, Rsdt: cb38f028)
-24:220  0:000    cb38f0b0: 'XSDT', 'Notebook', Rev: 1, Len: 220
-24:220  0:000    cb38f028: 'RSDT', 'Notebook', Rev: 1, Len: 128
-24:220  0:000    Tables in Xsdt: 23
-24:220  0:000    0. cb3a6da0: 'FACP', 'Notebook', Rev: 5, Len: 268
-24:220  0:000        (Dsdt: CB38F228, Facs: CC41EF80, XDsdt: cb38f228, XFacs: 0)
-24:220  0:000        cb38f228: 'DSDT', 'Notebook', Rev: 2, Len: 97137
-24:220  0:000        cc41ef80: 'FACS', Ver: 2, Len: 64
-24:220  0:000    1. cb3a6eb0: 'APIC', 'Notebook', Rev: 3, Len: 132
-24:220  0:000    2. cb3a6f38: 'FPDT', 'Notebook', Rev: 1, Len: 68
-24:220  0:000    3. cb3a6f80: 'FIDT', 'Notebook', Rev: 1, Len: 156
-24:220  0:000    4. cb3a7020: 'ECDT', 'Notebook', Rev: 1, Len: 193
-24:220  0:000    5. cb3a70e8: 'MCFG', 'Notebook', Rev: 1, Len: 60
-24:220  0:000    6. cb3a7128: 'HPET', 'Notebook', Rev: 1, Len: 56
-24:220  0:000    7. cb3a7160: 'SSDT', 'SataTabl', Rev: 1, Len: 789
-24:220  0:000    8. cb3a7478: 'UEFI', '', Rev: 1, Len: 66
-24:220  0:000    9. cb3a74c0: 'SSDT', 'zpodd', Rev: 1, Len: 404
-24:220  0:000    10. cb3a7658: 'SSDT', 'Ther_Rvp', Rev: 2, Len: 3197
-24:220  0:000    11. cb3a82d8: 'ASF!', ' HCG', Rev: 32, Len: 160
-24:220  0:000    12. cb3a8378: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1337
-24:220  0:000    13. cb3a88b8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 2932
-24:220  0:000    14. cb3a9430: 'SSDT', 'DptfTabl', Rev: 2, Len: 12869
-24:220  0:000    15. cb3ac678: 'SSDT', 'CppcTabl', Rev: 2, Len: 916
-24:220  0:000    16. cb3aca10: 'PCCT', 'PcctTabl', Rev: 5, Len: 110
-24:220  0:000    17. cb3aca80: 'SSDT', 'Cpc_Tabl', Rev: 2, Len: 2756
-24:220  0:000    18. cb3ad548: 'SSDT', 'SaSsdt', Rev: 2, Len: 27934
-24:220  0:000    19. cb3b4268: 'SSDT', 'SgPch', Rev: 2, Len: 1890
-24:220  0:000    20. cb3b49d0: 'DMAR', 'BDW', Rev: 1, Len: 168
-24:220  0:000    21. cb3b4a78: 'BGRT', 'Notebook', Rev: 1, Len: 56
-24:220  0:000    22. cb3b4ab0: 'SSDT', 'OptTabl', Rev: 1, Len: 6640
-24:220  0:000  Found UEFI Acpi 1.0 RSDP at cb38f000
-24:220  0:000  Printing ACPI tables from RSDP cb38f000 ...
-24:220  0:000   cb38f000: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
-24:220  0:000    (Xsdt: cb38f0b0, Rsdt: cb38f028)
-24:220  0:000    cb38f0b0: 'XSDT', 'Notebook', Rev: 1, Len: 220
-24:220  0:000    cb38f028: 'RSDT', 'Notebook', Rev: 1, Len: 128
-24:220  0:000    Tables in Xsdt: 23
-24:220  0:000    0. cb3a6da0: 'FACP', 'Notebook', Rev: 5, Len: 268
-24:220  0:000        (Dsdt: CB38F228, Facs: CC41EF80, XDsdt: cb38f228, XFacs: 0)
-24:220  0:000        cb38f228: 'DSDT', 'Notebook', Rev: 2, Len: 97137
-24:220  0:000        cc41ef80: 'FACS', Ver: 2, Len: 64
-24:220  0:000    1. cb3a6eb0: 'APIC', 'Notebook', Rev: 3, Len: 132
-24:220  0:000    2. cb3a6f38: 'FPDT', 'Notebook', Rev: 1, Len: 68
-24:220  0:000    3. cb3a6f80: 'FIDT', 'Notebook', Rev: 1, Len: 156
-24:220  0:000    4. cb3a7020: 'ECDT', 'Notebook', Rev: 1, Len: 193
-24:220  0:000    5. cb3a70e8: 'MCFG', 'Notebook', Rev: 1, Len: 60
-24:220  0:000    6. cb3a7128: 'HPET', 'Notebook', Rev: 1, Len: 56
-24:220  0:000    7. cb3a7160: 'SSDT', 'SataTabl', Rev: 1, Len: 789
-24:220  0:000    8. cb3a7478: 'UEFI', '', Rev: 1, Len: 66
-24:220  0:000    9. cb3a74c0: 'SSDT', 'zpodd', Rev: 1, Len: 404
-24:220  0:000    10. cb3a7658: 'SSDT', 'Ther_Rvp', Rev: 2, Len: 3197
-24:220  0:000    11. cb3a82d8: 'ASF!', ' HCG', Rev: 32, Len: 160
-24:220  0:000    12. cb3a8378: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1337
-24:220  0:000    13. cb3a88b8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 2932
-24:220  0:000    14. cb3a9430: 'SSDT', 'DptfTabl', Rev: 2, Len: 12869
-24:220  0:000    15. cb3ac678: 'SSDT', 'CppcTabl', Rev: 2, Len: 916
-24:220  0:000    16. cb3aca10: 'PCCT', 'PcctTabl', Rev: 5, Len: 110
-24:220  0:000    17. cb3aca80: 'SSDT', 'Cpc_Tabl', Rev: 2, Len: 2756
-24:220  0:000    18. cb3ad548: 'SSDT', 'SaSsdt', Rev: 2, Len: 27934
-24:220  0:000    19. cb3b4268: 'SSDT', 'SgPch', Rev: 2, Len: 1890
-24:220  0:000    20. cb3b49d0: 'DMAR', 'BDW', Rev: 1, Len: 168
-24:220  0:000    21. cb3b4a78: 'BGRT', 'Notebook', Rev: 1, Len: 56
-24:220  0:000    22. cb3b4ab0: 'SSDT', 'OptTabl', Rev: 1, Len: 6640
+27:571  0:099  Found BIOS RSDP at fd940
+27:571  0:000  Printing ACPI tables from RSDP fd940 ...
+27:571  0:000   fd940: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+27:571  0:000    (Xsdt: cb38f0b0, Rsdt: cb38f028)
+27:571  0:000    cb38f0b0: 'XSDT', 'Notebook', Rev: 1, Len: 220
+27:571  0:000    cb38f028: 'RSDT', 'Notebook', Rev: 1, Len: 128
+27:571  0:000    Tables in Xsdt: 23
+27:571  0:000    0. cb3a6da0: 'FACP', 'Notebook', Rev: 5, Len: 268
+27:571  0:000        (Dsdt: CB38F228, Facs: CC41EF80, XDsdt: cb38f228, XFacs: 0)
+27:571  0:000        cb38f228: 'DSDT', 'Notebook', Rev: 2, Len: 97137
+27:571  0:000        cc41ef80: 'FACS', Ver: 2, Len: 64
+27:571  0:000    1. cb3a6eb0: 'APIC', 'Notebook', Rev: 3, Len: 132
+27:571  0:000    2. cb3a6f38: 'FPDT', 'Notebook', Rev: 1, Len: 68
+27:571  0:000    3. cb3a6f80: 'FIDT', 'Notebook', Rev: 1, Len: 156
+27:571  0:000    4. cb3a7020: 'ECDT', 'Notebook', Rev: 1, Len: 193
+27:571  0:000    5. cb3a70e8: 'MCFG', 'Notebook', Rev: 1, Len: 60
+27:571  0:000    6. cb3a7128: 'HPET', 'Notebook', Rev: 1, Len: 56
+27:571  0:000    7. cb3a7160: 'SSDT', 'SataTabl', Rev: 1, Len: 789
+27:571  0:000    8. cb3a7478: 'UEFI', '', Rev: 1, Len: 66
+27:571  0:000    9. cb3a74c0: 'SSDT', 'zpodd', Rev: 1, Len: 404
+27:571  0:000    10. cb3a7658: 'SSDT', 'Ther_Rvp', Rev: 2, Len: 3197
+27:571  0:000    11. cb3a82d8: 'ASF!', ' HCG', Rev: 32, Len: 160
+27:571  0:000    12. cb3a8378: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1337
+27:571  0:000    13. cb3a88b8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 2932
+27:571  0:000    14. cb3a9430: 'SSDT', 'DptfTabl', Rev: 2, Len: 12869
+27:571  0:000    15. cb3ac678: 'SSDT', 'CppcTabl', Rev: 2, Len: 916
+27:571  0:000    16. cb3aca10: 'PCCT', 'PcctTabl', Rev: 5, Len: 110
+27:571  0:000    17. cb3aca80: 'SSDT', 'Cpc_Tabl', Rev: 2, Len: 2756
+27:571  0:000    18. cb3ad548: 'SSDT', 'SaSsdt', Rev: 2, Len: 27934
+27:571  0:000    19. cb3b4268: 'SSDT', 'SgPch', Rev: 2, Len: 1890
+27:571  0:000    20. cb3b49d0: 'DMAR', 'BDW', Rev: 1, Len: 168
+27:571  0:000    21. cb3b4a78: 'BGRT', 'Notebook', Rev: 1, Len: 56
+27:571  0:000    22. cb3b4ab0: 'SSDT', 'OptTabl', Rev: 1, Len: 6640
+27:571  0:000  Found UEFI Acpi 2.0 RSDP at cb38f000
+27:571  0:000  Saving ACPI tables from RSDP cb38f000 to ACPI\origin ...
+27:571  0:000   cb38f000: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+27:571  0:000    (Xsdt: cb38f0b0, Rsdt: cb38f028)
+27:571  0:000    cb38f0b0: 'XSDT', 'Notebook', Rev: 1, Len: 220
+27:571  0:000    cb38f028: 'RSDT', 'Notebook', Rev: 1, Len: 128
+27:571  0:000    Tables in Xsdt: 23
+27:571  0:000    0. cb3a6da0: 'FACP', 'Notebook', Rev: 5, Len: 268
+27:571  0:000        (Dsdt: CB38F228, Facs: CC41EF80, XDsdt: cb38f228, XFacs: 0)
+27:571  0:000        cb38f228: 'DSDT', 'Notebook', Rev: 2, Len: 97137
+27:571  0:000        cc41ef80: 'FACS', Ver: 2, Len: 64
+27:571  0:000    1. cb3a6eb0: 'APIC', 'Notebook', Rev: 3, Len: 132
+27:571  0:000    2. cb3a6f38: 'FPDT', 'Notebook', Rev: 1, Len: 68
+27:571  0:000    3. cb3a6f80: 'FIDT', 'Notebook', Rev: 1, Len: 156
+27:571  0:000    4. cb3a7020: 'ECDT', 'Notebook', Rev: 1, Len: 193
+27:571  0:000    5. cb3a70e8: 'MCFG', 'Notebook', Rev: 1, Len: 60
+27:571  0:000    6. cb3a7128: 'HPET', 'Notebook', Rev: 1, Len: 56
+27:571  0:000    7. cb3a7160: 'SSDT', 'SataTabl', Rev: 1, Len: 789
+27:571  0:000    8. cb3a7478: 'UEFI', '', Rev: 1, Len: 66
+27:571  0:000    9. cb3a74c0: 'SSDT', 'zpodd', Rev: 1, Len: 404
+27:571  0:000    10. cb3a7658: 'SSDT', 'Ther_Rvp', Rev: 2, Len: 3197
+27:571  0:000    11. cb3a82d8: 'ASF!', ' HCG', Rev: 32, Len: 160
+27:571  0:000    12. cb3a8378: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1337
+27:571  0:000    13. cb3a88b8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 2932
+27:571  0:000    14. cb3a9430: 'SSDT', 'DptfTabl', Rev: 2, Len: 12869
+27:571  0:000    15. cb3ac678: 'SSDT', 'CppcTabl', Rev: 2, Len: 916
+27:571  0:000    16. cb3aca10: 'PCCT', 'PcctTabl', Rev: 5, Len: 110
+27:571  0:000    17. cb3aca80: 'SSDT', 'Cpc_Tabl', Rev: 2, Len: 2756
+27:571  0:000    18. cb3ad548: 'SSDT', 'SaSsdt', Rev: 2, Len: 27934
+27:571  0:000    19. cb3b4268: 'SSDT', 'SgPch', Rev: 2, Len: 1890
+27:571  0:000    20. cb3b49d0: 'DMAR', 'BDW', Rev: 1, Len: 168
+27:571  0:000    21. cb3b4a78: 'BGRT', 'Notebook', Rev: 1, Len: 56
+27:571  0:000    22. cb3b4ab0: 'SSDT', 'OptTabl', Rev: 1, Len: 6640
+27:571  0:000  Found UEFI Acpi 1.0 RSDP at cb38f000
+27:571  0:000  Printing ACPI tables from RSDP cb38f000 ...
+27:571  0:000   cb38f000: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+27:571  0:000    (Xsdt: cb38f0b0, Rsdt: cb38f028)
+27:571  0:000    cb38f0b0: 'XSDT', 'Notebook', Rev: 1, Len: 220
+27:571  0:000    cb38f028: 'RSDT', 'Notebook', Rev: 1, Len: 128
+27:571  0:000    Tables in Xsdt: 23
+27:571  0:000    0. cb3a6da0: 'FACP', 'Notebook', Rev: 5, Len: 268
+27:571  0:000        (Dsdt: CB38F228, Facs: CC41EF80, XDsdt: cb38f228, XFacs: 0)
+27:571  0:000        cb38f228: 'DSDT', 'Notebook', Rev: 2, Len: 97137
+27:571  0:000        cc41ef80: 'FACS', Ver: 2, Len: 64
+27:571  0:000    1. cb3a6eb0: 'APIC', 'Notebook', Rev: 3, Len: 132
+27:571  0:000    2. cb3a6f38: 'FPDT', 'Notebook', Rev: 1, Len: 68
+27:571  0:000    3. cb3a6f80: 'FIDT', 'Notebook', Rev: 1, Len: 156
+27:571  0:000    4. cb3a7020: 'ECDT', 'Notebook', Rev: 1, Len: 193
+27:571  0:000    5. cb3a70e8: 'MCFG', 'Notebook', Rev: 1, Len: 60
+27:571  0:000    6. cb3a7128: 'HPET', 'Notebook', Rev: 1, Len: 56
+27:571  0:000    7. cb3a7160: 'SSDT', 'SataTabl', Rev: 1, Len: 789
+27:571  0:000    8. cb3a7478: 'UEFI', '', Rev: 1, Len: 66
+27:571  0:000    9. cb3a74c0: 'SSDT', 'zpodd', Rev: 1, Len: 404
+27:571  0:000    10. cb3a7658: 'SSDT', 'Ther_Rvp', Rev: 2, Len: 3197
+27:571  0:000    11. cb3a82d8: 'ASF!', ' HCG', Rev: 32, Len: 160
+27:571  0:000    12. cb3a8378: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1337
+27:571  0:000    13. cb3a88b8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 2932
+27:571  0:000    14. cb3a9430: 'SSDT', 'DptfTabl', Rev: 2, Len: 12869
+27:571  0:000    15. cb3ac678: 'SSDT', 'CppcTabl', Rev: 2, Len: 916
+27:571  0:000    16. cb3aca10: 'PCCT', 'PcctTabl', Rev: 5, Len: 110
+27:571  0:000    17. cb3aca80: 'SSDT', 'Cpc_Tabl', Rev: 2, Len: 2756
+27:571  0:000    18. cb3ad548: 'SSDT', 'SaSsdt', Rev: 2, Len: 27934
+27:571  0:000    19. cb3b4268: 'SSDT', 'SgPch', Rev: 2, Len: 1890
+27:571  0:000    20. cb3b49d0: 'DMAR', 'BDW', Rev: 1, Len: 168
+27:571  0:000    21. cb3b4a78: 'BGRT', 'Notebook', Rev: 1, Len: 56
+27:571  0:000    22. cb3b4ab0: 'SSDT', 'OptTabl', Rev: 1, Len: 6640
