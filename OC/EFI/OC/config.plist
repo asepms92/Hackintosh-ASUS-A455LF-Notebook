@@ -1103,6 +1103,43 @@
 	<dict>
 		<key>Add</key>
 		<dict>
+			<key>#PciRoot(0x0)/Pci(0x1D,0x0)</key>
+			<dict>
+				<key>AAPL,clock-id</key>
+				<data>
+				Ag==
+				</data>
+				<key>AAPL,current-available</key>
+				<data>
+				NAgAAA==
+				</data>
+				<key>AAPL,current-extra</key>
+				<data>
+				gAwAAA==
+				</data>
+				<key>AAPL,current-extra-in-sleep</key>
+				<data>
+				6AMAAA==
+				</data>
+				<key>AAPL,current-in-sleep</key>
+				<data>
+				6AM=
+				</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,29,0</string>
+				<key>built-in</key>
+				<data>
+				AA==
+				</data>
+				<key>device_type</key>
+				<data>
+				RUgwMQ==
+				</data>
+				<key>model</key>
+				<string>Wildcat Point-LP USB EHCI Controller</string>
+				<key>name</key>
+				<string>EH01</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -1111,20 +1148,26 @@
 				<string>Host bridge</string>
 				<key>model</key>
 				<string>Broadwell-U Host Bridge -OPI</string>
+				<key>name</key>
+				<string>MCHC</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
 				<key>AAPL,clock-id</key>
 				<data>
-				AA==
+				Ag==
 				</data>
 				<key>AAPL,current-available</key>
 				<data>
-				NAg=
+				NAgAAA==
 				</data>
 				<key>AAPL,current-extra</key>
 				<data>
-				gAw=
+				gAwAAA==
+				</data>
+				<key>AAPL,current-extra-in-sleep</key>
+				<data>
+				6AMAAA==
 				</data>
 				<key>AAPL,current-in-sleep</key>
 				<data>
@@ -1138,7 +1181,7 @@
 				</data>
 				<key>device_type</key>
 				<data>
-				WEhDSQ==
+				WEhDXw==
 				</data>
 				<key>model</key>
 				<string>Wildcat Point-LP USB xHCI Controller</string>
@@ -1173,6 +1216,24 @@
 				<key>model</key>
 				<string>Wildcat Point-LP High Definition Audio Controller</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,0</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Wildcat Point-LP PCI Express Root Port #1</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x2)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,2</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Wildcat Point-LP PCI Express Root Port #3</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x2)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -1184,6 +1245,15 @@
 				<key>name</key>
 				<string>Ethernet</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x3)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,3</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Wildcat Point-LP PCI Express Root Port #4</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -1194,6 +1264,15 @@
 				<string>QCA9565 / AR9565 Wireless Network Adapter</string>
 				<key>name</key>
 				<string>AirPort</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x4)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,4</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Wildcat Point-LP PCI Express Root Port #5</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x0)</key>
 			<dict>
