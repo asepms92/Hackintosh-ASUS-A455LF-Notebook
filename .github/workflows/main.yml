@@ -44,18 +44,3 @@ jobs:
           prerelease: false
           tag: ${{ env.CUR_TAG }}
           token: ${{ secrets.GITHUB_TOKEN }}
-
-  analyze-scripts:
-    name: Analyze Scripts
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Install Dependency
-        run: |
-          brew install shellcheck
-        env:
-          HOMEBREW_NO_INSTALL_CLEANUP: 1
-
-      - name: Run shellcheck
-        run: find . \( -name "*.tool" -o -name "*.command" -o -name "*.sh" \) -exec sh -c 'for TargetFile; do shellcheck --severity=info "${TargetFile}" || exit 1; done' sh {} +
