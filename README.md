@@ -1,18 +1,19 @@
 # Hackintosh-ASUS-A455LF-Notebook
 
 [![Build Status](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/workflows/CI/badge.svg?branch=master)](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/actions)
+[![Brand](https://img.shields.io/badge/A455LF-WX039D-yellow?style=flat&logo=asus)](https://www.asus.com/)
 [![macOS](https://img.shields.io/badge/macOS-Big_Sur_v11.6-red?style=flat&logo=apple)](https://www.apple.com/macos/big-sur/)
 [![Clover](https://img.shields.io/badge/Clover-r5143-brightgreen?style=flat&logo=icq)](https://github.com/CloverHackyColor/CloverBootloader)
 [![OpenCore](https://img.shields.io/badge/OpenCore-v0.7.7-blue?style=flat&logo=okta)](https://github.com/acidanthera/OpenCorePkg)
 
-My EFI Folder for ASUS-A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
+Running macOS on ASUS-A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
  
 <img src="/Images/Sept-MacBook-Images.png?raw=true" alt="macOS Big Sur" align="center">
  
 ### How to Get it?
 
 - Open Terminal with Command: $ `git clone https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook.git`
-- Or Just [Clone/Download](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/archive/refs/heads/master.zip) with Specific Folder Only
+- Or [Download](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/archive/refs/heads/master.zip) with Specific Folder Only
  
 --------------------------------------------------------------------------------------------
  
@@ -27,7 +28,7 @@ My EFI Folder for ASUS-A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
 - [x] <b>Audio</b>: Conexant CX20751/2
 - [x] <b>Wifi+BT</b>: Qualcomm Atheros QCA9565/AR9565 Wireless Network Adapter + AR3012 (Azurewave Tech)
 - [x] <b>Ethernet</b>: Realtek RTL8111GU/8168GU/8411GU PCI Express Gigabit Ethernet
-- [x] <b>Others</b>: USB3.0 + USB2.0 ports WebCam, FocalTech TouchPad PS/2, ports HDMI/VGA, Alcor Micro USB Card Reader, etc..
+- [x] <b>Others</b>: USB3.0 + USB2.0 ports WebCam, FocalTech TouchPad PS/2, ports HDMI/VGA, Alcor Micro USB Card Reader, etc.
 
 --------------------------------------------------------------------------------------------
 
@@ -39,7 +40,7 @@ Security -> Secure Boot | Disabled
 Intel Virtualization    | Enabled OK / Disabled if you have issues
 VT-d | Disabled / Enabled with boot-args "dart=0"
 Graphics Configuration -> DVMT Pre-Allocation | 64M / default 32M but need pre-alloc patches
-USB Configuration -> XHCI Pre-Boot Mode | Smart Auto / Enabled
+USB Configuration -> XHCI Pre-Boot Mode | Enabled / Smart Auto if using EHCI device
 SATA Mode | AHCI
 Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
  
@@ -50,16 +51,16 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 - [x] QE/CI Intel HD Graphics 5500 with VRAM 4000 MB (Cosmetic), Nvidia Geforce 930M (Disable)
 - [x] Audio Conexant CX20751/2 with layout-id 21 + Internal Microphone (SSDT-CX207512.aml + Lilu.kext + AppleALC.kext)
 - [x] Display brightness PNLF and Fn Keys (DSDT Patch Fix Graphics Broadwell from RehabMan Repo + ASUS DSDT Patches Brightness FN Key + AsusSMC.kext)
-- [x] Qualcomm Atheros AR9565 Wifi (HS80211Family.kext)
+- [x] Qualcomm Atheros AR9565 Wifi (HS80211Family.kext + AirPortAtheros40.kext)
 - [x] LAN Ethernet Realtek RTL8111GU/8168GU/8411GU (RealtekRTL8111.kext)
-- [x] Bluetooth AR3012 (Ath3kBT.kext +Ath3kBTInjector.kext)
+- [x] Bluetooth AR3012 (Ath3kBT.kext + Ath3kBTInjector.kext)
 - [x] FocalTech TouchPad PS/2 (ApplePS2SmartTouchpad.kext)
 - [x] Battery Indicator (DSDT RehabMan Battery Laptop Patch for ASUS + SMCBatteryManager.kext)
 - [x] WebCam OOB + Card Reader OOB
-- [x] USB3.0 Port + Power/Speed (Disable XhciPortLimit + USBPorts.kext/SSDT-EC-UIAC.aml)
+- [x] USB2.0 Ports + USB3.0 Ports + Power/Speed (Disable XhciPortLimit + USBMap.kext/SSDT-UIAC.aml)
 - [x] Native Power Management CPU (SSDT.aml combine from [ssdtPRGen.sh](https://github.com/Piker-Alpha/ssdtPRGen.sh) Pike R. Alpha and [ssdt_data](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md#data-combination) PMheart + CPUFriend.kext + CPUFriendDataProvider.kext)
 - [x] Apple Graphics Power Management (Edit Info.plist VirtualSMC.kext) for Macbook Pro 12,1
-- [x] HDMI, Etc..
+- [x] HDMI, Etc.
  
 --------------------------------------------------------------------------------------------
  
@@ -76,11 +77,10 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
  
 ### Notes
 
-1. Don't use my patch [DSDT.aml and SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables/BIOS Version and Model/Freq CPU PM</b>
-
-2. If you get errors from config.plist. You need regenerate serial number for your mac, Use Clover Configurator or [macserial](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/Utilities/macserial) from OC
-
-3. And many more [apps](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/Tools/Apps)
+1. Don't use my patch [DSDT.aml & SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables / BIOS Version & Model / Freq CPU PM</b>
+2. Maybe many don't works/issues with OC for laptop such as ADBG, AC0/ADP1, PDRC, SDMA, SPI0/SPI1, UA00, Battery issues, and other. Because OC can't use DSDT patched
+3. You need regenerate serial number for your mac, use [Clover](https://mackie100projects.altervista.org/download-clover-configurator/)[/OC](https://mackie100projects.altervista.org/download-opencore-configurator/) Configurator or [macserial](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/Utilities/macserial) from OC
+4. And many more [apps](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/Tools/Apps)
 --------------------------------------------------------------------------------------------
  
 ### Special Thanks and Credits to :
