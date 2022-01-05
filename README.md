@@ -1,5 +1,9 @@
 # Hackintosh-ASUS-A455LF-Notebook
 
+[![macOS](https://img.shields.io/badge/macOS-Big_Sur_11.6-red)](https://www.apple.com/macos/big-sur/)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.7-blue)](https://github.com/acidanthera/OpenCorePkg)
+[![Build Status](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/workflows/CI/badge.svg?branch=master)](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/actions)
+
 My EFI Folder for ASUS-A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
  
 <img src="/Images/Sept-MacBook-Images.png?raw=true" alt="macOS Big Sur" align="center">

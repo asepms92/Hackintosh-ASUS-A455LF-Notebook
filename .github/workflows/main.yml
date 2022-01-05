@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  build-efi-release:
+    name: Build EFI Release
+    runs-on: macos-latest
+    env:
+      XCODE_VERSION: 12.4
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: '5'
+
+      - name: Initialize Variables
+        run: |
+          GIT_SHA="$(git rev-parse --short HEAD)"
+          echo "CUR_TAG=beta-$GIT_SHA" >> "$GITHUB_ENV"
+          echo "DEVELOPER_DIR=/Applications/Xcode_${XCODE_VERSION}.app/Contents/Developer" >> "$GITHUB_ENV"
+
+      - name: Manage Release Version
+        if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
+        run: |
+          echo "CUR_TAG=${GITHUB_REF##*/}" >> "$GITHUB_ENV"
+
+      - name: Upload to Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: ASUS A455LF-WX039D NoteBook EFI ${{ env.CUR_TAG }}
+          path: build/*.zip
+
+      - name: Upload to Release
+        if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
+        uses: ncipollo/release-action@v1.8.10
+        with:
+          artifacts: build/*.zip
+          name: ASUS A455LF-WX039D NoteBook EFI ${{ env.CUR_TAG }}
+          prerelease: false
+          tag: ${{ env.CUR_TAG }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  analyze-scripts:
+    name: Analyze Scripts
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Dependency
+        run: |
+          brew install shellcheck
+        env:
+          HOMEBREW_NO_INSTALL_CLEANUP: 1
+
+      - name: Run shellcheck
+        run: find . \( -name "*.tool" -o -name "*.command" -o -name "*.sh" \) -exec sh -c 'for TargetFile; do shellcheck --severity=info "${TargetFile}" || exit 1; done' sh {} +
