@@ -1,9 +1,9 @@
 # Hackintosh-ASUS-A455LF-Notebook
 
 [![Build Status](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/workflows/CI/badge.svg?branch=master)](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/actions)
-[![macOS](https://img.shields.io/badge/macOS-Big_Sur_v11.6-red)](https://www.apple.com/macos/big-sur/)
-[![Clover](https://img.shields.io/badge/Clover-r5143-green)](https://github.com/CloverHackyColor/CloverBootloader)
-[![OpenCore](https://img.shields.io/badge/OpenCore-v0.7.7-blue)](https://github.com/acidanthera/OpenCorePkg)
+[![macOS](https://img.shields.io/badge/macOS-Big_Sur_v11.6-red?style=flat&logo=apple)](https://www.apple.com/macos/big-sur/)
+[![Clover](https://img.shields.io/badge/Clover-r5143-brightgreen?style=flat&logo=icq)](https://github.com/CloverHackyColor/CloverBootloader)
+[![OpenCore](https://img.shields.io/badge/OpenCore-v0.7.7-blue?style=flat&logo=okta)](https://github.com/acidanthera/OpenCorePkg)
 
 My EFI Folder for ASUS-A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
  
