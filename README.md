@@ -79,8 +79,10 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 
 1. Don't use my patch [DSDT.aml & SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables / BIOS Version & Model / Freq CPU PM</b>
 2. Maybe many don't works/issues with OC for laptop such as ADBG, AC0/ADP1, PDRC, SDMA, SPI0/SPI1, UA00, Battery issues, and other. Because OC can't use DSDT patched
-3. You need regenerate serial number for your mac, use [Clover](https://mackie100projects.altervista.org/download-clover-configurator/)[/OC](https://mackie100projects.altervista.org/download-opencore-configurator/) Configurator or [macserial](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/Utilities/macserial) from OC
-4. And many more [apps](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/Tools/Apps)
+3. For Catalina and older, set MinDate = -1 and MinVersion = -1 in UEFI -> APFS section
+<img src="/Images/set-config-oc-for-catalina-and-older.png?raw=true" alt="Set config OC Catalina and older" align="center">
+4. You need regenerate serial number for your mac, use [Clover](https://mackie100projects.altervista.org/download-clover-configurator/)[/OC](https://mackie100projects.altervista.org/download-opencore-configurator/) Configurator or [macserial](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/Utilities/macserial) from OC
+5. And many more [apps](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/Tools/Apps)
 --------------------------------------------------------------------------------------------
  
 ### Special Thanks and Credits to :

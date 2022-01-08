@@ -902,15 +902,59 @@
 			<dict>
 				<key>Comment</key>
 				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
+				<key>Count</key>
+				<integer>1</integer>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
 				ILniAAAADzA=
 				</data>
+				<key>MatchOS</key>
+				<string>All</string>
 				<key>Replace</key>
 				<data>
 				ILniAAAAkJA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SurPlus v1 - PART 1 of 2 - Patch read_erandom (inlined in _early_random)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AHQjSIs=
+				</data>
+				<key>MatchOS</key>
+				<string>11.x</string>
+				<key>Procedure</key>
+				<string>_early_random</string>
+				<key>Replace</key>
+				<data>
+				AOsjSIs=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SurPlus v1 - PART 2 of 2 - Patch register_and_init_prng</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				ukgBAAAx9g==
+				</data>
+				<key>MatchOS</key>
+				<string>11.x</string>
+				<key>Procedure</key>
+				<string>_register_and_init_prng</string>
+				<key>Replace</key>
+				<data>
+				ukgBAADrBQ==
 				</data>
 			</dict>
 		</array>
@@ -921,12 +965,16 @@
 			<dict>
 				<key>Comment</key>
 				<string>ALPM IO Error AppleAHCIPort</string>
+				<key>Count</key>
+				<integer>1</integer>
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
 				QGACAA==
 				</data>
+				<key>MatchOS</key>
+				<string>All</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleAHCIPort</string>
 				<key>Replace</key>
@@ -937,12 +985,16 @@
 			<dict>
 				<key>Comment</key>
 				<string>Fix freeze some HDD</string>
+				<key>Count</key>
+				<integer>1</integer>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
 				pZAAAA==
 				</data>
+				<key>MatchOS</key>
+				<string>All</string>
 				<key>Name</key>
 				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Replace</key>
