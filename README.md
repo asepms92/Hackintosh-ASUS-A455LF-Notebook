@@ -79,7 +79,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 
 1. Don't use my patch [DSDT.aml & SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables / BIOS Version & Model / Freq CPU PM</b>
 2. Maybe many don't works/issues with OC for laptop such as ADBG, AC0/ADP1, PDRC, SDMA, SPI0/SPI1, UA00, Battery issues, and other. Because OC can't use DSDT patched
-3. For Catalina and older, set MinDate = -1 and MinVersion = -1 in UEFI -> APFS section
+3. Config OC for Catalina and older, set (MinDate = -1) & (MinVersion = -1) in 'UEFI' -> 'APFS' section
 
 <img src="/Images/set-config-oc-for-catalina-and-older.png?raw=true" alt="Set config OC Catalina and older" align="center">
 
@@ -95,10 +95,9 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 - [Acidanthera](https://github.com/acidanthera)
 - [Rehabman](https://github.com/RehabMan)
 - [Mieze](https://github.com/Mieze)
-- [Mirone](https://github.com/Mirone)
 - [EmlyDinesh](https://github.com/EMlyDinEsHMG)
 - [AnV](https://github.com/andyvand)
-- [Piker R. Alpha](https://github.com/Piker-Alpha)
+- [Pike R. Alpha](https://github.com/Piker-Alpha)
 - [InsanelyMac](https://www.insanelymac.com)
 - [Olarila](http://olarila.com)
 - [OSXLatitude](https://osxlatitude.com)

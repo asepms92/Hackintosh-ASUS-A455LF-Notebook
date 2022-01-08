@@ -878,7 +878,7 @@
 		<key>#Number of KextsToPatch</key>
 		<integer>2</integer>
 		<key>#Number of Patchs To Kernel</key>
-		<integer>1</integer>
+		<integer>3</integer>
 		<key>AppleIntelCPUPM</key>
 		<true/>
 		<key>AppleRTC</key>
@@ -929,7 +929,7 @@
 				AHQjSIs=
 				</data>
 				<key>MatchOS</key>
-				<string>11.x</string>
+				<string>11.6.x</string>
 				<key>Procedure</key>
 				<string>_early_random</string>
 				<key>Replace</key>
@@ -949,7 +949,7 @@
 				ukgBAAAx9g==
 				</data>
 				<key>MatchOS</key>
-				<string>11.x</string>
+				<string>11.6.x</string>
 				<key>Procedure</key>
 				<string>_register_and_init_prng</string>
 				<key>Replace</key>
