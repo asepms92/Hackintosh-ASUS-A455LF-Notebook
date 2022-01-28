@@ -7,7 +7,7 @@
 	<key>ACPI</key>
 	<dict>
 		<key>#Sorted ACPI tables Count</key>
-		<integer>16</integer>
+		<integer>15</integer>
 		<key>AutoMerge</key>
 		<true/>
 		<key>DSDT</key>
@@ -514,11 +514,10 @@
 			<string>SSDT-FAN0.aml</string>
 			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-MEM2.aml</string>
-			<string>SSDT-OSME.aml</string>
+			<string>SSDT-OSXP.aml</string>
 			<string>SSDT-PMCR.aml</string>
 			<string>SSDT-PTSWAK.aml</string>
 			<string>SSDT-RMCF.aml</string>
-			<string>SSDT-RMDT.aml</string>
 			<string>SSDT-STAS.aml</string>
 			<string>SSDT-UIAC.aml</string>
 			<string>SSDT-USBW.aml</string>

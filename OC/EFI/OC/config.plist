@@ -98,11 +98,11 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Host Win 2000</string>
+				<string>Host Win 2001 as OSXP/WXP1</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-OSME.aml</string>
+				<string>SSDT-OSXP.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -1146,21 +1146,15 @@
 				Ag==
 				</data>
 				<key>AAPL,current-available</key>
-				<data>
-				NAgAAA==
-				</data>
+				<integer>2100</integer>
 				<key>AAPL,current-extra</key>
-				<data>
-				gAwAAA==
-				</data>
+				<integer>2200</integer>
 				<key>AAPL,current-extra-in-sleep</key>
-				<data>
-				6AMAAA==
-				</data>
+				<integer>1600</integer>
 				<key>AAPL,current-in-sleep</key>
-				<data>
-				6AM=
-				</data>
+				<integer>1000</integer>
+				<key>AAPL,max-port-current-in-sleep</key>
+				<integer>2100</integer>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,29,0</string>
 				<key>built-in</key>
@@ -1194,21 +1188,15 @@
 				Ag==
 				</data>
 				<key>AAPL,current-available</key>
-				<data>
-				NAgAAA==
-				</data>
+				<integer>2100</integer>
 				<key>AAPL,current-extra</key>
-				<data>
-				gAwAAA==
-				</data>
+				<integer>2200</integer>
 				<key>AAPL,current-extra-in-sleep</key>
-				<data>
-				6AMAAA==
-				</data>
+				<integer>1600</integer>
 				<key>AAPL,current-in-sleep</key>
-				<data>
-				6AM=
-				</data>
+				<integer>1000</integer>
+				<key>AAPL,max-port-current-in-sleep</key>
+				<integer>2100</integer>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,20,0</string>
 				<key>built-in</key>

@@ -319,12 +319,12 @@
 						BgAAAA==
 						</data>
 					</dict>
-					<key>SS01</key>
+					<key>SSP1</key>
 					<dict>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>name</key>
-						<string>SS01</string>
+						<string>SSP1</string>
 						<key>port</key>
 						<data>
 						DAAAAA==
