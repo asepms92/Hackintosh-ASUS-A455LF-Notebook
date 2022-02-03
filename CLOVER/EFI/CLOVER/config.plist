@@ -15,7 +15,7 @@
 			<key>#PNLF_UID</key>
 			<string>0x0F</string>
 			<key>#Patches count</key>
-			<integer>20</integer>
+			<integer>19</integer>
 			<key>Debug</key>
 			<false/>
 			<key>Fixes</key>
@@ -238,23 +238,6 @@
 					<key>Replace</key>
 					<data>
 					RUgwMQ==
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change XHCI to XHC</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					WEhDSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WEhDXw==
 					</data>
 					<key>TgtBridge</key>
 					<data>
@@ -531,12 +514,6 @@
 	<dict>
 		<key>#LegacyBiosDefaultEntry</key>
 		<integer>0</integer>
-		<key>#SkipHibernateTimeout</key>
-		<false/>
-		<key>#StrictHibernate</key>
-		<false/>
-		<key>#XMPDetection</key>
-		<string>-1</string>
 		<key>Arguments</key>
 		<string>-no_compat_check amfi_get_out_of_my_way=1</string>
 		<key>CustomLogo</key>
@@ -565,8 +542,14 @@
 		<false/>
 		<key>SignatureFixup</key>
 		<false/>
+		<key>SkipHibernateTimeout</key>
+		<true/>
+		<key>StrictHibernate</key>
+		<true/>
 		<key>Timeout</key>
 		<integer>10</integer>
+		<key>XMPDetection</key>
+		<string>-1</string>
 	</dict>
 	<key>BootGraphics</key>
 	<dict>
@@ -600,12 +583,12 @@
 		<string></string>
 		<key>Audio</key>
 		<dict>
-			<key>#ResetHDA</key>
-			<false/>
 			<key>AFGLowPowerState</key>
 			<true/>
 			<key>Inject</key>
 			<integer>21</integer>
+			<key>ResetHDA</key>
+			<false/>
 		</dict>
 		<key>FakeID</key>
 		<dict>
@@ -877,7 +860,7 @@
 		<key>#Number of KextsToPatch</key>
 		<integer>2</integer>
 		<key>#Number of Patchs To Kernel</key>
-		<integer>3</integer>
+		<integer>1</integer>
 		<key>AppleIntelCPUPM</key>
 		<true/>
 		<key>AppleRTC</key>
@@ -909,51 +892,27 @@
 				<data>
 				ILniAAAADzA=
 				</data>
+				<key>MaskFind</key>
+				<data>
+				</data>
+				<key>MaskReplace</key>
+				<data>
+				</data>
+				<key>MaskStart</key>
+				<data>
+				</data>
 				<key>MatchOS</key>
 				<string>All</string>
+				<key>Procedure</key>
+				<string></string>
+				<key>RangeFind</key>
+				<integer>0</integer>
 				<key>Replace</key>
 				<data>
 				ILniAAAAkJA=
 				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SurPlus v1 - PART 1 of 2 - Patch read_erandom (inlined in _early_random)</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
+				<key>StartPattern</key>
 				<data>
-				AHQjSIs=
-				</data>
-				<key>MatchOS</key>
-				<string>11.x</string>
-				<key>Procedure</key>
-				<string>_early_random</string>
-				<key>Replace</key>
-				<data>
-				AOsjSIs=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SurPlus v1 - PART 2 of 2 - Patch register_and_init_prng</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				ukgBAAAx9g==
-				</data>
-				<key>MatchOS</key>
-				<string>11.x</string>
-				<key>Procedure</key>
-				<string>_register_and_init_prng</string>
-				<key>Replace</key>
-				<data>
-				ukgBAADrBQ==
 				</data>
 			</dict>
 		</array>
@@ -971,6 +930,14 @@
 				<key>Find</key>
 				<data>
 				QGACAA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MaskFind</key>
+				<data>
+				</data>
+				<key>MaskReplace</key>
+				<data>
 				</data>
 				<key>MatchOS</key>
 				<string>All</string>
@@ -992,6 +959,14 @@
 				<data>
 				pZAAAA==
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MaskFind</key>
+				<data>
+				</data>
+				<key>MaskReplace</key>
+				<data>
+				</data>
 				<key>MatchOS</key>
 				<string>All</string>
 				<key>Name</key>
@@ -1007,8 +982,6 @@
 	</dict>
 	<key>Quirks</key>
 	<dict>
-		<key>#ForceOcWriteFlash</key>
-		<false/>
 		<key>AppleXcpmExtraMsrs</key>
 		<false/>
 		<key>AppleXcpmForceBoost</key>
@@ -1038,6 +1011,8 @@
 		<key>ExternalDiskIcons</key>
 		<true/>
 		<key>ForceExitBootServices</key>
+		<false/>
+		<key>ForceOcWriteFlash</key>
 		<false/>
 		<key>FuzzyMatch</key>
 		<true/>
@@ -1072,12 +1047,16 @@
 		<false/>
 		<key>ProtectUefiServices</key>
 		<false/>
+		<key>ProvideCurrentCpuInfo</key>
+		<false/>
 		<key>ProvideCustomSlide</key>
 		<true/>
 		<key>ProvideMaxSlide</key>
 		<integer>0</integer>
 		<key>RebuildAppleMemoryMap</key>
 		<false/>
+		<key>ResizeAppleGpuBars</key>
+		<integer>-1</integer>
 		<key>SetupVirtualMap</key>
 		<true/>
 		<key>SignalAppleOS</key>
@@ -1182,6 +1161,8 @@
 		<string></string>
 		<key>#CustomUUID</key>
 		<string></string>
+		<key>#NvidiaWeb</key>
+		<false/>
 		<key>InjectKexts</key>
 		<true/>
 		<key>InjectSystemID</key>
