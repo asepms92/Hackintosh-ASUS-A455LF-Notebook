@@ -7,7 +7,7 @@
 	<key>ACPI</key>
 	<dict>
 		<key>#Sorted ACPI tables Count</key>
-		<integer>15</integer>
+		<integer>14</integer>
 		<key>AutoMerge</key>
 		<true/>
 		<key>DSDT</key>
@@ -493,7 +493,6 @@
 		<array>
 			<string>SSDT.aml</string>
 			<string>SSDT-CX207512.aml</string>
-			<string>SSDT-DGPU.aml</string>
 			<string>SSDT-FAN0.aml</string>
 			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-MEM2.aml</string>

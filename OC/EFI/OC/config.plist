@@ -58,14 +58,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable discrete graphics</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-DGPU.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>ASUS fan</string>
 				<key>Enabled</key>
 				<true/>
