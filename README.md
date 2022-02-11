@@ -58,8 +58,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 - [x] Battery Indicator (DSDT RehabMan Battery Laptop Patch for ASUS + SMCBatteryManager.kext)
 - [x] WebCam OOB + Card Reader OOB
 - [x] USB2.0 Ports + USB3.0 Ports + Power/Speed (Disable XhciPortLimit + USBMap.kext/SSDT-UIAC.aml)
-- [x] Native Power Management CPU (SSDT.aml combination from [ssdtPRGen.sh](https://github.com/Piker-Alpha/ssdtPRGen.sh) Pike R. Alpha and [ssdt_data](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md#data-combination) PMheart + CPUFriend.kext + CPUFriendDataProvider.kext)
-- [x] Apple Graphics Power Management (Edit Info.plist VirtualSMC.kext) for Macbook Pro 12,1
+- [x] Native Power Management CPU (Combination from [ssdtPRGen.sh](https://github.com/Piker-Alpha/ssdtPRGen.sh) Pike R. Alpha and [ssdt_data](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md#data-combination) PMheart + CPUFriend.kext + CPUFriendDataProvider.kext)
 - [x] HDMI, Etc.
  
 --------------------------------------------------------------------------------------------
