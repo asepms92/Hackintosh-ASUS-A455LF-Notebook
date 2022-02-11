@@ -15,7 +15,7 @@
 			<key>#PNLF_UID</key>
 			<string>0x0F</string>
 			<key>#Patches count</key>
-			<integer>19</integer>
+			<integer>21</integer>
 			<key>Debug</key>
 			<false/>
 			<key>Fixes</key>
@@ -157,6 +157,23 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>Change H_EC to EC</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					SF9FQw==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUNfXw==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>Fix RTC _STA bug</string>
 					<key>Disabled</key>
 					<false/>
@@ -187,7 +204,7 @@
 					</data>
 					<key>TgtBridge</key>
 					<data>
-					UlRDAA==
+					UlRDXw==
 					</data>
 				</dict>
 				<dict>
@@ -224,6 +241,23 @@
 					<key>TgtBridge</key>
 					<data>
 					SFBFVA==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change Method (LDR2,_STA &amp; MATH,_STA) to XSTA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1NUQQCgDZNQ
+					</data>
+					<key>Replace</key>
+					<data>
+					WFNUQQCgDZNQ
+					</data>
+					<key>TgtBridge</key>
+					<data>
 					</data>
 				</dict>
 				<dict>
@@ -347,7 +381,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change Method (XWAK,0,S) to ZWAK</string>
+					<string>Change Method (XWAK,0,S) to AWAK</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -356,7 +390,7 @@
 					</data>
 					<key>Replace</key>
 					<data>
-					WldBSwg=
+					QVdBSwg=
 					</data>
 					<key>TgtBridge</key>
 					<data>

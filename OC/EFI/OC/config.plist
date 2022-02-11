@@ -366,6 +366,44 @@
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
+				<string>Change H_EC to EC</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				SF9FQw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				RUNfXw==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
 				<string>Fix RTC _STA bug</string>
 				<key>Count</key>
 				<integer>0</integer>
@@ -500,6 +538,44 @@
 				<key>Replace</key>
 				<data>
 				WENSUwigSQ==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Change Method (LDR2,_STA) &amp; (MATH,_STA) to XSTA</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1NUQQCgDZNQ
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFNUQQCgDZNQ
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -860,7 +936,7 @@
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
-				<string>Change Method (XWAK,0,S) to ZWAK</string>
+				<string>Change Method (XWAK,0,S) to AWAK</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -879,7 +955,7 @@
 				</data>
 				<key>Replace</key>
 				<data>
-				WldBSwg=
+				QVdBSwg=
 				</data>
 				<key>ReplaceMask</key>
 				<data>
