@@ -366,44 +366,6 @@
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
-				<string>Change H_EC to EC</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				SF9FQw==
-				</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>OemTableId</key>
-				<data>
-				</data>
-				<key>Replace</key>
-				<data>
-				RUNfXw==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				</data>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>BaseSkip</key>
-				<integer>0</integer>
-				<key>Comment</key>
 				<string>Fix RTC _STA bug</string>
 				<key>Count</key>
 				<integer>0</integer>
@@ -936,14 +898,14 @@
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
-				<string>Change Method (XWAK,0,S) to AWAK</string>
+				<string>Change Method (XWAK) to AWAK</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				WFdBSwg=
+				WFdBSw==
 				</data>
 				<key>Limit</key>
 				<integer>0</integer>
@@ -955,7 +917,7 @@
 				</data>
 				<key>Replace</key>
 				<data>
-				QVdBSwg=
+				QVdBSw==
 				</data>
 				<key>ReplaceMask</key>
 				<data>

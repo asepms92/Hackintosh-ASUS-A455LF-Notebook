@@ -72,6 +72,9 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 
 ### Not Tested?
  
+ - Sidecar
+ - Universal Control
+ 
 --------------------------------------------------------------------------------------------
  
 ### Notes
