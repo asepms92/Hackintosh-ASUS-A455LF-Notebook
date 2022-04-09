@@ -26,15 +26,15 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Fn Keys ASUS</string>
+				<string>Fn keys ASUS</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-ATK-BDW.aml</string>
+				<string>SSDT-ATKD.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>ASUS Adapter &amp; Battery</string>
+				<string>Battery ASUS</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -54,7 +54,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-DEHC2.aml</string>
+				<string>SSDT-EH2D.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -74,7 +74,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Rename HPET _CRS to XCRS</string>
+				<string>Fix _CRS HPET</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -82,7 +82,23 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Fixed memory region for IGPU</string>
+				<string>LIDP + SEPT + USBW + VMOD devices</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-LSUV.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>MCHC + SMBus devices</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-MCHBUS.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>MEM2 device</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -90,15 +106,15 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Host Win 2001/XP</string>
+				<string>Host Win 2000/OSME</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-OSXP.aml</string>
+				<string>SSDT-OSME.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Patch AppleIntelPCHPMC</string>
+				<string>PMCR device</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -106,7 +122,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Apple brightness slider</string>
+				<string>PNLF device</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -138,35 +154,11 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SMBus &amp; MCHC</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-SBUS-MCHC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Fix RTC _STA bug</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-STAS.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>USB ports and AppleBusPowerController</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-UIAC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Virtual USB wake</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-USBW.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -362,13 +354,13 @@
 			</dict>
 			<dict>
 				<key>Base</key>
-				<string></string>
+				<string>\_SB.PCI0.LPCB.RTC</string>
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
 				<string>Fix RTC _STA bug</string>
 				<key>Count</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -400,13 +392,13 @@
 			</dict>
 			<dict>
 				<key>Base</key>
-				<string></string>
+				<string>\_SB.PCI0.LPCB.RTC</string>
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
 				<string>RTC IRQ 8 Patch</string>
 				<key>Count</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -438,13 +430,13 @@
 			</dict>
 			<dict>
 				<key>Base</key>
-				<string></string>
+				<string>\_SB.PCI0.LPCB.TIMR</string>
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
 				<string>TIMR IRQ 0 Patch</string>
 				<key>Count</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -476,13 +468,13 @@
 			</dict>
 			<dict>
 				<key>Base</key>
-				<string></string>
+				<string>\_SB.PCI0.LPCB.HPET</string>
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
 				<string>Change Method (HPET,_CRS) to XCRS</string>
 				<key>Count</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -500,44 +492,6 @@
 				<key>Replace</key>
 				<data>
 				WENSUwigSQ==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				</data>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>BaseSkip</key>
-				<integer>0</integer>
-				<key>Comment</key>
-				<string>Change Method (LDR2,_STA) &amp; (MATH,_STA) to XSTA</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				X1NUQQCgDZNQ
-				</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>OemTableId</key>
-				<data>
-				</data>
-				<key>Replace</key>
-				<data>
-				WFNUQQCgDZNQ
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -804,6 +758,462 @@
 				<key>Replace</key>
 				<data>
 				TElEMA==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Change ATK Method (_Q0A,0,N) to Method (XQ0A,0,N)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1EwQQA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFEwQQA=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Change ATK Method (_Q0B,0,N) to Method (XQ0B,0,N)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1EwQgA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFEwQgA=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Change ATK Method (_Q0C,0,N) to Method (XQ0C,0,N)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1EwQwA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFEwQwA=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Change ATK Method (_Q0D,0,N) to Method (XQ0D,0,N)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1EwRAA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFEwRAA=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Change ATK Method (_Q0E,0,N) to Method (XQ0E,0,N)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1EwRQA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFEwRQA=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Change ATK Method (_Q0F,0,N) to Method (XQ0F,0,N)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1EwRgA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFEwRgA=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Change ATK Method (_Q10,0,N) to Method (XQ10,0,N)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1ExMAA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFExMAA=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Change ATK Method (_Q11,0,N) to Method (XQ11,0,N)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1ExMQA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFExMQA=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Change ATK Method (_Q12,0,N) to Method (XQ12,0,N)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1ExMgA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFExMgA=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Change ATK Method (_Q13,0,N) to Method (XQ13,0,N)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1ExMwA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFExMwA=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Change ATK Method (_Q14,0,N) to Method (XQ14,0,N)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1ExNAA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFExNAA=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Change ATK Method (_Q15,0,N) to Method (XQ15,0,N)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X1ExNQA=
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				WFExNQA=
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -1163,83 +1573,16 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>#PciRoot(0x0)/Pci(0x1C,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,28,0</string>
-				<key>device_type</key>
-				<string>PCI bridge</string>
-				<key>model</key>
-				<string>Wildcat Point-LP PCI Express Root Port #1</string>
-			</dict>
-			<key>#PciRoot(0x0)/Pci(0x1C,0x2)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,28,2</string>
-				<key>device_type</key>
-				<string>PCI bridge</string>
-				<key>model</key>
-				<string>Wildcat Point-LP PCI Express Root Port #3</string>
-			</dict>
-			<key>#PciRoot(0x0)/Pci(0x1C,0x3)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,28,3</string>
-				<key>device_type</key>
-				<string>PCI bridge</string>
-				<key>model</key>
-				<string>Wildcat Point-LP PCI Express Root Port #4</string>
-			</dict>
-			<key>#PciRoot(0x0)/Pci(0x1C,0x4)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,28,4</string>
-				<key>device_type</key>
-				<string>PCI bridge</string>
-				<key>model</key>
-				<string>Wildcat Point-LP PCI Express Root Port #5</string>
-			</dict>
-			<key>#PciRoot(0x0)/Pci(0x1D,0x0)</key>
-			<dict>
-				<key>AAPL,clock-id</key>
-				<data>
-				Ag==
-				</data>
-				<key>AAPL,current-available</key>
-				<integer>2100</integer>
-				<key>AAPL,current-extra</key>
-				<integer>2200</integer>
-				<key>AAPL,current-extra-in-sleep</key>
-				<integer>1600</integer>
-				<key>AAPL,current-in-sleep</key>
-				<integer>1000</integer>
-				<key>AAPL,max-port-current-in-sleep</key>
-				<integer>2100</integer>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,29,0</string>
-				<key>built-in</key>
-				<data>
-				AA==
-				</data>
-				<key>device_type</key>
-				<data>
-				RUgwMQ==
-				</data>
-				<key>model</key>
-				<string>Wildcat Point-LP USB EHCI Controller</string>
-				<key>name</key>
-				<string>EH01</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,0,0</string>
+				<key>IOName</key>
+				<string>pci8086,1604</string>
 				<key>device_type</key>
 				<string>Host bridge</string>
 				<key>model</key>
 				<string>Broadwell-U Host Bridge -OPI</string>
-				<key>name</key>
-				<string>MCHC</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
@@ -1255,6 +1598,8 @@
 				<integer>1600</integer>
 				<key>AAPL,current-in-sleep</key>
 				<integer>1000</integer>
+				<key>AAPL,device-internal</key>
+				<integer>2</integer>
 				<key>AAPL,max-port-current-in-sleep</key>
 				<integer>2100</integer>
 				<key>AAPL,slot-name</key>
@@ -1283,9 +1628,29 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
 			<dict>
+				<key>#PinConfigurations</key>
+				<data>
+				QBAhBBABF5DwAfBAMBCBBCABoJDgAFYo
+				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,27,0</string>
 				<key>AFGLowPowerState</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>MaximumBootBeepVolume</key>
+				<data>
+				7w==
+				</data>
+				<key>MaximumBootBeepVolumeAlt</key>
+				<data>
+				8Q==
+				</data>
+				<key>alc-layout-id</key>
+				<data>
+				FQAAAA==
+				</data>
+				<key>alc-verbs</key>
 				<data>
 				AQAAAA==
 				</data>
@@ -1293,12 +1658,30 @@
 				<string>Audio Device</string>
 				<key>hda-gfx</key>
 				<string>onboard-2</string>
-				<key>layout-id</key>
-				<data>
-				FQAAAA==
-				</data>
 				<key>model</key>
 				<string>Wildcat Point-LP High Definition Audio Controller</string>
+				<key>multiEQDevicePresence</key>
+				<data>
+				DAABAA==
+				</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,0</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Wildcat Point-LP PCI Express Root Port #1</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x2)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,2</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Wildcat Point-LP PCI Express Root Port #3</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x2)/Pci(0x0,0x0)</key>
 			<dict>
@@ -1311,6 +1694,15 @@
 				<key>name</key>
 				<string>Ethernet</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x3)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,3</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Wildcat Point-LP PCI Express Root Port #4</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -1321,6 +1713,48 @@
 				<string>QCA9565 / AR9565 Wireless Network Adapter</string>
 				<key>name</key>
 				<string>AirPort</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x4)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,4</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Wildcat Point-LP PCI Express Root Port #5</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1D,0x0)</key>
+			<dict>
+				<key>AAPL,clock-id</key>
+				<data>
+				Ag==
+				</data>
+				<key>AAPL,current-available</key>
+				<integer>2100</integer>
+				<key>AAPL,current-extra</key>
+				<integer>2200</integer>
+				<key>AAPL,current-extra-in-sleep</key>
+				<integer>1600</integer>
+				<key>AAPL,current-in-sleep</key>
+				<integer>1000</integer>
+				<key>AAPL,device-internal</key>
+				<integer>2</integer>
+				<key>AAPL,max-port-current-in-sleep</key>
+				<integer>2100</integer>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,29,0</string>
+				<key>built-in</key>
+				<data>
+				AA==
+				</data>
+				<key>device_type</key>
+				<data>
+				RUgwMQ==
+				</data>
+				<key>model</key>
+				<string>Wildcat Point-LP USB EHCI Controller</string>
+				<key>name</key>
+				<string>EH01</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x0)</key>
 			<dict>
@@ -1360,10 +1794,21 @@
 				<key>model</key>
 				<string>Wildcat Point-LP Thermal Management Controller</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1c,0x2)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>built-in</key>
+				<data>
+				AQ==
+				</data>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>#AAPL00,override-no-connect</key>
 				<data>
+				AP///////wANrpMUAAAAACgXAQSVHxF4An5Fk1VTlCgj
+				UFQAAAABAQEBAQEBAQEBAQEBAQEB2h1W4lAAIDBELUcA
+				Na0QAAAYAAAA/gBOMTQwQkdFLUU0MwogAAAA/gBDTU4K
+				ICAgICAgICAgAAAA/gBOMTQwQkdFLUU0MwogAJU=
 				</data>
 				<key>#AAPL00,override-no-edid</key>
 				<data>
@@ -1383,6 +1828,10 @@
 				<key>AAPL,ig-platform-id</key>
 				<data>
 				AgAWFg==
+				</data>
+				<key>AAPL,ig-tcon-scaler</key>
+				<data>
+				AQAAAA==
 				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
@@ -1464,6 +1913,10 @@
 				<data>
 				AAAA+g==
 				</data>
+				<key>graphic-options</key>
+				<data>
+				DAAAAA==
+				</data>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>model</key>
@@ -1477,16 +1930,42 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x3,0x0)</key>
 			<dict>
+				<key>#PinConfigurations</key>
+				<data>
+				4ABWKA==
+				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,3,0</string>
 				<key>AFGLowPowerState</key>
 				<data>
 				AQAAAA==
 				</data>
+				<key>MaximumBootBeepVolume</key>
+				<data>
+				7w==
+				</data>
+				<key>MaximumBootBeepVolumeAlt</key>
+				<data>
+				8Q==
+				</data>
+				<key>alc-layout-id</key>
+				<data>
+				FQAAAA==
+				</data>
+				<key>alc-verbs</key>
+				<data>
+				AQAAAA==
+				</data>
 				<key>device_type</key>
 				<string>Audio Device</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
 				<key>model</key>
 				<string>Broadwell-U Audio Controller</string>
+				<key>multiEQDevicePresence</key>
+				<data>
+				DAABAA==
+				</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x4,0x0)</key>
 			<dict>
@@ -1617,6 +2096,42 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
+				<string>CPUFriend.kext</string>
+				<key>Comment</key>
+				<string>Dynamic power management</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/CPUFriend</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>CPUFriend.kext/Contents/PlugIns/CPUFriendDataProvider.kext</string>
+				<key>Comment</key>
+				<string>Injector power management</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
 				<string>WhateverGreen.kext</string>
 				<key>Comment</key>
 				<string>Video patches</string>
@@ -1646,6 +2161,24 @@
 				<string></string>
 				<key>MinKernel</key>
 				<string>8.0.0</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>RealtekRTL8111.kext</string>
+				<key>Comment</key>
+				<string>Realtek LAN Ethernet</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/RealtekRTL8111</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -1707,13 +2240,49 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>RealtekRTL8111.kext</string>
+				<string>ApplePS2SmartTouchPad.kext/Contents/PlugIns/ApplePS2Controller.kext</string>
 				<key>Comment</key>
-				<string>Realtek LAN Ethernet</string>
+				<string>Controller PS/2</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/RealtekRTL8111</string>
+				<string>Contents/MacOS/ApplePS2Controller</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>ApplePS2SmartTouchPad.kext/Contents/PlugIns/ApplePS2Keyboard.kext</string>
+				<key>Comment</key>
+				<string>Keyboard PS/2</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/ApplePS2Keyboard</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>ApplePS2SmartTouchPad.kext</string>
+				<key>Comment</key>
+				<string>TouchPad PS/2</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/ApplePS2SmartTouchPad</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1815,60 +2384,6 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>ApplePS2SmartTouchPad.kext/Contents/PlugIns/ApplePS2Controller.kext</string>
-				<key>Comment</key>
-				<string>Controller PS/2</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/ApplePS2Controller</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>ApplePS2SmartTouchPad.kext/Contents/PlugIns/ApplePS2Keyboard.kext</string>
-				<key>Comment</key>
-				<string>Keyboard PS/2</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/ApplePS2Keyboard</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>ApplePS2SmartTouchPad.kext</string>
-				<key>Comment</key>
-				<string>TouchPad PS/2</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/ApplePS2SmartTouchPad</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
 				<string>ACPIPoller.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -1912,42 +2427,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AsusSMC</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>CPUFriend.kext</string>
-				<key>Comment</key>
-				<string>Dynamic power management</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/CPUFriend</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>CPUFriend.kext/Contents/PlugIns/CPUFriendDataProvider.kext</string>
-				<key>Comment</key>
-				<string>Injector power management</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -2020,24 +2499,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/ECEnabler</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>ELANSMBus.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/ELANSMBus</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -2128,24 +2589,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/RestrictEvents</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>RTCMemoryFixup.kext</string>
-				<key>Comment</key>
-				<string>Fix RTC</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/RTCMemoryFixup</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -2503,6 +2946,8 @@
 			<false/>
 			<key>ExternalDiskIcons</key>
 			<true/>
+			<key>ForceAquantiaEthernet</key>
+			<false/>
 			<key>ForceSecureBootScheme</key>
 			<false/>
 			<key>IncreasePciBarSize</key>
@@ -2553,7 +2998,7 @@
 			<key>LauncherPath</key>
 			<string>Default</string>
 			<key>PickerAttributes</key>
-			<integer>1</integer>
+			<integer>17</integer>
 			<key>PickerAudioAssist</key>
 			<false/>
 			<key>PickerMode</key>
@@ -2581,8 +3026,8 @@
 			<integer>0</integer>
 			<key>DisplayLevel</key>
 			<integer>2147483650</integer>
-			<key>SerialInit</key>
-			<false/>
+			<key>LogModules</key>
+			<string>*</string>
 			<key>SysReport</key>
 			<false/>
 			<key>Target</key>
@@ -2643,6 +3088,37 @@
 			<string>Disabled</string>
 			<key>Vault</key>
 			<string>Optional</string>
+		</dict>
+		<key>Serial</key>
+		<dict>
+			<key>BaudRate</key>
+			<integer>115200</integer>
+			<key>ClockRate</key>
+			<integer>1843200</integer>
+			<key>DetectCable</key>
+			<false/>
+			<key>ExtendedTxFifoSize</key>
+			<integer>64</integer>
+			<key>FifoControl</key>
+			<integer>7</integer>
+			<key>Init</key>
+			<false/>
+			<key>LineControl</key>
+			<integer>3</integer>
+			<key>PciDeviceInfo</key>
+			<data>
+			/w==
+			</data>
+			<key>RegisterAccessWidth</key>
+			<integer>8</integer>
+			<key>RegisterBase</key>
+			<integer>1016</integer>
+			<key>RegisterStride</key>
+			<integer>1</integer>
+			<key>UseHardwareFlowControl</key>
+			<false/>
+			<key>UseMmio</key>
+			<false/>
 		</dict>
 		<key>Tools</key>
 		<array>
@@ -2734,7 +3210,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>-no_compat_check amfi_get_out_of_my_way=1</string>
+				<string>-no_compat_check amfi_get_out_of_my_way=1 -allow_sidecar_ipad</string>
 				<key>booter-fileset-basesystem</key>
 				<data>
 				AA==
@@ -2849,7 +3325,7 @@
 			<key>SystemSerialNumber</key>
 			<string></string>
 			<key>SystemUUID</key>
-			<string>00000000-0000-0000-0000-000000000000</string>
+			<string></string>
 		</dict>
 		<key>Generic</key>
 		<dict>
@@ -2891,7 +3367,7 @@
 					<key>Manufacturer</key>
 					<string>Kingston</string>
 					<key>PartNumber</key>
-					<string>99U5469-045.A00LF</string>
+					<string></string>
 					<key>SerialNumber</key>
 					<string>00000000</string>
 					<key>Size</key>
@@ -2909,7 +3385,7 @@
 					<key>Manufacturer</key>
 					<string>Samsung</string>
 					<key>PartNumber</key>
-					<string>M471B5173EB0-YK0</string>
+					<string></string>
 					<key>SerialNumber</key>
 					<string>00000000</string>
 					<key>Size</key>
@@ -2944,14 +3420,14 @@
 			f/8f/wgAAAA=
 			</data>
 			<key>MLB</key>
-			<string>00000000000000000</string>
+			<string></string>
 			<key>ROM</key>
 			<data>
 			</data>
 			<key>SystemSerialNumber</key>
 			<string></string>
 			<key>SystemUUID</key>
-			<string>00000000-0000-0000-0000-000000000000</string>
+			<string></string>
 		</dict>
 		<key>SMBIOS</key>
 		<dict>
@@ -3012,7 +3488,7 @@
 			<key>SystemSerialNumber</key>
 			<string></string>
 			<key>SystemUUID</key>
-			<string>00000000-0000-0000-0000-000000000000</string>
+			<string></string>
 			<key>SystemVersion</key>
 			<string>1.0</string>
 		</dict>
@@ -3074,7 +3550,7 @@
 			<key>AudioDevice</key>
 			<string>PciRoot(0x0)/Pci(0x1b,0x0)</string>
 			<key>AudioOutMask</key>
-			<integer>1</integer>
+			<integer>-1</integer>
 			<key>AudioSupport</key>
 			<true/>
 			<key>DisconnectHda</key>
@@ -3084,7 +3560,7 @@
 			<key>MinimumAssistGain</key>
 			<integer>-30</integer>
 			<key>MinimumAudibleGain</key>
-			<integer>-55</integer>
+			<integer>-128</integer>
 			<key>PlayChime</key>
 			<string>Auto</string>
 			<key>ResetTrafficClass</key>
@@ -3215,6 +3691,16 @@
 				<true/>
 				<key>Path</key>
 				<string>Ps2KeyboardDxe.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string>PS/2 Mouse Driver</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>Ps2MouseDxe.efi</string>
 			</dict>
 		</array>
 		<key>Input</key>

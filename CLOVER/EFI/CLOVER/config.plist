@@ -4,10 +4,14 @@
 <dict>
 	<key>#Comment</key>
 	<string>This file is for ASUS Broadwell notebook that are natively supported</string>
+	<key>#ConfigName</key>
+	<string>config</string>
+	<key>#GenTool</key>
+	<string>Clover r5146 by Clover.app v1.24</string>
 	<key>ACPI</key>
 	<dict>
 		<key>#Sorted ACPI tables Count</key>
-		<integer>14</integer>
+		<integer>11</integer>
 		<key>AutoMerge</key>
 		<true/>
 		<key>DSDT</key>
@@ -15,7 +19,7 @@
 			<key>#PNLF_UID</key>
 			<string>0x0F</string>
 			<key>#Patches count</key>
-			<integer>20</integer>
+			<integer>17</integer>
 			<key>Debug</key>
 			<false/>
 			<key>Fixes</key>
@@ -170,6 +174,7 @@
 					</data>
 					<key>TgtBridge</key>
 					<data>
+					UlRDXw==
 					</data>
 				</dict>
 				<dict>
@@ -206,58 +211,6 @@
 					<key>TgtBridge</key>
 					<data>
 					VElNUg==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change Method (HPET,_CRS) to XCRS</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X0NSUwigSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WENSUwigSQ==
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					SFBFVA==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change Method (LDR2,_STA &amp; MATH,_STA) to XSTA</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1NUQQCgDZNQ
-					</data>
-					<key>Replace</key>
-					<data>
-					WFNUQQCgDZNQ
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change EHC1 to EH01</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					RUhDMQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUgwMQ==
-					</data>
-					<key>TgtBridge</key>
-					<data>
 					</data>
 				</dict>
 				<dict>
@@ -462,6 +415,10 @@
 			<key>#_SB.PCI0.RP04.PXSX</key>
 			<string>ARPT</string>
 		</dict>
+		<key>ResetAddress</key>
+		<string>0x0CF9</string>
+		<key>ResetValue</key>
+		<string>0x0006</string>
 		<key>SSDT</key>
 		<dict>
 			<key>#C3Latency</key>
@@ -513,13 +470,10 @@
 			<string>SSDT-FAN0.aml</string>
 			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-MEM2.aml</string>
-			<string>SSDT-OSXP.aml</string>
-			<string>SSDT-PMCR.aml</string>
+			<string>SSDT-OSME.aml</string>
 			<string>SSDT-PTSWAK.aml</string>
 			<string>SSDT-RMCF.aml</string>
-			<string>SSDT-STAS.aml</string>
 			<string>SSDT-UIAC.aml</string>
-			<string>SSDT-USBW.aml</string>
 			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-XSEX.aml</string>
 		</array>
@@ -531,7 +485,7 @@
 		<key>#LegacyBiosDefaultEntry</key>
 		<integer>0</integer>
 		<key>Arguments</key>
-		<string>-no_compat_check amfi_get_out_of_my_way=1</string>
+		<string>-no_compat_check amfi_get_out_of_my_way=1 -allow_sidecar_ipad</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -543,6 +497,8 @@
 		<key>DisableCloverHotkeys</key>
 		<false/>
 		<key>Fast</key>
+		<false/>
+		<key>HibernationFixup</key>
 		<false/>
 		<key>Legacy</key>
 		<string>PBR</string>
@@ -597,12 +553,18 @@
 	<dict>
 		<key>#DisableFunctions</key>
 		<string></string>
+		<key>#IntelMaxValue</key>
+		<string></string>
+		<key>#SetIntelBacklight</key>
+		<false/>
+		<key>#SetIntelMaxBacklight</key>
+		<true/>
 		<key>Audio</key>
 		<dict>
 			<key>AFGLowPowerState</key>
 			<true/>
 			<key>Inject</key>
-			<integer>21</integer>
+			<string>Detect</string>
 			<key>ResetHDA</key>
 			<false/>
 		</dict>
@@ -633,7 +595,7 @@
 		<true/>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x2)/Pci(0x1c,0x3)/Pci(0x0,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x1c,0x2)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>built-in</key>
 				<data>
@@ -654,11 +616,9 @@
 				</data>
 				<key>#subsystem-id</key>
 				<data>
-				fRoAAA==
 				</data>
 				<key>#subsystem-vendor-id</key>
 				<data>
-				QxAAAA==
 				</data>
 				<key>AAPL,GfxYTile</key>
 				<data>
@@ -667,6 +627,10 @@
 				<key>AAPL,ig-platform-id</key>
 				<data>
 				AgAWFg==
+				</data>
+				<key>AAPL,ig-tcon-scaler</key>
+				<data>
+				AQAAAA==
 				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
@@ -756,6 +720,10 @@
 				<data>
 				AAAA+g==
 				</data>
+				<key>graphic-options</key>
+				<data>
+				DAAAAA==
+				</data>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>model</key>
@@ -775,7 +743,7 @@
 			<key>FixOwnership</key>
 			<true/>
 			<key>HighCurrent</key>
-			<true/>
+			<false/>
 			<key>Inject</key>
 			<true/>
 		</dict>
@@ -793,6 +761,8 @@
 		<string></string>
 		<key>#EmbeddedThemeType</key>
 		<string>Dark</string>
+		<key>#TextOnly</key>
+		<false/>
 		<key>#Timezone</key>
 		<integer>0</integer>
 		<key>Custom</key>
@@ -1093,7 +1063,7 @@
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
 		<key>MLB</key>
-		<string>00000000000000000</string>
+		<string></string>
 		<key>ROM</key>
 		<string>UseMacAddr0</string>
 	</dict>
@@ -1122,7 +1092,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>00000000000000000</string>
+		<string></string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -1165,7 +1135,7 @@
 		<key>Slots</key>
 		<array/>
 		<key>SmUUID</key>
-		<string>00000000-0000-0000-0000-000000000000</string>
+		<string></string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>

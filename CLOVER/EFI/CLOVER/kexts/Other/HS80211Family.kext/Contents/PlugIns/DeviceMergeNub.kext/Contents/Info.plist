@@ -24,10 +24,10 @@
 	<string>1.00</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>AirPort Atheros AR9565ID</key>
+        <key>AirPort Atheros AR9565ID</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.AnV_Software.driver.DeviceMergeNub</string>
+            <string>com.AnV_Software.driver.DeviceMergeNub</string>
 			<key>IOClass</key>
 			<string>DeviceMergeNub</string>
 			<key>IOPCIPrimaryMatch</key>
@@ -59,7 +59,7 @@
 		<key>AirPort AtherosNewma40Interface</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.AnV_Software.driver.DeviceMergeNub</string>
+            <string>com.AnV_Software.driver.DeviceMergeNub</string>
 			<key>IOClass</key>
 			<string>DeviceMergeNub</string>
 			<key>IOProviderClass</key>

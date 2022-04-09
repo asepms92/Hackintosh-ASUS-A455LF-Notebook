@@ -54,10 +54,6 @@
 			<string>IODefaultMatchCategory</string>
 			<key>IONameMatch</key>
 			<array>
-				<string>pci168c,32</string>
-				<string>pci168c,33</string>
-				<string>pci168c,34</string>
-				<string>pci168c,37</string>
 				<string>pci168c,36</string>
 				<string>pci168c,2a</string>
 				<string>pci106b,0086</string>
