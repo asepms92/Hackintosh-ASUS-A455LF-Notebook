@@ -106,7 +106,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Host Win 2000/OSME + RTC enable, disable AWAC</string>
+				<string>Host Win 2000/OSME + Fix STAS</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
