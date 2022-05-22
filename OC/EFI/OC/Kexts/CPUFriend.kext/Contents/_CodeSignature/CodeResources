@@ -10,10 +10,10 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			NixZdmkrjhmBzfp4XJDDGbZqk+g=
+			7lg5LTY42GPES1Cwwlc/5WVpiGo=
 			</data>
 			<key>requirement</key>
-			<string>identifier "org.vanilla.driver.CPUFriendDataProvider" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: admin@asepms.com (98X4TQ7Z2W)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+			<string>identifier "org.acidanthera.driver.CPUFriendDataProvider" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: admin@asepms.com (98X4TQ7Z2W)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
 		</dict>
 	</dict>
 	<key>rules</key>

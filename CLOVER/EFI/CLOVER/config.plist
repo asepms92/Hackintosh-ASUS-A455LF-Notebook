@@ -15,7 +15,7 @@
 			<key>#PNLF_UID</key>
 			<string>0x0F</string>
 			<key>#Patches count</key>
-			<integer>15</integer>
+			<integer>14</integer>
 			<key>Debug</key>
 			<false/>
 			<key>Fixes</key>
@@ -100,6 +100,8 @@
 					<data>
 					WFNJRA==
 					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -117,6 +119,8 @@
 					<data>
 					WE9TSQ==
 					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -134,6 +138,8 @@
 					<data>
 					WERTTQ==
 					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -151,23 +157,8 @@
 					<data>
 					RUNfXw==
 					</data>
-					<key>TgtBridge</key>
-					<data>
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Fix RTC _STA bug</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					oAqTU1RBUwE=
-					</data>
-					<key>Replace</key>
-					<data>
-					oAqRCv8L//8=
-					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -185,6 +176,8 @@
 					<data>
 					SUdQVQ==
 					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -202,6 +195,8 @@
 					<data>
 					SERBVQ==
 					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -219,6 +214,8 @@
 					<data>
 					SU1FSQ==
 					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -236,6 +233,8 @@
 					<data>
 					U0FUQQ==
 					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -253,6 +252,8 @@
 					<data>
 					WlBUUwE=
 					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -270,6 +271,8 @@
 					<data>
 					WldBSwE=
 					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -287,6 +290,8 @@
 					<data>
 					QVdBSw==
 					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -304,6 +309,8 @@
 					<data>
 					WFNFWgg=
 					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -321,6 +328,8 @@
 					<data>
 					RVNFWgg=
 					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -338,6 +347,8 @@
 					<data>
 					WFBSVwI=
 					</data>
+					<key>Skip</key>
+					<integer>0</integer>
 					<key>TgtBridge</key>
 					<data>
 					</data>
@@ -429,11 +440,11 @@
 			<string>SSDT-FAN0.aml</string>
 			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-MEM2.aml</string>
-			<string>SSDT-OSMSTS.aml</string>
+			<string>SSDT-OSME.aml</string>
 			<string>SSDT-PTSWAK.aml</string>
 			<string>SSDT-RMCF.aml</string>
 			<string>SSDT-STA_ON.aml</string>
-			<string>SSDT-UIAC.aml</string>
+			<string>SSDT-UXEC.aml</string>
 			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-XSEX.aml</string>
 		</array>
@@ -721,8 +732,6 @@
 		<string></string>
 		<key>#EmbeddedThemeType</key>
 		<string>Dark</string>
-		<key>#TextOnly</key>
-		<false/>
 		<key>#Timezone</key>
 		<integer>0</integer>
 		<key>Custom</key>
@@ -768,6 +777,8 @@
 		<key>ScreenResolution</key>
 		<string>1366x768</string>
 		<key>ShowOptimus</key>
+		<false/>
+		<key>TextOnly</key>
 		<false/>
 		<key>Theme</key>
 		<string>Nightwish</string>
