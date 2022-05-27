@@ -14,7 +14,7 @@ Running macOS on ASUS-A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
 
 - Open Terminal with Command: $ `git clone https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook.git`
 - Or [Download](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/archive/refs/heads/master.zip) with Specific Folder Only
-- Then copy to USB Installer
+- Then copy to EFI Partition USB Installer/HDD/SSD
  
 --------------------------------------------------------------------------------------------
  

@@ -369,6 +369,14 @@
 				<key>Signature</key>
 				<string>DMAR</string>
 			</dict>
+			<dict>
+				<key>#Length</key>
+				<integer>0</integer>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>Cpu0Ist</string>
+			</dict>
 		</array>
 		<key>FixHeaders</key>
 		<true/>
@@ -403,19 +411,6 @@
 			<true/>
 			<key>#EnableC7</key>
 			<false/>
-			<key>#Generate</key>
-			<dict>
-				<key>#APLF</key>
-				<false/>
-				<key>#APSN</key>
-				<false/>
-				<key>#CStates</key>
-				<false/>
-				<key>#PStates</key>
-				<false/>
-				<key>#PluginType</key>
-				<false/>
-			</dict>
 			<key>#MaxMultiplier</key>
 			<integer>0</integer>
 			<key>#MinMultiplier</key>
@@ -428,26 +423,26 @@
 			<false/>
 			<key>DropOem</key>
 			<false/>
+			<key>Generate</key>
+			<dict>
+				<key>APLF</key>
+				<false/>
+				<key>APSN</key>
+				<false/>
+				<key>CStates</key>
+				<false/>
+				<key>PStates</key>
+				<false/>
+				<key>PluginType</key>
+				<false/>
+			</dict>
 			<key>NoDynamicExtract</key>
 			<true/>
 			<key>NoOemTableId</key>
 			<false/>
 		</dict>
 		<key>SortedOrder</key>
-		<array>
-			<string>SSDT.aml</string>
-			<string>SSDT-CX207512.aml</string>
-			<string>SSDT-FAN0.aml</string>
-			<string>SSDT-GPRW.aml</string>
-			<string>SSDT-MEM2.aml</string>
-			<string>SSDT-OSME.aml</string>
-			<string>SSDT-PTSWAK.aml</string>
-			<string>SSDT-RMCF.aml</string>
-			<string>SSDT-STA_ON.aml</string>
-			<string>SSDT-UXEC.aml</string>
-			<string>SSDT-XOSI.aml</string>
-			<string>SSDT-XSEX.aml</string>
-		</array>
+		<array/>
 		<key>smartUPS</key>
 		<false/>
 	</dict>

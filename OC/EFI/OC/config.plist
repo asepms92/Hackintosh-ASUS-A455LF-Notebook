@@ -191,27 +191,9 @@
 				<key>All</key>
 				<false/>
 				<key>Comment</key>
-				<string>Delete CpuPm</string>
-				<key>Enabled</key>
-				<false/>
-				<key>OemTableId</key>
-				<data>
-				Q3B1UG0AAAA=
-				</data>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				U1NEVA==
-				</data>
-			</dict>
-			<dict>
-				<key>All</key>
-				<false/>
-				<key>Comment</key>
 				<string>Delete Cpu0Ist</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>OemTableId</key>
 				<data>
 				Q3B1MElzdAA=
@@ -1559,9 +1541,7 @@
 				AA==
 				</data>
 				<key>device_type</key>
-				<data>
-				WEhDXw==
-				</data>
+				<string>USB Controller</string>
 				<key>model</key>
 				<string>Wildcat Point-LP USB xHCI Controller</string>
 				<key>name</key>
@@ -1698,9 +1678,7 @@
 				AA==
 				</data>
 				<key>device_type</key>
-				<data>
-				RUgwMQ==
-				</data>
+				<string>USB Controller</string>
 				<key>model</key>
 				<string>Wildcat Point-LP USB EHCI Controller</string>
 				<key>name</key>
@@ -2532,24 +2510,6 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>OpenFirmwareManager.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/OpenFirmwareManager</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
 				<string>RestrictEvents.kext</string>
 				<key>Comment</key>
 				<string>Disable EFI check</string>
@@ -2611,24 +2571,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/ThermalSolution</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>USBWakeFixup.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/USBWakeFixup</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
