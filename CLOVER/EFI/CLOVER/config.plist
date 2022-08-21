@@ -7,13 +7,11 @@
 	<key>ACPI</key>
 	<dict>
 		<key>#Sorted ACPI tables Count</key>
-		<integer>9</integer>
+		<integer>8</integer>
 		<key>AutoMerge</key>
 		<true/>
 		<key>DSDT</key>
 		<dict>
-			<key>#PNLF_UID</key>
-			<string>0x0F</string>
 			<key>#Patches count</key>
 			<integer>7</integer>
 			<key>Debug</key>
@@ -63,7 +61,7 @@
 				<key>FixLAN</key>
 				<false/>
 				<key>FixMutex</key>
-				<true/>
+				<false/>
 				<key>FixRTC</key>
 				<false/>
 				<key>FixRegions</key>
@@ -85,6 +83,8 @@
 			</dict>
 			<key>Name</key>
 			<string>DSDT.aml</string>
+			<key>PNLF_UID?</key>
+			<string>0x0F</string>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -238,7 +238,7 @@
 			</dict>
 			<dict>
 				<key>#Length</key>
-				<integer>0</integer>
+				<integer>1337</integer>
 				<key>Signature</key>
 				<string>SSDT</string>
 				<key>TableId</key>
@@ -266,29 +266,19 @@
 		<string>0x0006</string>
 		<key>SSDT</key>
 		<dict>
-			<key>#C3Latency</key>
-			<string></string>
-			<key>#DropOem</key>
-			<false/>
-			<key>#EnableC2</key>
-			<false/>
-			<key>#EnableC4</key>
-			<false/>
-			<key>#EnableC6</key>
-			<true/>
-			<key>#EnableC7</key>
-			<false/>
-			<key>#MaxMultiplier</key>
-			<integer>0</integer>
-			<key>#MinMultiplier</key>
-			<integer>0</integer>
-			<key>#PLimitDict</key>
-			<integer>0</integer>
-			<key>#UnderVoltStep</key>
-			<integer>0</integer>
-			<key>#UseSystemIO</key>
-			<false/>
+			<key>C3Latency?</key>
+			<string>0x00FA</string>
 			<key>DoubleFirstState</key>
+			<false/>
+			<key>DropOem?</key>
+			<false/>
+			<key>EnableC2</key>
+			<false/>
+			<key>EnableC4</key>
+			<false/>
+			<key>EnableC6</key>
+			<true/>
+			<key>EnableC7</key>
 			<false/>
 			<key>Generate</key>
 			<dict>
@@ -303,9 +293,19 @@
 				<key>PluginType</key>
 				<false/>
 			</dict>
+			<key>MaxMultiplier?</key>
+			<integer>0</integer>
+			<key>MinMultiplier?</key>
+			<integer>0</integer>
 			<key>NoDynamicExtract</key>
 			<true/>
 			<key>NoOemTableId</key>
+			<false/>
+			<key>PLimitDict?</key>
+			<integer>0</integer>
+			<key>UnderVoltStep?</key>
+			<integer>0</integer>
+			<key>UseSystemIO?</key>
 			<false/>
 		</dict>
 		<key>SortedOrder</key>
@@ -315,8 +315,6 @@
 	</dict>
 	<key>Boot</key>
 	<dict>
-		<key>#LegacyBiosDefaultEntry</key>
-		<integer>0</integer>
 		<key>Arguments</key>
 		<string>-no_compat_check amfi_get_out_of_my_way=1 -allow_sidecar_ipad</string>
 		<key>CustomLogo</key>
@@ -335,6 +333,8 @@
 		<false/>
 		<key>Legacy</key>
 		<string>PBR</string>
+		<key>LegacyBiosDefaultEntry?</key>
+		<integer>0</integer>
 		<key>NeverDoRecovery</key>
 		<true/>
 		<key>NeverHibernate</key>
@@ -358,7 +358,7 @@
 	</dict>
 	<key>BootGraphics</key>
 	<dict>
-		<key>#DefaultBackgroundColor</key>
+		<key>DefaultBackgroundColor?</key>
 		<string>0x80000000</string>
 		<key>EFILoginHiDPI</key>
 		<integer>0</integer>
@@ -369,29 +369,25 @@
 	</dict>
 	<key>CPU</key>
 	<dict>
-		<key>#BusSpeedkHz</key>
+		<key>BusSpeedkHz?</key>
 		<integer>99769</integer>
-		<key>#EnabledCores</key>
+		<key>EnabledCores?</key>
 		<integer>2</integer>
-		<key>#FrequencyMHz</key>
+		<key>FrequencyMHz?</key>
 		<integer>2195</integer>
-		<key>#SavingMode</key>
+		<key>QPI?</key>
+		<integer>0</integer>
+		<key>SavingMode?</key>
 		<integer>255</integer>
-		<key>#TurboDisable</key>
+		<key>TDP?</key>
+		<integer>15</integer>
+		<key>TurboDisable?</key>
 		<true/>
-		<key>#Type</key>
+		<key>Type</key>
 		<string>0x0606</string>
 	</dict>
 	<key>Devices</key>
 	<dict>
-		<key>#DisableFunctions</key>
-		<string></string>
-		<key>#IntelMaxValue</key>
-		<string></string>
-		<key>#SetIntelBacklight</key>
-		<false/>
-		<key>#SetIntelMaxBacklight</key>
-		<true/>
 		<key>Audio</key>
 		<dict>
 			<key>AFGLowPowerState</key>
@@ -401,31 +397,35 @@
 			<key>ResetHDA</key>
 			<false/>
 		</dict>
+		<key>DisableFunctions?</key>
+		<string></string>
 		<key>FakeID</key>
 		<dict>
 			<key>#Broadwell-Comment</key>
 			<string>To avoid automatic Clover fake device-id (Broadwell) injection</string>
-			<key>#IMEI</key>
+			<key>IMEI?</key>
 			<string>0x9CBA8086</string>
-			<key>#IntelGFX</key>
+			<key>IntelGFX?</key>
 			<string>0x16168086</string>
-			<key>#LAN</key>
+			<key>LAN?</key>
 			<string>0x816810EC</string>
-			<key>#SATA</key>
+			<key>SATA?</key>
 			<string>0x9C838086</string>
-			<key>#WIFI</key>
+			<key>WIFI?</key>
 			<string>0x0036168C</string>
-			<key>#XHCI</key>
+			<key>XHCI?</key>
 			<string>0x9CB18086</string>
 		</dict>
 		<key>ForceHPET</key>
 		<false/>
 		<key>HDMIInjection</key>
 		<false/>
+		<key>IntelMaxValue?</key>
+		<string></string>
 		<key>LANInjection</key>
 		<true/>
 		<key>NoDefaultProperties</key>
-		<true/>
+		<false/>
 		<key>Properties</key>
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x2)/Pci(0x0,0x0)</key>
@@ -447,15 +447,32 @@
 				<key>#AAPL00,override-no-edid</key>
 				<data>
 				</data>
+				<key>#StartupDisplay</key>
+				<data>
+				R04CAAAAAAAACgAAQAYAACD8ABAAAAAAAAoAAEAGAACg
+				AAAAAAAAAAAAAAAuAAAAAAAAAAAAAAAwAAAAIAAAAAMA
+				AAAGAAAAAAAAAAAAAAAAAAABAAAAAAAAAACtCw3wAQAA
+				AAAAAAAACgAAQAYAACD8ABAAAAAAAAoAAEAGAACgAAAA
+				AAAAAAAAAAAuAAAAAAAAAAAAAAAwAAAAIAAAAAMAAAAG
+				AAAAAAAAAAAAAAA=
+				</data>
+				<key>#saved-config</key>
+				<data>
+				RwAAAAAAAAAAAAAAAAAAAAAAAwACABYWAGwFcAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				</data>
 				<key>#subsystem-id</key>
 				<data>
+				fRoAAA==
 				</data>
 				<key>#subsystem-vendor-id</key>
 				<data>
-				</data>
-				<key>AAPL,GfxYTile</key>
-				<data>
-				AQAAAA==
+				QxAAAA==
 				</data>
 				<key>AAPL,ig-platform-id</key>
 				<data>
@@ -569,6 +586,10 @@
 				</data>
 			</dict>
 		</dict>
+		<key>SetIntelBacklight?</key>
+		<false/>
+		<key>SetIntelMaxBacklight?</key>
+		<true/>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
@@ -590,12 +611,8 @@
 	</array>
 	<key>GUI</key>
 	<dict>
-		<key>#ConsoleMode</key>
+		<key>ConsoleMode?</key>
 		<string></string>
-		<key>#EmbeddedThemeType</key>
-		<string>Dark</string>
-		<key>#Timezone</key>
-		<integer>0</integer>
 		<key>Custom</key>
 		<dict>
 			<key>Entries</key>
@@ -607,6 +624,8 @@
 		</dict>
 		<key>CustomIcons</key>
 		<false/>
+		<key>EmbeddedThemeType?</key>
+		<string>Dark</string>
 		<key>Hide</key>
 		<array>
 			<string>Recovery</string>
@@ -618,8 +637,14 @@
 		<string>en-US:0</string>
 		<key>Mouse</key>
 		<dict>
+			<key>DoubleClickTime?</key>
+			<integer>0</integer>
 			<key>Enabled</key>
 			<false/>
+			<key>Mirror</key>
+			<false/>
+			<key>Speed?</key>
+			<integer>0</integer>
 		</dict>
 		<key>PlayAsync</key>
 		<true/>
@@ -643,24 +668,30 @@
 		<key>TextOnly</key>
 		<false/>
 		<key>Theme</key>
-		<string>Nightwish</string>
+		<string>Chamelia</string>
+		<key>Timezone?</key>
+		<integer>0</integer>
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>#DualLink</key>
+		<key>DualLink?</key>
 		<integer>10</integer>
-		<key>#LoadVBios</key>
-		<false/>
-		<key>#NVCAP</key>
-		<string>04000000000003000c0000000000000700000000</string>
-		<key>#display-cfg</key>
-		<string>03010300ffff0001</string>
-		<key>#ig-platform-id</key>
-		<string>0x16160002</string>
 		<key>EDID</key>
 		<dict>
+			<key>Custom?</key>
+			<data>
+			AA==
+			</data>
+			<key>HorizontalSyncPulseWidth?</key>
+			<string></string>
 			<key>Inject</key>
 			<false/>
+			<key>ProductID?</key>
+			<string>0x1493</string>
+			<key>VendorID?</key>
+			<string>0x0dae</string>
+			<key>VideoInputSignal?</key>
+			<string></string>
 		</dict>
 		<key>Inject</key>
 		<dict>
@@ -669,13 +700,29 @@
 			<key>NVidia</key>
 			<false/>
 		</dict>
+		<key>LoadVBios?</key>
+		<false/>
+		<key>NVCAP?</key>
+		<string>04000000000003000c0000000000000700000000</string>
+		<key>NvidiaGeneric?</key>
+		<false/>
+		<key>NvidiaNoEFI?</key>
+		<false/>
+		<key>NvidiaSingle?</key>
+		<false/>
+		<key>VRAM?</key>
+		<integer>4000</integer>
+		<key>VideoPorts?</key>
+		<integer>0</integer>
+		<key>display-cfg?</key>
+		<string>03010300ffff0001</string>
+		<key>ig-platform-id?</key>
+		<string>0x16160002</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>#Broadwell-Comment</key>
-		<string>Broadwell CPU supportable on 10.15.x and prior by using FakeCPUID</string>
-		<key>#FakeCPUID</key>
-		<string>0x0306D4</string>
+		<string>Broadwell CPU supportable on 12.x.x and prior by using FakeCPUID</string>
 		<key>#Number of KextsToPatch</key>
 		<integer>2</integer>
 		<key>#Number of Patchs To Kernel</key>
@@ -684,12 +731,16 @@
 		<true/>
 		<key>AppleRTC</key>
 		<true/>
+		<key>BootPatches</key>
+		<array/>
 		<key>Debug</key>
 		<false/>
 		<key>DellSMBIOSPatch</key>
 		<false/>
 		<key>EightApple</key>
 		<false/>
+		<key>FakeCPUID?</key>
+		<string>0x0306D4</string>
 		<key>ForceKextsToLoad</key>
 		<array>
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
@@ -895,6 +946,8 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>HWTarget?</key>
+		<string></string>
 		<key>MLB</key>
 		<string></string>
 		<key>ROM</key>
@@ -902,24 +955,12 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>#MemoryRank</key>
-		<integer>2</integer>
-		<key>#NoRomInfo</key>
-		<true/>
-		<key>#OEMBoard</key>
-		<string>X455LF</string>
-		<key>#OEMProduct</key>
-		<string>X455LF</string>
-		<key>#OEMVendor</key>
-		<string>ASUSTeK COMPUTER INC.</string>
-		<key>#SmbiosVersion</key>
-		<string></string>
 		<key>BiosReleaseDate</key>
-		<string>10/27/2021</string>
+		<string>03/16/2022</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP121.88Z.F000.B00.2110271746</string>
+		<string>MBP121.88Z.F000.B00.2203161445</string>
 		<key>Board-ID</key>
 		<string>Mac-E43C1C25D4880AD6</string>
 		<key>BoardManufacturer</key>
@@ -937,7 +978,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>428.60.3.0.0</string>
+		<string>430.120.6.0.0</string>
 		<key>ExtendedFirmwareFeatures</key>
 		<string>0x00000008FD0FF576</string>
 		<key>ExtendedFirmwareFeaturesMask</key>
@@ -957,8 +998,18 @@
 			<key>Modules</key>
 			<array/>
 		</dict>
+		<key>MemoryRank?</key>
+		<integer>2</integer>
 		<key>Mobile</key>
 		<true/>
+		<key>NoRomInfo?</key>
+		<true/>
+		<key>OEMBoard?</key>
+		<string>X455LF</string>
+		<key>OEMProduct?</key>
+		<string>X455LF</string>
+		<key>OEMVendor?</key>
+		<string>ASUSTeK COMPUTER INC.</string>
 		<key>PlatformFeature</key>
 		<string>0x02</string>
 		<key>ProductName</key>
@@ -969,6 +1020,8 @@
 		<array/>
 		<key>SmUUID</key>
 		<string></string>
+		<key>SmbiosVersion?</key>
+		<string></string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
@@ -976,17 +1029,17 @@
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
-		<key>#BacklightLevel</key>
+		<key>BacklightLevel?</key>
 		<string></string>
-		<key>#CustomUUID</key>
-		<string></string>
-		<key>#NvidiaWeb</key>
-		<false/>
+		<key>CustomUUID?</key>
+		<string>DC31D7E0-351A-EA58-B1B4-4CFC314AA1E6</string>
 		<key>InjectKexts</key>
 		<true/>
 		<key>InjectSystemID</key>
 		<true/>
 		<key>NoCaches</key>
+		<false/>
+		<key>NvidiaWeb?</key>
 		<false/>
 	</dict>
 </dict>

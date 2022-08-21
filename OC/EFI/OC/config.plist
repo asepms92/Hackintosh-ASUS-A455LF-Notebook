@@ -74,11 +74,11 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>LIDP + SEPT + USBW + VMOD devices</string>
+				<string>More devices</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-LSUV.aml</string>
+				<string>SSDT-LSEV.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -158,7 +158,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-UXEC.aml</string>
+				<string>SSDT-UIAC.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -352,7 +352,7 @@
 				<key>Comment</key>
 				<string>Change Method (HPET,_CRS) to XCRS</string>
 				<key>Count</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -1222,7 +1222,7 @@
 		<key>Quirks</key>
 		<dict>
 			<key>FadtEnableReset</key>
-			<false/>
+			<true/>
 			<key>NormalizeHeaders</key>
 			<false/>
 			<key>RebaseRegions</key>
@@ -1337,6 +1337,37 @@
 	<dict>
 		<key>Add</key>
 		<dict>
+			<key>#PciRoot(0x0)/Pci(0x1D,0x0)</key>
+			<dict>
+				<key>#AAPL,clock-id</key>
+				<data>
+				Ag==
+				</data>
+				<key>#AAPL,current-available</key>
+				<integer>2100</integer>
+				<key>#AAPL,current-extra</key>
+				<integer>2200</integer>
+				<key>#AAPL,current-extra-in-sleep</key>
+				<integer>1600</integer>
+				<key>#AAPL,current-in-sleep</key>
+				<integer>1000</integer>
+				<key>#AAPL,device-internal</key>
+				<integer>2</integer>
+				<key>#AAPL,max-port-current-in-sleep</key>
+				<integer>2100</integer>
+				<key>#AAPL,slot-name</key>
+				<string>Internal@0,29,0</string>
+				<key>#built-in</key>
+				<data>
+				AA==
+				</data>
+				<key>#device_type</key>
+				<string>USB Controller</string>
+				<key>#model</key>
+				<string>Wildcat Point-LP USB EHCI Controller</string>
+				<key>#name</key>
+				<string>EH01</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -1449,6 +1480,10 @@
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,28,2/0,0</string>
+				<key>built-in</key>
+				<data>
+				AQ==
+				</data>
 				<key>device_type</key>
 				<string>Ethernet Controller</string>
 				<key>model</key>
@@ -1469,6 +1504,10 @@
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,28,3/0,0</string>
+				<key>built-in</key>
+				<data>
+				AQ==
+				</data>
 				<key>device_type</key>
 				<string>AirPort Extreme</string>
 				<key>model</key>
@@ -1485,37 +1524,6 @@
 				<key>model</key>
 				<string>Wildcat Point-LP PCI Express Root Port #5</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1D,0x0)</key>
-			<dict>
-				<key>AAPL,clock-id</key>
-				<data>
-				Ag==
-				</data>
-				<key>AAPL,current-available</key>
-				<integer>2100</integer>
-				<key>AAPL,current-extra</key>
-				<integer>2200</integer>
-				<key>AAPL,current-extra-in-sleep</key>
-				<integer>1600</integer>
-				<key>AAPL,current-in-sleep</key>
-				<integer>1000</integer>
-				<key>AAPL,device-internal</key>
-				<integer>2</integer>
-				<key>AAPL,max-port-current-in-sleep</key>
-				<integer>2100</integer>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,29,0</string>
-				<key>built-in</key>
-				<data>
-				AA==
-				</data>
-				<key>device_type</key>
-				<string>USB Controller</string>
-				<key>model</key>
-				<string>Wildcat Point-LP USB EHCI Controller</string>
-				<key>name</key>
-				<string>EH01</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -1531,10 +1539,16 @@
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,31,2</string>
+				<key>deep-idle</key>
+				<integer>1</integer>
 				<key>device_type</key>
 				<string>SATA Controller</string>
 				<key>model</key>
 				<string>Wildcat Point-LP SATA Controller [AHCI Mode]</string>
+				<key>sata-express-power-off</key>
+				<integer>1</integer>
+				<key>use-msi</key>
+				<integer>1</integer>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
@@ -1573,6 +1587,25 @@
 				<key>#AAPL00,override-no-edid</key>
 				<data>
 				</data>
+				<key>#StartupDisplay</key>
+				<data>
+				R04CAAAAAAAACgAAQAYAACD8ABAAAAAAAAoAAEAGAACg
+				AAAAAAAAAAAAAAAuAAAAAAAAAAAAAAAwAAAAIAAAAAMA
+				AAAGAAAAAAAAAAAAAAAAAAABAAAAAAAAAACtCw3wAQAA
+				AAAAAAAACgAAQAYAACD8ABAAAAAAAAoAAEAGAACgAAAA
+				AAAAAAAAAAAuAAAAAAAAAAAAAAAwAAAAIAAAAAMAAAAG
+				AAAAAAAAAAAAAAA=
+				</data>
+				<key>#saved-config</key>
+				<data>
+				RwAAAAAAAAAAAAAAAAAAAAAAAwACABYWAGwFcAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				</data>
 				<key>#subsystem-id</key>
 				<data>
 				fRoAAA==
@@ -1580,10 +1613,6 @@
 				<key>#subsystem-vendor-id</key>
 				<data>
 				QxAAAA==
-				</data>
-				<key>AAPL,GfxYTile</key>
-				<data>
-				AQAAAA==
 				</data>
 				<key>AAPL,ig-platform-id</key>
 				<data>
@@ -1845,6 +1874,42 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/SMCLightSensor</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>CPUFriend.kext</string>
+				<key>Comment</key>
+				<string>Dynamic power management</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/CPUFriend</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>CPUFriend.kext/Contents/PlugIns/CPUFriendDataProvider.kext</string>
+				<key>Comment</key>
+				<string>Injector power management</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -2162,42 +2227,6 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>CPUFriend.kext</string>
-				<key>Comment</key>
-				<string>Dynamic power management</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/CPUFriend</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>CPUFriend.kext/Contents/PlugIns/CPUFriendDataProvider.kext</string>
-				<key>Comment</key>
-				<string>Injector power management</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
 				<string>CpuTscSync.kext</string>
 				<key>Comment</key>
 				<string>Sync all cores TSC</string>
@@ -2331,6 +2360,24 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/NoTouchID</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>OpenFirmwareManager.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/OpenFirmwareManager</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -2896,6 +2943,8 @@
 				<true/>
 				<key>Flavour</key>
 				<string>Auto</string>
+				<key>FullNvramAccess</key>
+				<false/>
 				<key>Name</key>
 				<string>Control MsrE2</string>
 				<key>Path</key>
@@ -2916,6 +2965,8 @@
 				<true/>
 				<key>Flavour</key>
 				<string>Auto</string>
+				<key>FullNvramAccess</key>
+				<false/>
 				<key>Name</key>
 				<string>OC Control</string>
 				<key>Path</key>
@@ -2936,6 +2987,8 @@
 				<true/>
 				<key>Flavour</key>
 				<string>OpenShell:UEFIShell:Shell</string>
+				<key>FullNvramAccess</key>
+				<false/>
 				<key>Name</key>
 				<string>UEFI Shell</string>
 				<key>Path</key>
@@ -3014,8 +3067,6 @@
 				<string>ForceDisplayRotationInEFI</string>
 			</array>
 		</dict>
-		<key>LegacyEnable</key>
-		<false/>
 		<key>LegacyOverwrite</key>
 		<false/>
 		<key>LegacySchema</key>
@@ -3198,15 +3249,15 @@
 		<key>SMBIOS</key>
 		<dict>
 			<key>BIOSReleaseDate</key>
-			<string>10/27/2021</string>
+			<string>03/16/2022</string>
 			<key>BIOSVendor</key>
 			<string>Apple Inc.</string>
 			<key>BIOSVersion</key>
-			<string>428.60.3.0.0</string>
+			<string>430.120.6.0.0</string>
 			<key>BoardAssetTag</key>
 			<string></string>
 			<key>BoardLocationInChassis</key>
-			<string></string>
+			<string>Part Component</string>
 			<key>BoardManufacturer</key>
 			<string>Apple Inc.</string>
 			<key>BoardProduct</key>
@@ -3345,18 +3396,10 @@
 				<string>Audio Driver</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>AudioDxe.efi</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
-				<string>BTRFS Driver</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>Btrfs.efi</string>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -3365,6 +3408,8 @@
 				<string>English Driver</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>EnglishDxe.efi</string>
 			</dict>
@@ -3375,8 +3420,10 @@
 				<string>Ext4 Driver</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
-				<string>Ext4.efi</string>
+				<string>Ext4Dxe.efi</string>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -3385,8 +3432,22 @@
 				<string>Fat Driver</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>Fat.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string>HFS+ Driver</string>
+				<key>Enabled</key>
+				<true/>
+				<key>LoadEarly</key>
+				<false/>
+				<key>Path</key>
+				<string>HfsPlus.efi</string>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -3395,18 +3456,10 @@
 				<string>OC GUI Driver</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenCanopy.efi</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
-				<string>OC HFS+ Driver</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>OpenHfsPlus.efi</string>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -3415,6 +3468,8 @@
 				<string>OC Linux Driver</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenLinuxBoot.efi</string>
 			</dict>
@@ -3425,6 +3480,8 @@
 				<string>OC NTFS Driver</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenNtfsDxe.efi</string>
 			</dict>
@@ -3435,6 +3492,8 @@
 				<string>OC Partition Driver</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenPartitionDxe.efi</string>
 			</dict>
@@ -3445,6 +3504,8 @@
 				<string>OC Internal Driver</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenRuntime.efi</string>
 			</dict>
@@ -3455,6 +3516,8 @@
 				<string>PS/2 Keyboard Driver</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>Ps2KeyboardDxe.efi</string>
 			</dict>
@@ -3465,6 +3528,8 @@
 				<string>PS/2 Mouse Driver</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>Ps2MouseDxe.efi</string>
 			</dict>
@@ -3474,6 +3539,8 @@
 				<key>Comment</key>
 				<string>Reset NVRAM</string>
 				<key>Enabled</key>
+				<true/>
+				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
 				<string>ResetNvramEntry.efi</string>
@@ -3484,6 +3551,8 @@
 				<key>Comment</key>
 				<string>Toggle SIP</string>
 				<key>Enabled</key>
+				<true/>
+				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
 				<string>ToggleSipEntry.efi</string>
@@ -3587,7 +3656,7 @@
 			<key>DisableSecurityPolicy</key>
 			<false/>
 			<key>EnableVectorAcceleration</key>
-			<true/>
+			<false/>
 			<key>EnableVmx</key>
 			<false/>
 			<key>ExitBootServicesDelay</key>
