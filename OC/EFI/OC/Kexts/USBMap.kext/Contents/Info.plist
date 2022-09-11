@@ -42,6 +42,28 @@
 	<string>10G8</string>
 	<key>IOKitPersonalities</key>
 	<dict>
+		<key>MacBookPro12,1-EC</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
+			<key>IOClass</key>
+			<string>AppleUSBHostMergeProperties</string>
+			<key>IOProviderClass</key>
+			<string>AppleBusPowerController</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>kUSBSleepPortCurrentLimit</key>
+				<integer>2100</integer>
+				<key>kUSBSleepPowerSupply</key>
+				<integer>2600</integer>
+				<key>kUSBWakePortCurrentLimit</key>
+				<integer>2100</integer>
+				<key>kUSBWakePowerSupply</key>
+				<integer>3200</integer>
+			</dict>
+			<key>model</key>
+			<string>MacBookPro12,1</string>
+		</dict>
 		<key>MacBookPro12,1-EH01</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -375,7 +397,7 @@
 			<key>idVendor</key>
 			<integer>1266</integer>
 		</dict>
-		<key>WebCam Interface A</key>
+		<key>WebCam-Interface-A</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
@@ -403,7 +425,7 @@
 			<key>idVendor</key>
 			<integer>1266</integer>
 		</dict>
-		<key>WebCam Interface B</key>
+		<key>WebCam-Interface-B</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
