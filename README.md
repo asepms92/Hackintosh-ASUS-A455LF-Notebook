@@ -39,8 +39,8 @@ Bios Config | Setting
 :---:| :---:
 Security -> Secure Boot | Disabled
 Intel Virtualization    | Enabled OK / Disabled if you have issues
-VT-d | Disabled / Enabled with boot-args "dart=0" for older Clover
-Graphics Configuration -> DVMT Pre-Allocation | 64M / default 32M but need pre-alloc patches
+VT-d | Disabled / Enabled OK or boot-args "dart=0" for older Clover
+Graphics Configuration -> DVMT Pre-Allocation | 64M / Default 32M (need pre-alloc patches in Device Properties section)
 USB Configuration -> XHCI Pre-Boot Mode | Enabled (XHC Only) / Smart Auto (XHC + EHC)
 SATA Mode | AHCI
 Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
@@ -51,13 +51,13 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 
 - [x] QE/CI Intel HD Graphics 5500 with VRAM 4000 MB (Cosmetic), Nvidia Geforce 930M (Disable)
 - [x] Audio Conexant CX20751/2 with layout-id 21 + Internal Microphone (SSDT-CX207512.aml + Lilu.kext + AppleALC.kext)
-- [x] Display brightness PNLF and Fn Keys (Device PNLF taken from MacBook ACPI dump + ASUS DSDT Patches FN Key + AsusSMC.kext)
+- [x] Display brightness PNLF and Fn Keys (Add Device PNLF taken from MacBook ACPI dump + ASUS DSDT Patches FN Key + AsusSMC.kext)
 - [x] Qualcomm Atheros AR9565 Wifi (HS80211Family.kext + AirPortAtheros40.kext)
 - [x] LAN Ethernet Realtek RTL8111GU/8168GU/8411GU (RealtekRTL8111.kext)
 - [x] Bluetooth AR3012 (Ath3kBT.kext + Ath3kBTInjector.kext)
 - [x] FocalTech TouchPad PS/2 (ApplePS2SmartTouchpad.kext)
 - [x] Battery Indicator (DSDT RehabMan Battery Laptop Patch for ASUS + SMCBatteryManager.kext)
-- [x] WebCam OOB + Card Reader OOB
+- [x] WebCam OOB but sometimes blank (USBMap.kext with FakeID Apple WebCam Interfaces)
 - [x] USB2.0 Ports + USB3.0 Ports + Power/Speed (Disable XhciPortLimit + USBMap.kext/SSDT-UIAC.aml)
 - [x] Native Power Management CPU (Combination from [ssdtPRGen.sh](https://github.com/Piker-Alpha/ssdtPRGen.sh) Pike R. Alpha and [ssdt_data](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md#data-combination) PMheart + CPUFriend.kext + CPUFriendDataProvider.kext)
 - [x] HDMI, Etc.
@@ -68,6 +68,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 
 - Nvidia Geforce 930M (Optimus Tech) not supported by hackintosh
 - AirDrop, Handoff, Continuity, Because this chipset and module not supported
+- Card Reader, broken port on this laptop, so i not use it
 
 --------------------------------------------------------------------------------------------
 
