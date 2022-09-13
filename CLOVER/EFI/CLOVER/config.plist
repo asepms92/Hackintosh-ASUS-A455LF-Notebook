@@ -248,7 +248,7 @@
 		<key>FixHeaders</key>
 		<true/>
 		<key>FixMCFG</key>
-		<true/>
+		<false/>
 		<key>HaltEnabler</key>
 		<true/>
 		<key>PatchAPIC</key>
@@ -383,7 +383,7 @@
 		<integer>15</integer>
 		<key>TurboDisable?</key>
 		<true/>
-		<key>Type</key>
+		<key>Type?</key>
 		<string>0x0606</string>
 	</dict>
 	<key>Devices</key>
@@ -1032,7 +1032,7 @@
 		<key>BacklightLevel?</key>
 		<string></string>
 		<key>CustomUUID?</key>
-		<string>DC31D7E0-351A-EA58-B1B4-4CFC314AA1E6</string>
+		<string></string>
 		<key>InjectKexts</key>
 		<true/>
 		<key>InjectSystemID</key>

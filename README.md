@@ -1,4 +1,4 @@
-# Hackintosh-ASUS-A455LF-Notebook
+# Hackintosh ASUS A455LF Notebook
 
 [![Build Status](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/workflows/CI/badge.svg?branch=master)](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/actions)
 [![Brand](https://img.shields.io/badge/A455LF-WX039D-yellow?style=flat&logo=asus)](https://www.asus.com/)
@@ -6,7 +6,7 @@
 [![Clover](https://img.shields.io/badge/Clover-r5149-brightgreen?style=flat&logo=icq)](https://github.com/CloverHackyColor/CloverBootloader)
 [![OpenCore](https://img.shields.io/badge/OpenCore-v0.8.5-blue?style=flat&logo=okta)](https://github.com/acidanthera/OpenCorePkg)
 
-Running macOS on ASUS-A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
+Running macOS on ASUS A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
  
 <img src="/Images/Sept-MacBook-Images.png?raw=true" alt="macOS Big Sur" align="center">
  
@@ -39,9 +39,9 @@ Bios Config | Setting
 :---:| :---:
 Security -> Secure Boot | Disabled
 Intel Virtualization    | Enabled OK / Disabled if you have issues
-VT-d | Disabled / Enabled with boot-args "dart=0"
+VT-d | Disabled / Enabled with boot-args "dart=0" for older Clover
 Graphics Configuration -> DVMT Pre-Allocation | 64M / default 32M but need pre-alloc patches
-USB Configuration -> XHCI Pre-Boot Mode | Enabled / Smart Auto if using EHCI device
+USB Configuration -> XHCI Pre-Boot Mode | Enabled (XHC Only) / Smart Auto (XHC + EHC) if using EHCI device
 SATA Mode | AHCI
 Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
  
@@ -94,7 +94,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 ### Special Thanks and Credits to :
 
 - [Apple](https://www.apple.com)
-- [Clover](https://github.com/CloverHackyColor/CloverBootloader)
+- [Clover](https://github.com/CloverHackyColor)
 - [Acidanthera](https://github.com/acidanthera)
 - [Rehabman](https://github.com/RehabMan)
 - [Mieze](https://github.com/Mieze)

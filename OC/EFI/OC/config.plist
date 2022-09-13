@@ -1228,7 +1228,7 @@
 			<key>RebaseRegions</key>
 			<false/>
 			<key>ResetHwSig</key>
-			<false/>
+			<true/>
 			<key>ResetLogoStatus</key>
 			<false/>
 			<key>SyncTableIds</key>
@@ -1337,47 +1337,16 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>#PciRoot(0x0)/Pci(0x1D,0x0)</key>
-			<dict>
-				<key>#AAPL,clock-id</key>
-				<data>
-				Ag==
-				</data>
-				<key>#AAPL,current-available</key>
-				<integer>2100</integer>
-				<key>#AAPL,current-extra</key>
-				<integer>2200</integer>
-				<key>#AAPL,current-extra-in-sleep</key>
-				<integer>1600</integer>
-				<key>#AAPL,current-in-sleep</key>
-				<integer>1000</integer>
-				<key>#AAPL,device-internal</key>
-				<integer>2</integer>
-				<key>#AAPL,max-port-current-in-sleep</key>
-				<integer>2100</integer>
-				<key>#AAPL,slot-name</key>
-				<string>Internal@0,29,0</string>
-				<key>#built-in</key>
-				<data>
-				AA==
-				</data>
-				<key>#device_type</key>
-				<string>USB Controller</string>
-				<key>#model</key>
-				<string>Wildcat Point-LP USB EHCI Controller</string>
-				<key>#name</key>
-				<string>EH01</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,0,0</string>
-				<key>IOName</key>
-				<string>pci8086,1604</string>
 				<key>device_type</key>
 				<string>Host bridge</string>
 				<key>model</key>
 				<string>Broadwell-U Host Bridge -OPI</string>
+				<key>name</key>
+				<string>Intel Host Bridge</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
@@ -1399,16 +1368,12 @@
 				<integer>2100</integer>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,20,0</string>
-				<key>built-in</key>
-				<data>
-				AA==
-				</data>
 				<key>device_type</key>
 				<string>USB Controller</string>
 				<key>model</key>
 				<string>Wildcat Point-LP USB xHCI Controller</string>
 				<key>name</key>
-				<string>XHC</string>
+				<string>Intel USB xHCI Controller</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
 			<dict>
@@ -1418,6 +1383,8 @@
 				<string>Communication Controller</string>
 				<key>model</key>
 				<string>Wildcat Point-LP MEI Controller #1</string>
+				<key>name</key>
+				<string>Intel Management Engine Interface</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
 			<dict>
@@ -1457,6 +1424,8 @@
 				<data>
 				DAABAA==
 				</data>
+				<key>name</key>
+				<string>Intel High Definition Audio Controller</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x0)</key>
 			<dict>
@@ -1466,6 +1435,8 @@
 				<string>PCI bridge</string>
 				<key>model</key>
 				<string>Wildcat Point-LP PCI Express Root Port #1</string>
+				<key>name</key>
+				<string>pci-bridge</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x2)</key>
 			<dict>
@@ -1475,15 +1446,13 @@
 				<string>PCI bridge</string>
 				<key>model</key>
 				<string>Wildcat Point-LP PCI Express Root Port #3</string>
+				<key>name</key>
+				<string>pci-bridge</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x2)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,28,2/0,0</string>
-				<key>built-in</key>
-				<data>
-				AQ==
-				</data>
 				<key>device_type</key>
 				<string>Ethernet Controller</string>
 				<key>model</key>
@@ -1499,15 +1468,13 @@
 				<string>PCI bridge</string>
 				<key>model</key>
 				<string>Wildcat Point-LP PCI Express Root Port #4</string>
+				<key>name</key>
+				<string>pci-bridge</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,28,3/0,0</string>
-				<key>built-in</key>
-				<data>
-				AQ==
-				</data>
 				<key>device_type</key>
 				<string>AirPort Extreme</string>
 				<key>model</key>
@@ -1523,6 +1490,35 @@
 				<string>PCI bridge</string>
 				<key>model</key>
 				<string>Wildcat Point-LP PCI Express Root Port #5</string>
+				<key>name</key>
+				<string>pci-bridge</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1D,0x0)</key>
+			<dict>
+				<key>AAPL,clock-id</key>
+				<data>
+				Ag==
+				</data>
+				<key>AAPL,current-available</key>
+				<integer>2100</integer>
+				<key>AAPL,current-extra</key>
+				<integer>2200</integer>
+				<key>AAPL,current-extra-in-sleep</key>
+				<integer>1600</integer>
+				<key>AAPL,current-in-sleep</key>
+				<integer>1000</integer>
+				<key>AAPL,device-internal</key>
+				<integer>2</integer>
+				<key>AAPL,max-port-current-in-sleep</key>
+				<integer>2100</integer>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,29,0</string>
+				<key>device_type</key>
+				<string>USB Controller</string>
+				<key>model</key>
+				<string>Wildcat Point-LP USB EHCI Controller</string>
+				<key>name</key>
+				<string>Intel USB EHCI Controller</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x0)</key>
 			<dict>
@@ -1534,6 +1530,8 @@
 				<string>generic</string>
 				<key>model</key>
 				<string>Wildcat Point-LP LPC Controller</string>
+				<key>name</key>
+				<string>Intel LPC Controller</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x2)</key>
 			<dict>
@@ -1545,6 +1543,8 @@
 				<string>SATA Controller</string>
 				<key>model</key>
 				<string>Wildcat Point-LP SATA Controller [AHCI Mode]</string>
+				<key>name</key>
+				<string>Intel AHCI Controller</string>
 				<key>sata-express-power-off</key>
 				<integer>1</integer>
 				<key>use-msi</key>
@@ -1558,6 +1558,8 @@
 				<string>SMBus</string>
 				<key>model</key>
 				<string>Wildcat Point-LP SMBus Controller</string>
+				<key>name</key>
+				<string>Intel SMBus Controller</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x6)</key>
 			<dict>
@@ -1567,6 +1569,8 @@
 				<string>Signal Processing Controller</string>
 				<key>model</key>
 				<string>Wildcat Point-LP Thermal Management Controller</string>
+				<key>name</key>
+				<string>Intel Thermal Management</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x2)/Pci(0x0,0x0)</key>
 			<dict>
@@ -1658,6 +1662,10 @@
 				<data>
 				AQAAAA==
 				</data>
+				<key>framebuffer-con1-pipe</key>
+				<data>
+				EgAAAA==
+				</data>
 				<key>framebuffer-con1-type</key>
 				<data>
 				AAgAAA==
@@ -1665,6 +1673,10 @@
 				<key>framebuffer-con2-enable</key>
 				<data>
 				AQAAAA==
+				</data>
+				<key>framebuffer-con2-pipe</key>
+				<data>
+				EgAAAA==
 				</data>
 				<key>framebuffer-con2-type</key>
 				<data>
@@ -1755,6 +1767,8 @@
 				<data>
 				DAABAA==
 				</data>
+				<key>name</key>
+				<string>Intel HDMI Audio Controller</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x4,0x0)</key>
 			<dict>
@@ -1764,6 +1778,8 @@
 				<string>Signal Processing Controller</string>
 				<key>model</key>
 				<string>Broadwell-U Processor Thermal Subsystem</string>
+				<key>name</key>
+				<string>Intel Processor Thermal Subsystem</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
