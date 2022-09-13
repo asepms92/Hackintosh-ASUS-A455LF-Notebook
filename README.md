@@ -41,7 +41,7 @@ Security -> Secure Boot | Disabled
 Intel Virtualization    | Enabled OK / Disabled if you have issues
 VT-d | Disabled / Enabled with boot-args "dart=0" for older Clover
 Graphics Configuration -> DVMT Pre-Allocation | 64M / default 32M but need pre-alloc patches
-USB Configuration -> XHCI Pre-Boot Mode | Enabled (XHC Only) / Smart Auto (XHC + EHC) if using EHCI device
+USB Configuration -> XHCI Pre-Boot Mode | Enabled (XHC Only) / Smart Auto (XHC + EHC)
 SATA Mode | AHCI
 Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
  
@@ -51,7 +51,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 
 - [x] QE/CI Intel HD Graphics 5500 with VRAM 4000 MB (Cosmetic), Nvidia Geforce 930M (Disable)
 - [x] Audio Conexant CX20751/2 with layout-id 21 + Internal Microphone (SSDT-CX207512.aml + Lilu.kext + AppleALC.kext)
-- [x] Display brightness PNLF and Fn Keys (DSDT Patch Fix Graphics Broadwell from RehabMan Repo + ASUS DSDT Patches Brightness FN Key + AsusSMC.kext)
+- [x] Display brightness PNLF and Fn Keys (Device PNLF taken from MacBook ACPI dump + ASUS DSDT Patches FN Key + AsusSMC.kext)
 - [x] Qualcomm Atheros AR9565 Wifi (HS80211Family.kext + AirPortAtheros40.kext)
 - [x] LAN Ethernet Realtek RTL8111GU/8168GU/8411GU (RealtekRTL8111.kext)
 - [x] Bluetooth AR3012 (Ath3kBT.kext + Ath3kBTInjector.kext)
