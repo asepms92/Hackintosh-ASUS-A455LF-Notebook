@@ -935,12 +935,14 @@
 		<false/>
 		<key>ThirdPartyDrives</key>
 		<false/>
+		<key>TscSyncTimeout</key>
+		<integer>0</integer>
 		<key>XhciPortLimit</key>
 		<false/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
-		<key>Block</key>
+		<key>Block?</key>
 		<array/>
 		<key>BooterConfig</key>
 		<string>0x28</string>
@@ -956,11 +958,11 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>03/16/2022</string>
+		<string>04/18/2022</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP121.88Z.F000.B00.2203161445</string>
+		<string>MBP121.88Z.F000.B00.2204181522</string>
 		<key>Board-ID</key>
 		<string>Mac-E43C1C25D4880AD6</string>
 		<key>BoardManufacturer</key>
@@ -978,7 +980,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>430.120.6.0.0</string>
+		<string>430.140.3.0.0</string>
 		<key>ExtendedFirmwareFeatures</key>
 		<string>0x00000008FD0FF576</string>
 		<key>ExtendedFirmwareFeaturesMask</key>
