@@ -4,7 +4,7 @@
 [![Brand](https://img.shields.io/badge/A455LF-WX039D-yellow?style=flat&logo=asus)](https://www.asus.com/)
 [![macOS](https://img.shields.io/badge/macOS-Big_Sur_v11.6-red?style=flat&logo=apple)](https://www.apple.com/macos/big-sur/)
 [![Clover](https://img.shields.io/badge/Clover-r5149-brightgreen?style=flat&logo=icq)](https://github.com/CloverHackyColor/CloverBootloader)
-[![OpenCore](https://img.shields.io/badge/OpenCore-v0.8.5-blue?style=flat&logo=okta)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-v0.8.6-blue?style=flat&logo=okta)](https://github.com/acidanthera/OpenCorePkg)
 
 Running macOS on ASUS A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
  
