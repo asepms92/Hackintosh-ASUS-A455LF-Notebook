@@ -5,7 +5,7 @@
 	<key>AppleSecurityExtension</key>
 	<true/>
 	<key>BuildMachineOSBuild</key>
-	<string>20G624</string>
+	<string>20G817</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -92,6 +92,8 @@
 		<string>12.0.0</string>
 		<key>com.apple.kpi.unsupported</key>
 		<string>12.0.0</string>
+		<key>com.flagers.MDMBlock</key>
+		<string>1.0</string>
 		<key>com.hieplpvip.AsusSMC</key>
 		<string>1.0.0</string>
 		<key>org.acidanthera.driver.CPUFriend</key>

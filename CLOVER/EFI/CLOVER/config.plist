@@ -277,7 +277,7 @@
 			<key>EnableC4</key>
 			<false/>
 			<key>EnableC6</key>
-			<true/>
+			<false/>
 			<key>EnableC7</key>
 			<false/>
 			<key>Generate</key>
@@ -301,7 +301,7 @@
 			<true/>
 			<key>NoOemTableId</key>
 			<false/>
-			<key>PLimitDict?</key>
+			<key>PLimitDict</key>
 			<integer>0</integer>
 			<key>UnderVoltStep?</key>
 			<integer>0</integer>
