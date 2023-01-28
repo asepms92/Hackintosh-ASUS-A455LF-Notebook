@@ -517,11 +517,19 @@
 				<data>
 				AQAAAA==
 				</data>
+				<key>framebuffer-con0-index</key>
+				<data>
+				AAAAAA==
+				</data>
 				<key>framebuffer-con0-pipe</key>
 				<data>
 				EgAAAA==
 				</data>
 				<key>framebuffer-con1-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con1-index</key>
 				<data>
 				AQAAAA==
 				</data>
@@ -536,6 +544,10 @@
 				<key>framebuffer-con2-enable</key>
 				<data>
 				AQAAAA==
+				</data>
+				<key>framebuffer-con2-index</key>
+				<data>
+				AgAAAA==
 				</data>
 				<key>framebuffer-con2-pipe</key>
 				<data>
