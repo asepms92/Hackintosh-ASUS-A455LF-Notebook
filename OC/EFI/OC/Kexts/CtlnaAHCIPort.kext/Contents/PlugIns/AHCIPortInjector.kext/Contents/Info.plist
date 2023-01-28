@@ -7,11 +7,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleIdentifier</key>
-	<string>Fabio1971 and insanelymac.com</string>
+	<string>com.Fabio1971.AHCIPortInjector</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>AHCI Device Injector</string>
+	<string>AHCIPortInjector</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
@@ -57,19 +57,6 @@
 				<key>Physical Interconnect Location</key>
 				<string>Internal</string>
 			</dict>
-		</dict>
-		<key>AppleSATAExpress</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.apple.driver.AppleAHCIPort</string>
-			<key>IOClass</key>
-			<string>AppleSATAExpress</string>
-			<key>IOPCIPrimaryMatch</key>
-			<string>0xa801144d</string>
-			<key>IOProbeScore</key>
-			<integer>2000</integer>
-			<key>IOProviderClass</key>
-			<string>IOPCIDevice</string>
 		</dict>
 		<key>GenericAHCI</key>
 		<dict>
@@ -131,7 +118,7 @@
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Fabio1971 and  insanelymac.com</string>
+	<string>Copyright © Fabio1971 and insanelymac.com. All rights reserved.</string>
 	<key>OSBundleRequired</key>
 	<string>Local-Root</string>
 </dict>

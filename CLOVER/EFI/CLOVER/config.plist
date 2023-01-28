@@ -268,7 +268,7 @@
 		<dict>
 			<key>C3Latency?</key>
 			<string>0x00FA</string>
-			<key>DoubleFirstState</key>
+			<key>DoubleFirstState?</key>
 			<false/>
 			<key>DropOem?</key>
 			<false/>
@@ -301,7 +301,7 @@
 			<true/>
 			<key>NoOemTableId</key>
 			<false/>
-			<key>PLimitDict</key>
+			<key>PLimitDict?</key>
 			<integer>0</integer>
 			<key>UnderVoltStep?</key>
 			<integer>0</integer>
@@ -316,7 +316,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-no_compat_check amfi_get_out_of_my_way=1 -allow_sidecar_ipad</string>
+		<string>amfi_get_out_of_my_way=1 -allow_sidecar_ipad</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -399,7 +399,7 @@
 		</dict>
 		<key>DisableFunctions?</key>
 		<string></string>
-		<key>FakeID</key>
+		<key>FakeID?</key>
 		<dict>
 			<key>#Broadwell-Comment</key>
 			<string>To avoid automatic Clover fake device-id (Broadwell) injection</string>
@@ -435,6 +435,13 @@
 				AQ==
 				</data>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1c,0x3)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>built-in</key>
+				<data>
+				AQ==
+				</data>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>#AAPL00,override-no-connect</key>
@@ -455,6 +462,10 @@
 				AAAAAAAACgAAQAYAACD8ABAAAAAAAAoAAEAGAACgAAAA
 				AAAAAAAAAAAuAAAAAAAAAAAAAAAwAAAAIAAAAAMAAAAG
 				AAAAAAAAAAAAAAA=
+				</data>
+				<key>#built-in</key>
+				<data>
+				AA==
 				</data>
 				<key>#saved-config</key>
 				<data>
@@ -484,10 +495,6 @@
 				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
-				<key>built-in</key>
-				<data>
-				AA==
-				</data>
 				<key>device-id</key>
 				<data>
 				FhYAAA==
@@ -670,7 +677,7 @@
 		<key>Theme</key>
 		<string>Nightwish</string>
 		<key>Timezone?</key>
-		<integer>0</integer>
+		<integer>7</integer>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -682,16 +689,12 @@
 			<data>
 			AA==
 			</data>
-			<key>HorizontalSyncPulseWidth?</key>
-			<string></string>
 			<key>Inject</key>
 			<false/>
 			<key>ProductID?</key>
 			<string>0x1493</string>
 			<key>VendorID?</key>
 			<string>0x0dae</string>
-			<key>VideoInputSignal?</key>
-			<string></string>
 		</dict>
 		<key>Inject</key>
 		<dict>
@@ -700,16 +703,8 @@
 			<key>NVidia</key>
 			<false/>
 		</dict>
-		<key>LoadVBios?</key>
-		<false/>
 		<key>NVCAP?</key>
 		<string>04000000000003000c0000000000000700000000</string>
-		<key>NvidiaGeneric?</key>
-		<false/>
-		<key>NvidiaNoEFI?</key>
-		<false/>
-		<key>NvidiaSingle?</key>
-		<false/>
 		<key>VRAM?</key>
 		<integer>4000</integer>
 		<key>VideoPorts?</key>
@@ -958,11 +953,11 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>04/18/2022</string>
+		<string>09/06/2022</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP121.88Z.F000.B00.2204181522</string>
+		<string>MBP121.88Z.F000.B00.2209061741</string>
 		<key>Board-ID</key>
 		<string>Mac-E43C1C25D4880AD6</string>
 		<key>BoardManufacturer</key>
@@ -980,7 +975,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>430.140.3.0.0</string>
+		<string>476.0.0.0.0</string>
 		<key>ExtendedFirmwareFeatures</key>
 		<string>0x00000008FD0FF576</string>
 		<key>ExtendedFirmwareFeaturesMask</key>
@@ -1018,8 +1013,29 @@
 		<string>MacBookPro12,1</string>
 		<key>SerialNumber</key>
 		<string></string>
-		<key>Slots</key>
-		<array/>
+		<key>Slots?</key>
+		<array>
+			<dict>
+				<key>Device?</key>
+				<string>LAN</string>
+				<key>ID?</key>
+				<integer>2</integer>
+				<key>Name?</key>
+				<string>Ethernet</string>
+				<key>Type?</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>Device?</key>
+				<string>WIFI</string>
+				<key>ID?</key>
+				<integer>3</integer>
+				<key>Name?</key>
+				<string>Slot- 3</string>
+				<key>Type?</key>
+				<integer>1</integer>
+			</dict>
+		</array>
 		<key>SmUUID</key>
 		<string></string>
 		<key>SmbiosVersion?</key>

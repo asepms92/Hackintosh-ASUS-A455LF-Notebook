@@ -5,13 +5,13 @@
 	<key>AppleSecurityExtension</key>
 	<true/>
 	<key>BuildMachineOSBuild</key>
-	<string>20G817</string>
+	<string>19H2026</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>LiluFriend</string>
 	<key>CFBundleGetInfoString</key>
-	<string>LiluFriend v1.1.0, Copyright © 2017 Vanilla. All rights reserved.</string>
+	<string>LiluFriend v1.1.1, Copyright © 2017 Vanilla. All rights reserved.</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.apple.security.LiluFriend</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -21,7 +21,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1.0</string>
+	<string>1.1.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -29,23 +29,23 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.1.0</string>
+	<string>1.1.1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>13C100</string>
+	<string>12D4e</string>
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>12.1</string>
+	<string>11.1</string>
 	<key>DTSDKBuild</key>
-	<string>21C46</string>
+	<string>20C63</string>
 	<key>DTSDKName</key>
-	<string>macosx12.1</string>
+	<string>macosx11.1</string>
 	<key>DTXcode</key>
-	<string>1321</string>
+	<string>1240</string>
 	<key>DTXcodeBuild</key>
-	<string>13C100</string>
+	<string>12D4e</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>LiluFriend</key>
@@ -70,8 +70,6 @@
 	<dict>
 		<key>as.lvs1974.HibernationFixup</key>
 		<string>1.0</string>
-		<key>as.lvs1974.RTCMemoryFixup</key>
-		<string>1.0</string>
 		<key>as.vit9696.AppleALC</key>
 		<string>1.0</string>
 		<key>as.vit9696.RestrictEvents</key>
@@ -92,22 +90,14 @@
 		<string>12.0.0</string>
 		<key>com.apple.kpi.unsupported</key>
 		<string>12.0.0</string>
-		<key>com.flagers.MDMBlock</key>
-		<string>1.0</string>
 		<key>com.hieplpvip.AsusSMC</key>
 		<string>1.0.0</string>
 		<key>org.acidanthera.driver.CPUFriend</key>
 		<string>1.0</string>
 		<key>org.lvs1974.driver.CpuTscSync</key>
 		<string>1.0</string>
-		<key>ru.joedm.SMCSuperIO</key>
-		<string>1.0</string>
 		<key>ru.usrsse2.SMCBatteryManager</key>
 		<string>1.0.0</string>
-		<key>ru.usrsse2.SMCLightSensor</key>
-		<string>1.0.0</string>
-		<key>xyz.racermaster.NoTouchID</key>
-		<string>1.0</string>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Root</string>

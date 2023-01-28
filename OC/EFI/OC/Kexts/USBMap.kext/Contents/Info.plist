@@ -45,9 +45,9 @@
 		<key>MacBookPro12,1-EC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
 			<key>IOClass</key>
-			<string>AppleUSBHostMergeProperties</string>
+			<string>AppleUSBMergeNub</string>
 			<key>IOProviderClass</key>
 			<string>AppleBusPowerController</string>
 			<key>IOProviderMergeProperties</key>
@@ -67,11 +67,13 @@
 		<key>MacBookPro12,1-EH01</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
 			<key>IOClass</key>
-			<string>AppleUSBHostMergeProperties</string>
+			<string>AppleUSBMergeNub</string>
 			<key>IONameMatch</key>
 			<string>EH01</string>
+			<key>IOPCIClassMatch</key>
+			<string>0x0c032000</string>
 			<key>IOPCIPrimaryMatch</key>
 			<string>0x9ca68086</string>
 			<key>IOParentMatch</key>
@@ -82,14 +84,14 @@
 					<string>0:29:0</string>
 				</dict>
 			</dict>
+			<key>IOPathMatch</key>
+			<string>IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/EH01@1D/EH01@1d000000</string>
 			<key>IOProviderClass</key>
 			<string>AppleUSBEHCIPCI</string>
 			<key>IOProviderMergeProperties</key>
 			<dict>
-				<key>IOPCITunnelCompatible</key>
-				<true/>
 				<key>kUSBMuxEnabled</key>
-				<true/>
+				<false/>
 				<key>kUSBSleepPortCurrentLimit</key>
 				<integer>2100</integer>
 				<key>kUSBSleepPowerSupply</key>
@@ -131,20 +133,20 @@
 			<key>model</key>
 			<string>MacBookPro12,1</string>
 		</dict>
-		<key>MacBookPro12,1-HUB-1d100000</key>
+		<key>MacBookPro12,1-InternalHub-EH01</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
 			<key>IOClass</key>
-			<string>AppleUSBHostMergeProperties</string>
-			<key>IOProbeScore</key>
-			<integer>50100</integer>
+			<string>AppleUSBMergeNub</string>
+			<key>IOPathMatch</key>
+			<string>IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/EH01@1D/EH01@1d000000/PR01@1d100000/IOUSBHostDevice@1d100000/AppleUSB20InternalHub@1d100000</string>
 			<key>IOProviderClass</key>
 			<string>AppleUSB20InternalHub</string>
 			<key>IOProviderMergeProperties</key>
 			<dict>
 				<key>kUSBMuxEnabled</key>
-				<true/>
+				<false/>
 				<key>port-count</key>
 				<data>
 				CAAAAA==
@@ -241,6 +243,8 @@
 					</dict>
 				</dict>
 			</dict>
+			<key>board-id</key>
+			<string>Mac-E43C1C25D4880AD6</string>
 			<key>locationID</key>
 			<integer>487587840</integer>
 			<key>model</key>
@@ -249,11 +253,13 @@
 		<key>MacBookPro12,1-XHC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
 			<key>IOClass</key>
-			<string>AppleUSBHostMergeProperties</string>
+			<string>AppleUSBMergeNub</string>
 			<key>IONameMatch</key>
 			<string>XHC</string>
+			<key>IOPCIClassMatch</key>
+			<string>0x0c033000</string>
 			<key>IOPCIPrimaryMatch</key>
 			<string>0x9cb18086</string>
 			<key>IOParentMatch</key>
@@ -264,10 +270,10 @@
 					<string>0:20:0</string>
 				</dict>
 			</dict>
-			<key>IOProbeScore</key>
-			<integer>5000</integer>
+			<key>IOPathMatch</key>
+			<string>IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/XHC@14/XHC@14000000</string>
 			<key>IOProviderClass</key>
-			<string>AppleUSBXHCIPCI</string>
+			<string>AppleUSBXHCIWPT</string>
 			<key>IOProviderMergeProperties</key>
 			<dict>
 				<key>kUSBMuxEnabled</key>
@@ -357,18 +363,18 @@
 			<key>model</key>
 			<string>MacBookPro12,1</string>
 		</dict>
-		<key>WebCam</key>
+		<key>WebCam-Fake-Built-in-FaceTime-Camera</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
 			<key>IOClass</key>
-			<string>AppleUSBHostMergeProperties</string>
+			<string>AppleUSBMergeNub</string>
 			<key>IOProviderClass</key>
-			<string>IOUSBHostDevice</string>
+			<string>IOUSBDevice</string>
 			<key>IOProviderMergeProperties</key>
 			<dict>
 				<key>USB Product Name</key>
-				<string>1.3M HD WebCam</string>
+				<string>FaceTime Camera (Built-in)</string>
 				<key>USB Serial Number</key>
 				<string>DJHB2F000LDH7FL0</string>
 				<key>USB Vendor Name</key>
@@ -387,8 +393,24 @@
 				<integer>1452</integer>
 				<key>kSuspendPort</key>
 				<true/>
+				<key>kUSBDescriptorOverride</key>
+				<dict>
+					<key>descriptor</key>
+					<data>
+					NgNGAGEAYwBlAFQAaQBtAGUAIABDAGEAbQBl
+					AHIAYQAgACgAQgB1AGkAbAB0AC0AaQBuACkA
+					</data>
+					<key>index</key>
+					<string>UsbDescriptorOverrideProductStringIndex</string>
+					<key>languageID</key>
+					<integer>1033</integer>
+				</dict>
 				<key>kUSBProductString</key>
-				<string>1.3M HD WebCam</string>
+				<string>FaceTime Camera (Built-in)</string>
+				<key>kUSBSerialNumberString</key>
+				<string>DJHB2F000LDH7FL0</string>
+				<key>kUSBVendorString</key>
+				<string>Apple Inc.</string>
 				<key>non-removable</key>
 				<string>yes</string>
 			</dict>
@@ -397,18 +419,60 @@
 			<key>idVendor</key>
 			<integer>1266</integer>
 		</dict>
-		<key>WebCam-Interface-A</key>
+		<key>WebCam-Fake-Built-in-FaceTime-Camera-Interface-A</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
 			<key>IOClass</key>
-			<string>AppleUSBHostMergeProperties</string>
+			<string>AppleUSBMergeNub</string>
 			<key>IOProviderClass</key>
-			<string>IOUSBHostInterface</string>
+			<string>IOUSBInterface</string>
 			<key>IOProviderMergeProperties</key>
 			<dict>
 				<key>USB Interface Name</key>
-				<string>1.3M HD WebCam</string>
+				<string>FaceTime Camera (Built-in)</string>
+				<key>USB Product Name</key>
+				<string>FaceTime Camera (Built-in)</string>
+				<key>USB Serial Number</key>
+				<string>DJHB2F000LDH7FL0</string>
+				<key>USB Vendor Name</key>
+				<string>Apple Inc.</string>
+				<key>bcdDevice</key>
+				<integer>1302</integer>
+				<key>idProduct</key>
+				<integer>34058</integer>
+				<key>idVendor</key>
+				<integer>1452</integer>
+				<key>kUSBString</key>
+				<string>FaceTime Camera (Built-in)</string>
+			</dict>
+			<key>bConfigurationValue</key>
+			<string>*</string>
+			<key>bInterfaceNumber</key>
+			<integer>0</integer>
+			<key>idProduct</key>
+			<integer>46211</integer>
+			<key>idVendor</key>
+			<integer>1266</integer>
+		</dict>
+		<key>WebCam-Fake-Built-in-FaceTime-Camera-Interface-B</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBInterface</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Interface Name</key>
+				<string>FaceTime Camera (Built-in)</string>
+				<key>USB Product Name</key>
+				<string>FaceTime Camera (Built-in)</string>
+				<key>USB Serial Number</key>
+				<string>DJHB2F000LDH7FL0</string>
+				<key>USB Vendor Name</key>
+				<string>Apple Inc.</string>
 				<key>bcdDevice</key>
 				<integer>1302</integer>
 				<key>idProduct</key>
@@ -420,36 +484,6 @@
 			<string>*</string>
 			<key>bInterfaceNumber</key>
 			<integer>1</integer>
-			<key>idProduct</key>
-			<integer>46211</integer>
-			<key>idVendor</key>
-			<integer>1266</integer>
-		</dict>
-		<key>WebCam-Interface-B</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
-			<key>IOClass</key>
-			<string>AppleUSBHostMergeProperties</string>
-			<key>IOProviderClass</key>
-			<string>IOUSBHostInterface</string>
-			<key>IOProviderMergeProperties</key>
-			<dict>
-				<key>USB Interface Name</key>
-				<string>1.3M HD WebCam</string>
-				<key>bcdDevice</key>
-				<integer>1302</integer>
-				<key>idProduct</key>
-				<integer>34058</integer>
-				<key>idVendor</key>
-				<integer>1452</integer>
-				<key>kUSBString</key>
-				<string>1.3M HD WebCam</string>
-			</dict>
-			<key>bConfigurationValue</key>
-			<string>*</string>
-			<key>bInterfaceNumber</key>
-			<integer>0</integer>
 			<key>idProduct</key>
 			<integer>46211</integer>
 			<key>idVendor</key>

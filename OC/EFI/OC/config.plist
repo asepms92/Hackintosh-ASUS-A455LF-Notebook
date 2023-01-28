@@ -74,14 +74,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>More devices</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-LSEV.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>MCHC + SMBus devices</string>
 				<key>Enabled</key>
 				<true/>
@@ -143,6 +135,14 @@
 				<true/>
 				<key>Path</key>
 				<string>SSDT-RMCF.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>LIDP + SEPT</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-SEPT.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -920,44 +920,6 @@
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
-				<string>Change ATK Method (_Q10,0,N) to Method (XQ10,0,N)</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				X1ExMAA=
-				</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>OemTableId</key>
-				<data>
-				</data>
-				<key>Replace</key>
-				<data>
-				WFExMAA=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				</data>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>BaseSkip</key>
-				<integer>0</integer>
-				<key>Comment</key>
 				<string>Change ATK Method (_Q11,0,N) to Method (XQ11,0,N)</string>
 				<key>Count</key>
 				<integer>1</integer>
@@ -1355,17 +1317,29 @@
 				Ag==
 				</data>
 				<key>AAPL,current-available</key>
-				<integer>2100</integer>
+				<data>
+				MHg4MzQ=
+				</data>
 				<key>AAPL,current-extra</key>
-				<integer>2200</integer>
+				<data>
+				MHg4OTg=
+				</data>
 				<key>AAPL,current-extra-in-sleep</key>
-				<integer>1600</integer>
+				<data>
+				MHg2NDA=
+				</data>
 				<key>AAPL,current-in-sleep</key>
-				<integer>1000</integer>
+				<data>
+				MHgzZTg=
+				</data>
 				<key>AAPL,device-internal</key>
-				<integer>2</integer>
+				<data>
+				MHgy
+				</data>
 				<key>AAPL,max-port-current-in-sleep</key>
-				<integer>2100</integer>
+				<data>
+				MHg4MzQ=
+				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,20,0</string>
 				<key>device_type</key>
@@ -1386,7 +1360,7 @@
 				<key>name</key>
 				<string>Intel Management Engine Interface</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x1b,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,27,0</string>
@@ -1427,7 +1401,7 @@
 				<key>name</key>
 				<string>Intel High Definition Audio Controller</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x1c,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,28,0</string>
@@ -1437,8 +1411,12 @@
 				<string>Wildcat Point-LP PCI Express Root Port #1</string>
 				<key>name</key>
 				<string>pci-bridge</string>
+				<key>reg-ltrovr</key>
+				<data>
+				AAQAAAAAAAA=
+				</data>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x2)</key>
+			<key>PciRoot(0x0)/Pci(0x1c,0x2)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,28,2</string>
@@ -1448,11 +1426,19 @@
 				<string>Wildcat Point-LP PCI Express Root Port #3</string>
 				<key>name</key>
 				<string>pci-bridge</string>
+				<key>reg-ltrovr</key>
+				<data>
+				AAQAAAAAAAA=
+				</data>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x2)/Pci(0x0,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x1c,0x2)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
-				<string>Internal@0,28,2/0,0</string>
+				<string>Ethernet</string>
+				<key>built-in</key>
+				<data>
+				AQ==
+				</data>
 				<key>device_type</key>
 				<string>Ethernet Controller</string>
 				<key>model</key>
@@ -1460,7 +1446,7 @@
 				<key>name</key>
 				<string>Ethernet</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x3)</key>
+			<key>PciRoot(0x0)/Pci(0x1c,0x3)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,28,3</string>
@@ -1470,11 +1456,19 @@
 				<string>Wildcat Point-LP PCI Express Root Port #4</string>
 				<key>name</key>
 				<string>pci-bridge</string>
+				<key>reg-ltrovr</key>
+				<data>
+				AAQAAAAAAAA=
+				</data>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x1c,0x3)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
-				<string>Internal@0,28,3/0,0</string>
+				<string>Slot- 3</string>
+				<key>built-in</key>
+				<data>
+				AQ==
+				</data>
 				<key>device_type</key>
 				<string>AirPort Extreme</string>
 				<key>model</key>
@@ -1482,7 +1476,7 @@
 				<key>name</key>
 				<string>AirPort</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x4)</key>
+			<key>PciRoot(0x0)/Pci(0x1c,0x4)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,28,4</string>
@@ -1492,25 +1486,41 @@
 				<string>Wildcat Point-LP PCI Express Root Port #5</string>
 				<key>name</key>
 				<string>pci-bridge</string>
+				<key>reg-ltrovr</key>
+				<data>
+				AAQAAAAAAAA=
+				</data>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1D,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
 			<dict>
 				<key>AAPL,clock-id</key>
 				<data>
 				Ag==
 				</data>
 				<key>AAPL,current-available</key>
-				<integer>2100</integer>
+				<data>
+				MHg4MzQ=
+				</data>
 				<key>AAPL,current-extra</key>
-				<integer>2200</integer>
+				<data>
+				MHg4OTg=
+				</data>
 				<key>AAPL,current-extra-in-sleep</key>
-				<integer>1600</integer>
+				<data>
+				MHg2NDA=
+				</data>
 				<key>AAPL,current-in-sleep</key>
-				<integer>1000</integer>
+				<data>
+				MHgzZTg=
+				</data>
 				<key>AAPL,device-internal</key>
-				<integer>2</integer>
+				<data>
+				MHgy
+				</data>
 				<key>AAPL,max-port-current-in-sleep</key>
-				<integer>2100</integer>
+				<data>
+				MHg4MzQ=
+				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,29,0</string>
 				<key>device_type</key>
@@ -1520,7 +1530,7 @@
 				<key>name</key>
 				<string>Intel USB EHCI Controller</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,31,0</string>
@@ -1533,12 +1543,14 @@
 				<key>name</key>
 				<string>Intel LPC Controller</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x2)</key>
+			<key>PciRoot(0x0)/Pci(0x1f,0x2)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,31,2</string>
 				<key>deep-idle</key>
-				<integer>1</integer>
+				<data>
+				MHgx
+				</data>
 				<key>device_type</key>
 				<string>SATA Controller</string>
 				<key>model</key>
@@ -1546,11 +1558,15 @@
 				<key>name</key>
 				<string>Intel AHCI Controller</string>
 				<key>sata-express-power-off</key>
-				<integer>1</integer>
+				<data>
+				MHgx
+				</data>
 				<key>use-msi</key>
-				<integer>1</integer>
+				<data>
+				MHgx
+				</data>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
+			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,31,3</string>
@@ -1561,7 +1577,7 @@
 				<key>name</key>
 				<string>Intel SMBus Controller</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x6)</key>
+			<key>PciRoot(0x0)/Pci(0x1f,0x6)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,31,6</string>
@@ -1572,43 +1588,14 @@
 				<key>name</key>
 				<string>Intel Thermal Management</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x2)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>built-in</key>
-				<data>
-				AQ==
-				</data>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>#AAPL00,override-no-connect</key>
-				<data>
-				AP///////wANrpMUAAAAACgXAQSVHxF4An5Fk1VTlCgj
-				UFQAAAABAQEBAQEBAQEBAQEBAQEB2h1W4lAAIDBELUcA
-				Na0QAAAYAAAA/gBOMTQwQkdFLUU0MwogAAAA/gBDTU4K
-				ICAgICAgICAgAAAA/gBOMTQwQkdFLUU0MwogAJU=
-				</data>
 				<key>#AAPL00,override-no-edid</key>
 				<data>
 				</data>
-				<key>#StartupDisplay</key>
+				<key>#built-in</key>
 				<data>
-				R04CAAAAAAAACgAAQAYAACD8ABAAAAAAAAoAAEAGAACg
-				AAAAAAAAAAAAAAAuAAAAAAAAAAAAAAAwAAAAIAAAAAMA
-				AAAGAAAAAAAAAAAAAAAAAAABAAAAAAAAAACtCw3wAQAA
-				AAAAAAAACgAAQAYAACD8ABAAAAAAAAoAAEAGAACgAAAA
-				AAAAAAAAAAAuAAAAAAAAAAAAAAAwAAAAIAAAAAMAAAAG
-				AAAAAAAAAAAAAAA=
-				</data>
-				<key>#saved-config</key>
-				<data>
-				RwAAAAAAAAAAAAAAAAAAAAAAAwACABYWAGwFcAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AA==
 				</data>
 				<key>#subsystem-id</key>
 				<data>
@@ -1628,9 +1615,21 @@
 				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
-				<key>built-in</key>
+				<key>AAPL00,override-no-connect</key>
 				<data>
-				AA==
+				AP///////wANrpMUAAAAACgXAQSVHxF4An5Fk1VTlCgj
+				UFQAAAABAQEBAQEBAQEBAQEBAQEB2h1W4lAAIDBELUcA
+				Na0QAAAYAAAA/gBOMTQwQkdFLUU0MwogAAAA/gBDTU4K
+				ICAgICAgICAgAAAA/gBOMTQwQkdFLUU0MwogAJU=
+				</data>
+				<key>StartupDisplay</key>
+				<data>
+				R04CAAAAAAAACgAAQAYAACD8ABAAAAAAAAoAAEAGAACg
+				AAAAAAAAAAAAAAAuAAAAAAAAAAAAAAAwAAAAIAAAAAMA
+				AAAGAAAAAAAAAAAAAAAAAAABAAAAAAAAAACtCw3wAQAA
+				AAAAAAAACgAAQAYAACD8ABAAAAAAAAoAAEAGAACgAAAA
+				AAAAAAAAAAAuAAAAAAAAAAAAAAAwAAAAIAAAAAMAAAAG
+				AAAAAAAAAAAAAAA=
 				</data>
 				<key>device-id</key>
 				<data>
@@ -1654,11 +1653,19 @@
 				<data>
 				AQAAAA==
 				</data>
+				<key>framebuffer-con0-index</key>
+				<data>
+				AAAAAA==
+				</data>
 				<key>framebuffer-con0-pipe</key>
 				<data>
 				EgAAAA==
 				</data>
 				<key>framebuffer-con1-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con1-index</key>
 				<data>
 				AQAAAA==
 				</data>
@@ -1673,6 +1680,10 @@
 				<key>framebuffer-con2-enable</key>
 				<data>
 				AQAAAA==
+				</data>
+				<key>framebuffer-con2-index</key>
+				<data>
+				AgAAAA==
 				</data>
 				<key>framebuffer-con2-pipe</key>
 				<data>
@@ -1724,6 +1735,16 @@
 				<string>Intel HD Graphics 5500</string>
 				<key>name</key>
 				<string>Display</string>
+				<key>saved-config</key>
+				<data>
+				RwAAAAAAAAAAAAAAAAAAAAAAAwACABYWAGwFcAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				</data>
 				<key>vendor-id</key>
 				<data>
 				hoAAAA==
@@ -2279,6 +2300,24 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
+				<string>dAGPM.kext</string>
+				<key>Comment</key>
+				<string>AGPM injector</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
 				<string>DisableTurboBoostBattery.kext</string>
 				<key>Comment</key>
 				<string>Disable Intel Turbo Boost</string>
@@ -2299,7 +2338,7 @@
 				<key>BundlePath</key>
 				<string>ECEnabler.kext</string>
 				<key>Comment</key>
-				<string>Reading EC battery status</string>
+				<string>Allow reading EC for battery status</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -2369,42 +2408,6 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>MDMBlock.kext</string>
-				<key>Comment</key>
-				<string>Block mdmclient</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/MDMBlock</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>NoTouchID.kext</string>
-				<key>Comment</key>
-				<string>Disable touch ID support</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/NoTouchID</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
 				<string>OpenFirmwareManager.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -2425,29 +2428,11 @@
 				<key>BundlePath</key>
 				<string>RestrictEvents.kext</string>
 				<key>Comment</key>
-				<string>Disable EFI check</string>
+				<string>Blocking unwanted processes</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/RestrictEvents</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>RTCMemoryFixup.kext</string>
-				<key>Comment</key>
-				<string>Fix RTC between AppleRTC and firmware BIOS</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/RTCMemoryFixup</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -2497,7 +2482,7 @@
 				<key>BundlePath</key>
 				<string>Veneer.kext</string>
 				<key>Comment</key>
-				<string>Rootless application</string>
+				<string></string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -2852,6 +2837,8 @@
 			<integer>0</integer>
 			<key>HibernateMode</key>
 			<string>None</string>
+			<key>HibernateSkipsPicker</key>
+			<false/>
 			<key>HideAuxiliary</key>
 			<true/>
 			<key>LauncherOption</key>
@@ -3080,7 +3067,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>-no_compat_check amfi_get_out_of_my_way=1 -allow_sidecar_ipad</string>
+				<string>amfi_get_out_of_my_way=1 -allow_sidecar_ipad</string>
 				<key>booter-fileset-basesystem</key>
 				<data>
 				AA==
@@ -3114,8 +3101,6 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<array>
 				<string>boot-args</string>
-				<string>booter-fileset-basesystem</string>
-				<string>booter-fileset-kernel</string>
 				<string>ForceDisplayRotationInEFI</string>
 			</array>
 		</dict>
@@ -3238,7 +3223,7 @@
 					<key>PartNumber</key>
 					<string></string>
 					<key>SerialNumber</key>
-					<string>00000000</string>
+					<string></string>
 					<key>Size</key>
 					<integer>4096</integer>
 					<key>Speed</key>
@@ -3256,7 +3241,7 @@
 					<key>PartNumber</key>
 					<string></string>
 					<key>SerialNumber</key>
-					<string>00000000</string>
+					<string></string>
 					<key>Size</key>
 					<integer>4096</integer>
 					<key>Speed</key>
@@ -3301,13 +3286,13 @@
 		<key>SMBIOS</key>
 		<dict>
 			<key>BIOSReleaseDate</key>
-			<string>04/18/2022</string>
+			<string>09/06/2022</string>
 			<key>BIOSVendor</key>
 			<string>Apple Inc.</string>
 			<key>BIOSVersion</key>
-			<string>430.140.3.0.0</string>
+			<string>476.0.0.0.0</string>
 			<key>BoardAssetTag</key>
-			<string></string>
+			<string>MacBook-Aluminum</string>
 			<key>BoardLocationInChassis</key>
 			<string>Part Component</string>
 			<key>BoardManufacturer</key>
@@ -3566,30 +3551,6 @@
 				<false/>
 				<key>Path</key>
 				<string>OpenRuntime.efi</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
-				<string>PS/2 Keyboard Driver</string>
-				<key>Enabled</key>
-				<true/>
-				<key>LoadEarly</key>
-				<false/>
-				<key>Path</key>
-				<string>Ps2KeyboardDxe.efi</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
-				<string>PS/2 Mouse Driver</string>
-				<key>Enabled</key>
-				<true/>
-				<key>LoadEarly</key>
-				<false/>
-				<key>Path</key>
-				<string>Ps2MouseDxe.efi</string>
 			</dict>
 			<dict>
 				<key>Arguments</key>

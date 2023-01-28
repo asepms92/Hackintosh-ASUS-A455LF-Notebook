@@ -3,8 +3,8 @@
 [![Build Status](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/workflows/CI/badge.svg?branch=master)](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/actions)
 [![Brand](https://img.shields.io/badge/A455LF-WX039D-yellow?style=flat&logo=asus)](https://www.asus.com/)
 [![macOS](https://img.shields.io/badge/macOS-Big_Sur_v11.6-red?style=flat&logo=apple)](https://www.apple.com/macos/big-sur/)
-[![Clover](https://img.shields.io/badge/Clover-r5150-brightgreen?style=flat&logo=icq)](https://github.com/CloverHackyColor/CloverBootloader)
-[![OpenCore](https://img.shields.io/badge/OpenCore-v0.8.6-blue?style=flat&logo=okta)](https://github.com/acidanthera/OpenCorePkg)
+[![Clover](https://img.shields.io/badge/Clover-r5151-brightgreen?style=flat&logo=icq)](https://github.com/CloverHackyColor/CloverBootloader)
+[![OpenCore](https://img.shields.io/badge/OpenCore-v0.8.9-blue?style=flat&logo=okta)](https://github.com/acidanthera/OpenCorePkg)
 
 Running macOS on ASUS A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
  
@@ -83,7 +83,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 
 1. Don't use my patch [DSDT.aml & SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables / BIOS Version & Model / Freq CPU PM</b>
 2. I haven't idea for battery, when rename method battery and landing to [SSDT-BATT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/EFI/OC/ACPI), the indicator only show to 1%.
-3. Config OC for Catalina and older, set (MinDate = -1) & (MinVersion = -1) in 'UEFI' -> 'APFS' section
+3. Config OC for Catalina and older, set (MinDate = -1) & (MinVersion = -1) in 'UEFI' -> 'APFS' section, and take from [release page](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/releases/download/v0.0.1/OpenCore_v0.7.7.zip)
 
 <img src="/Images/set-config-oc-for-catalina-and-older.png?raw=true" alt="Set config OC Catalina and older" align="center">
 

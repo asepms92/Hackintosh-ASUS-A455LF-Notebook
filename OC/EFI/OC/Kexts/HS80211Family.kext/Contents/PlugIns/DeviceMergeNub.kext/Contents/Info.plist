@@ -31,7 +31,7 @@
 			<key>IOClass</key>
 			<string>DeviceMergeNub</string>
 			<key>IOPCIPrimaryMatch</key>
-			<string>0x36168C</string>
+			<string>0x0036168c</string>
 			<key>IOProbeScore</key>
 			<integer>700</integer>
 			<key>IOProviderClass</key>
@@ -53,6 +53,10 @@
 				<key>subsystem-vendor-id</key>
 				<data>
 				OxoAAA==
+				</data>
+				<key>vendor-id</key>
+				<data>
+				jBYAAA==
 				</data>
 			</dict>
 		</dict>

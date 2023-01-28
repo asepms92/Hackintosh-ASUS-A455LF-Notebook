@@ -10,7 +10,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			UJtcc86Q9tigic1+p3JQtFUDngk=
+			ZOpdTJuEQ53jTo64zqbZL07NVO4=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.zxystd.Ath3kBTInjector" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: admin@asepms.com (98X4TQ7Z2W)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
