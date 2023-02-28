@@ -35,12 +35,12 @@ jobs:
           name: ASUS A455LF-WX039D NoteBook EFI ${{ env.CUR_TAG }}
           path: build/*.zip
 
-      - name: Upload to Release
-        if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
-        uses: ncipollo/release-action@v1.8.10
-        with:
-          artifacts: build/*.zip
-          name: ASUS A455LF-WX039D NoteBook EFI ${{ env.CUR_TAG }}
-          prerelease: false
-          tag: ${{ env.CUR_TAG }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Upload to Release
+      #   if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
+      #   uses: ncipollo/release-action@v1.8.10
+      #   with:
+      #     artifacts: build/*.zip
+      #     name: ASUS A455LF-WX039D NoteBook EFI ${{ env.CUR_TAG }}
+      #     prerelease: false
+      #     tag: ${{ env.CUR_TAG }}
+      #     token: ${{ secrets.GITHUB_TOKEN }}
