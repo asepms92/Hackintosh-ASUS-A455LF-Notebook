@@ -33,13 +33,13 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ASUS A455LF-WX039D NoteBook EFI ${{ env.CUR_TAG }}
-      #     path: build/*.zip
+          path: build/*.zip
 
       - name: Upload to Release
         if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
         uses: ncipollo/release-action@v1.13.0
         with:
-      #     artifacts: build/*.zip
+          artifacts: build/*.zip
           name: ASUS A455LF-WX039D NoteBook EFI ${{ env.CUR_TAG }}
           prerelease: true
           tag: ${{ env.CUR_TAG }}
