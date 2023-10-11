@@ -8,8 +8,8 @@
 
 Running Single/Dual/Triple/Multi-Boot macOS and other OS's on ASUS A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
  
-<img src="/Images/Sept-MacBook-Monterey.png?raw=true" alt="macOS Monterey" align="center">
 <img src="/Images/screenshot0.png?raw=true" alt="Clover Bootloader" align="center">
+<img src="/Images/Sept-MacBook-Monterey.png?raw=true" alt="macOS Monterey" align="center">
  
 ### How to Get it?
 
@@ -73,7 +73,6 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 ### Not Working?
 
  - Nvidia Geforce 930M (Optimus Tech) not supported by hackintosh.
- - Don't install Monterey if you have chipset Atheros, because Apple fully dropped for atheros.
 
 --------------------------------------------------------------------------------------------
 
@@ -94,14 +93,15 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 ### Notes
 
 1. Don't use my patch [DSDT.aml & SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables/BIOS Version & Model/Freq CPU PM</b>.
-2. I haven't idea for battery, when rename method battery and landing to [SSDT-BATT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/EFI/OC/ACPI), the indicator only show to 1%.
-3. Config OC for Catalina and older, set (MinDate = -1) & (MinVersion = -1) in 'UEFI' -> 'APFS' section, and take from [release page](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/releases/download/v0.0.1/OpenCore_v0.7.7.zip).
+2. Don't install Monterey if you have chipset Atheros, because Apple fully dropped for Atheros on Monterey.
+3. I haven't idea for battery, when rename method battery and landing to [SSDT-BATT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/EFI/OC/ACPI), the indicator only show to 1%.
+4. Config OC for Catalina and older, set (MinDate = -1) & (MinVersion = -1) in 'UEFI' -> 'APFS' section, and take from [release page](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/releases/download/v0.0.1/OpenCore_v0.7.7.zip).
 
 <img src="/Images/set-config-oc-for-catalina-and-older.png?raw=true" alt="Set config OC Catalina and older" align="center">
 
-4. For 10.11-11 you need BrcmBluetoothInjector.kext, for 12 (Monterey) you need BluetoolFixup.kext, choose one and not both. 
-5. You need regenerate serial number for your mac, use [Clover](https://mackie100projects.altervista.org/download-clover-configurator/)[/OC](https://mackie100projects.altervista.org/download-opencore-configurator/) Configurator or [macserial](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/Utilities/macserial) from OC.
-6. And many more [apps](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/Tools/Apps).
+5. For 10.11-11 you need BrcmBluetoothInjector.kext, for 12 (Monterey) you need BluetoolFixup.kext, choose one and not both. 
+6. You need regenerate serial number for your mac, use [Clover](https://mackie100projects.altervista.org/download-clover-configurator/)[/OC](https://mackie100projects.altervista.org/download-opencore-configurator/) Configurator or [macserial](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/Utilities/macserial) from OC.
+7. And many more [apps](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/Tools/Apps).
 
 --------------------------------------------------------------------------------------------
  

@@ -2,12 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>#Comment</key>
+	<key>#About</key>
 	<string>This file is for ASUS Broadwell notebook that are natively supported</string>
+	<key>#Version</key>
+	<string>5155</string>
 	<key>ACPI</key>
 	<dict>
 		<key>#Sorted ACPI tables Count</key>
-		<integer>19</integer>
+		<integer>8</integer>
 		<key>AutoMerge</key>
 		<true/>
 		<key>DSDT</key>

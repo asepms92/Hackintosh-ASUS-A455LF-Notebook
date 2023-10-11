@@ -14,7 +14,7 @@ jobs:
     env:
       XCODE_VERSION: 12.4
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: '5'
 
@@ -30,17 +30,17 @@ jobs:
           echo "CUR_TAG=${GITHUB_REF##*/}" >> "$GITHUB_ENV"
 
       - name: Upload to Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ASUS A455LF-WX039D NoteBook EFI ${{ env.CUR_TAG }}
-          path: build/*.zip
+      #     path: build/*.zip
 
-      # - name: Upload to Release
-      #   if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
-      #   uses: ncipollo/release-action@v1.8.10
-      #   with:
+      - name: Upload to Release
+        if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
+        uses: ncipollo/release-action@v1.13.0
+        with:
       #     artifacts: build/*.zip
-      #     name: ASUS A455LF-WX039D NoteBook EFI ${{ env.CUR_TAG }}
-      #     prerelease: false
-      #     tag: ${{ env.CUR_TAG }}
-      #     token: ${{ secrets.GITHUB_TOKEN }}
+          name: ASUS A455LF-WX039D NoteBook EFI ${{ env.CUR_TAG }}
+          prerelease: true
+          tag: ${{ env.CUR_TAG }}
+          token: ${{ secrets.GITHUB_TOKEN }}
