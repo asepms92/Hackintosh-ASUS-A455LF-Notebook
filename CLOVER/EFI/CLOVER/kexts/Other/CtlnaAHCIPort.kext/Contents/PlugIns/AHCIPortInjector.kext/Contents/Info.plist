@@ -6,6 +6,8 @@
 	<string>18G6032</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
+	<key>CFBundleGetInfoString</key>
+	<string>1.0.1, Copyright © 2013 Fabio1971 and insanelymac.com. All rights reserved.</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.Fabio1971.AHCIPortInjector</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -118,7 +120,7 @@
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © Fabio1971 and insanelymac.com. All rights reserved.</string>
+	<string>Copyright © 2013 Fabio1971 and insanelymac.com. All rights reserved.</string>
 	<key>OSBundleRequired</key>
 	<string>Local-Root</string>
 </dict>

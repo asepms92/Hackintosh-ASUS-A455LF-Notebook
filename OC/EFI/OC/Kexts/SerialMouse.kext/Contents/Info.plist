@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>19H2026</string>
+	<string>20G1426</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.1</string>
+	<string>1.0.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,23 +25,23 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.0.1</string>
+	<string>1.0.2</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>12D4e</string>
+	<string>13C100</string>
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>11.1</string>
+	<string>12.1</string>
 	<key>DTSDKBuild</key>
-	<string>20C63</string>
+	<string>21C46</string>
 	<key>DTSDKName</key>
-	<string>macosx11.1</string>
+	<string>macosx12.1</string>
 	<key>DTXcode</key>
-	<string>1240</string>
+	<string>1321</string>
 	<key>DTXcodeBuild</key>
-	<string>12D4e</string>
+	<string>13C100</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>SerialMouse</key>
@@ -53,7 +53,7 @@
 			<key>IOProbeScore</key>
 			<integer>5000</integer>
 			<key>IOProviderClass</key>
-			<string>IORS232SerialStreamSync</string>
+			<string>IOSerialStreamSync</string>
 		</dict>
 		<key>SerialMouseResources</key>
 		<dict>
@@ -72,23 +72,21 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>10.9</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2018-2019 John Davis (Goldfish64). All rights reserved.</string>
-	<key>OSBundleCompatibleVersion</key>
-	<string>1.0.1</string>
+	<string>Copyright © 2018-2023 Goldfish64. All rights reserved.</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>com.apple.iokit.IOHIDFamily</key>
 		<string>1.0</string>
 		<key>com.apple.iokit.IOSerialFamily</key>
-		<string>10.0</string>
+		<string>8.0.0</string>
 		<key>com.apple.kpi.bsd</key>
-		<string>10.0</string>
+		<string>8.0.0</string>
 		<key>com.apple.kpi.iokit</key>
-		<string>10.0</string>
+		<string>8.0.0</string>
 		<key>com.apple.kpi.libkern</key>
-		<string>10.0</string>
+		<string>8.0.0</string>
 		<key>com.apple.kpi.mach</key>
-		<string>10.0</string>
+		<string>8.0.0</string>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Console</string>

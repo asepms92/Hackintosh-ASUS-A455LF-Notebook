@@ -7,7 +7,7 @@
 	<key>ACPI</key>
 	<dict>
 		<key>#Sorted ACPI tables Count</key>
-		<integer>8</integer>
+		<integer>19</integer>
 		<key>AutoMerge</key>
 		<true/>
 		<key>DSDT</key>
@@ -230,12 +230,10 @@
 		</dict>
 		<key>DisableASPM</key>
 		<false/>
+		<key>DisabledAML</key>
+		<array/>
 		<key>DropTables</key>
 		<array>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
 			<dict>
 				<key>#Length</key>
 				<integer>1337</integer>
@@ -316,7 +314,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>amfi_get_out_of_my_way=1 -allow_sidecar_ipad</string>
+		<string>amfi_get_out_of_my_way=1 brcmfx-country=ID -allow_sidecar_ipad</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -587,7 +585,7 @@
 				</data>
 				<key>framebuffer-unifiedmem</key>
 				<data>
-				AAAA+g==
+				/////w==
 				</data>
 				<key>graphic-options</key>
 				<data>
@@ -731,7 +729,7 @@
 		<key>#Broadwell-Comment</key>
 		<string>Broadwell CPU supportable on 12.x.x and prior by using FakeCPUID</string>
 		<key>#Number of KextsToPatch</key>
-		<integer>2</integer>
+		<integer>0</integer>
 		<key>#Number of Patchs To Kernel</key>
 		<integer>1</integer>
 		<key>AppleIntelCPUPM</key>
@@ -796,64 +794,7 @@
 		<key>KernelXCPM</key>
 		<false/>
 		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>ALPM IO Error AppleAHCIPort</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				QGACAA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MaskFind</key>
-				<data>
-				</data>
-				<key>MaskReplace</key>
-				<data>
-				</data>
-				<key>MatchOS</key>
-				<string>All</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleAHCIPort</string>
-				<key>Replace</key>
-				<data>
-				AAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Fix freeze some HDD</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				pZAAAA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MaskFind</key>
-				<data>
-				</data>
-				<key>MaskReplace</key>
-				<data>
-				</data>
-				<key>MatchOS</key>
-				<string>All</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IOAHCIBlockStorage</string>
-				<key>Replace</key>
-				<data>
-				kJCQkA==
-				</data>
-			</dict>
-		</array>
+		<array/>
 		<key>PanicNoKextDump</key>
 		<true/>
 	</dict>
@@ -884,7 +825,7 @@
 		<key>EnableWriteUnprotector</key>
 		<true/>
 		<key>ExtendBTFeatureFlags</key>
-		<false/>
+		<true/>
 		<key>ExternalDiskIcons</key>
 		<true/>
 		<key>ForceExitBootServices</key>
@@ -941,7 +882,7 @@
 		<key>SyncRuntimePermissions</key>
 		<false/>
 		<key>ThirdPartyDrives</key>
-		<false/>
+		<true/>
 		<key>TscSyncTimeout</key>
 		<integer>0</integer>
 		<key>XhciPortLimit</key>
@@ -965,11 +906,11 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>09/06/2022</string>
+		<string>01/12/2023</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP121.88Z.F000.B00.2209061741</string>
+		<string>MBP121.88Z.F000.B00.2301122010</string>
 		<key>Board-ID</key>
 		<string>Mac-E43C1C25D4880AD6</string>
 		<key>BoardManufacturer</key>
@@ -987,11 +928,13 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>476.0.0.0.0</string>
+		<string>481.0.0.0.0</string>
 		<key>ExtendedFirmwareFeatures</key>
 		<string>0x00000008FD0FF576</string>
 		<key>ExtendedFirmwareFeaturesMask</key>
 		<string>0x00000008FF1FFF7F</string>
+		<key>FakeCPUID?</key>
+		<string>0x0306D4</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
@@ -1004,15 +947,52 @@
 		<string>Apple Inc.</string>
 		<key>Memory</key>
 		<dict>
+			<key>Channels?</key>
+			<integer>1</integer>
 			<key>Modules</key>
-			<array/>
+			<array>
+				<dict>
+					<key>Frequency?</key>
+					<integer>1600</integer>
+					<key>Part?</key>
+					<string></string>
+					<key>Serial?</key>
+					<string></string>
+					<key>Size?</key>
+					<integer>8192</integer>
+					<key>Slot?</key>
+					<integer>0</integer>
+					<key>Type?</key>
+					<string>DDR3</string>
+					<key>Vendor?</key>
+					<string>Samsung</string>
+				</dict>
+				<dict>
+					<key>Frequency?</key>
+					<integer>1600</integer>
+					<key>Part?</key>
+					<string></string>
+					<key>Serial?</key>
+					<string></string>
+					<key>Size?</key>
+					<integer>4096</integer>
+					<key>Slot?</key>
+					<integer>1</integer>
+					<key>Type?</key>
+					<string>DDR3</string>
+					<key>Vendor?</key>
+					<string>Samsung</string>
+				</dict>
+			</array>
+			<key>SlotCount?</key>
+			<integer>2</integer>
 		</dict>
 		<key>MemoryRank?</key>
 		<integer>2</integer>
 		<key>Mobile</key>
 		<true/>
-		<key>NoRomInfo?</key>
-		<true/>
+		<key>NoRomInfo</key>
+		<false/>
 		<key>OEMBoard?</key>
 		<string>X455LF</string>
 		<key>OEMProduct?</key>
