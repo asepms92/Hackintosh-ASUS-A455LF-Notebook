@@ -18,6 +18,10 @@ jobs:
         with:
           fetch-depth: '5'
 
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
       - name: Initialize Variables
         run: |
           GIT_SHA="$(git rev-parse --short HEAD)"
@@ -44,3 +48,14 @@ jobs:
           prerelease: true
           tag: ${{ env.CUR_TAG }}
           token: ${{ secrets.GITHUB_TOKEN }}
+
+analyze-oc-config:
+  name: Analyze OC Config
+  runs-on: macos-latest
+  steps:
+    - uses: actions/checkout@v4
+
+    - name: Run ocvalidate
+      run: |
+        chmod +x ./OC/Utilities/ocvalidate/ocvalidate || exit 1
+        ./OC/Utilities/ocvalidate/ocvalidate ./OC/EFI/OC/config.plist || exit 1
