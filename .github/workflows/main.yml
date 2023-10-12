@@ -28,14 +28,6 @@ jobs:
           echo "CUR_TAG=beta-$GIT_SHA" >> "$GITHUB_ENV"
           echo "DEVELOPER_DIR=/Applications/Xcode_${XCODE_VERSION}.app/Contents/Developer" >> "$GITHUB_ENV"
 
-      - name: Prepare Pre-release
-        run: |
-          mkdir -p build
-          zip -q "ASUS-A455LF-CLOVER.zip" /CLOVER/*
-          zip -q "ASUS-A455LF-OC.zip" /OC/*
-          releaseItems=(ASUS-A455LF-CLOVER.zip ASUS-A455LF-OC.zip)
-          for releaseItem in "${releaseItems[@]}"; do cp -Rf "${releaseItem}" ./build || exit 1; done
-
       - name: Manage Pre-release Version
         if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
         run: |

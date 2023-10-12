@@ -5,4 +5,5 @@
 .fseventsd
 .metadata_never_index
 ._*
+!.gitkeep
 build/*
