@@ -22,12 +22,6 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install Dependencies
-          run: brew install p7zip
-          env:
-            HOMEBREW_NO_INSTALL_CLEANUP: 1
-            HOMEBREW_NO_AUTO_UPDATE: 1
-
       - name: Initialize Variables
         run: |
           GIT_SHA="$(git rev-parse --short HEAD)"
