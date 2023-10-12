@@ -31,8 +31,8 @@ jobs:
       - name: Prepare Pre-release
         run: |
           mkdir -p build
-          (cd "CLOVER/" && zip -q "ASUS-A455LF-CLOVER.zip" "EFI" || exit 1)
-          (cd "OC/" && zip -q "ASUS-A455LF-OC.zip" "EFI" || exit 1)
+          zip -q "ASUS-A455LF-CLOVER.zip" /CLOVER/*
+          zip -q "ASUS-A455LF-OC.zip" /OC/*
           releaseItems=(ASUS-A455LF-CLOVER.zip ASUS-A455LF-OC.zip)
           for releaseItem in "${releaseItems[@]}"; do cp -Rf "${releaseItem}" ./build || exit 1; done
 
