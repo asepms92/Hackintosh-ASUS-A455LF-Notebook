@@ -36,7 +36,7 @@ jobs:
       - name: Upload to Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: EFI ASUS A455LF beta ${{ env.CUR_TAG }}
+          name: EFI ASUS A455LF ${{ env.CUR_TAG }}
           path: Pre-Release/*.zip
 
       - name: Upload to Pre-release
@@ -44,7 +44,7 @@ jobs:
         uses: ncipollo/release-action@v1.13.0
         with:
           artifacts: Pre-release/*.zip
-          name: EFI ASUS A455LF beta ${{ env.CUR_TAG }}
+          name: EFI ASUS A455LF ${{ env.CUR_TAG }}
           prerelease: true
           tag: ${{ env.CUR_TAG }}
           token: ${{ secrets.GITHUB_TOKEN }}
