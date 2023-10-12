@@ -28,10 +28,6 @@ jobs:
           echo "CUR_TAG=beta-$GIT_SHA" >> "$GITHUB_ENV"
           echo "DEVELOPER_DIR=/Applications/Xcode_${XCODE_VERSION}.app/Contents/Developer" >> "$GITHUB_ENV"
 
-      - name: CI Bootstrap
-        run: |
-          src=$(/usr/bin/curl -LfsS https://raw.githubusercontent.com/acidanthera/ocbuild/master/ci-bootstrap.sh) && eval "$src" || exit 1
-
       - name: Manage Pre-release Version
         if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
         run: |
@@ -41,13 +37,13 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: EFI ASUS A455LF beta ${{ env.CUR_TAG }}
-          path: build/*.zip
+          path: Pre-Release/*.zip
 
       - name: Upload to Pre-release
         if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
         uses: ncipollo/release-action@v1.13.0
         with:
-          artifacts: build/*.zip
+          artifacts: Pre-release/*.zip
           name: EFI ASUS A455LF beta ${{ env.CUR_TAG }}
           prerelease: true
           tag: ${{ env.CUR_TAG }}
