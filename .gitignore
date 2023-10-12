@@ -6,9 +6,5 @@
 .TemporaryItems
 .fseventsd
 .metadata_never_index
-CLOVER/.DS_Store
-CLOVER/EFI/.DS_Store
-OC/.DS_Store
-OC/EFI/.DS_Store
-Images/.DS_Store
-Tools/.DS_Store
+!.gitkeep
+build/*
