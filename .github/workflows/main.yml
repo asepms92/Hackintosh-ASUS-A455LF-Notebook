@@ -18,10 +18,6 @@ jobs:
         with:
           fetch-depth: '5'
 
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.8'
-
       - name: Initialize Variables
         run: |
           GIT_SHA="$(git rev-parse --short HEAD)"
@@ -36,7 +32,7 @@ jobs:
       - name: Upload to Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: ASUS A455LF-WX039D NoteBook EFI ${{ env.CUR_TAG }}
+          name: EFI ASUS A455LF ${{ env.CUR_TAG }}
           path: build/*.zip
 
       - name: Upload to Pre-release
@@ -44,33 +40,7 @@ jobs:
         uses: ncipollo/release-action@v1.13.0
         with:
           artifacts: build/*.zip
-          name: ASUS A455LF-WX039D NoteBook EFI ${{ env.CUR_TAG }}
+          name: EFI ASUS A455LF ${{ env.CUR_TAG }}
           prerelease: true
           tag: ${{ env.CUR_TAG }}
           token: ${{ secrets.GITHUB_TOKEN }}
-
-analyze-scripts:
-  name: Analyze Scripts
-  runs-on: macos-latest
-  steps:
-    - uses: actions/checkout@v4
-
-    - name: Install Dependency
-      run: |
-        brew install shellcheck
-      env:
-        HOMEBREW_NO_INSTALL_CLEANUP: 1
-
-    - name: Run shellcheck
-      find . \( -name "*.tool" -o -name "*.command" -o -name "*.sh" \) -exec sh -c 'for TargetFile; do shellcheck --severity=info "${TargetFile}" || exit 1; done' sh {} +
-
-analyze-oc-config:
-  name: Analyze OpenCore Configs
-  runs-on: macos-latest
-  steps:
-    - uses: actions/checkout@v4
-
-    - name: Run ocvalidate
-      run: |
-        chmod +x ./OC/Utilities/ocvalidate/ocvalidate || exit 1
-        ./OC/Utilities/ocvalidate/ocvalidate ./OC/EFI/OC/config.plist || exit 1
