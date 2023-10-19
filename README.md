@@ -10,15 +10,15 @@ Running Single/Dual/Triple/Multi-Boot macOS and other OS's on ASUS A455LF-WX039D
 
 <img src="/Images/screenshot0.png?raw=true" alt="Clover Bootloader" align="center">
 <img src="/Images/Sept-MacBook-Monterey.png?raw=true" alt="macOS Monterey" align="center">
- 
+
 ### How to Get it?
 
  - Open Terminal with Command : $ `git clone https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook.git`
  - Or [Download](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/archive/refs/heads/master.zip) with Specific Folder Only
  - Then copy to EFI Partition USB Installer/HDD/SSD
- 
+
 --------------------------------------------------------------------------------------------
- 
+
 ### Specs :
 
  - [x] <b>BIOS</b> : v302 (2019/06/04) American Megatrends Inc,
@@ -48,9 +48,9 @@ Graphics Configuration -> DVMT Pre-Allocation | 64M / Default 32M (need pre-allo
 USB Configuration -> XHCI Pre-Boot Mode | Enabled (XHC Only) / Smart Auto (XHC + EHC)
 SATA Mode | AHCI
 Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
- 
+
 --------------------------------------------------------------------------------------------
- 
+
 ### What's Working?
 
  - [x] QE/CI Intel HD Graphics 5500 with VRAM 4095 MB (Cosmetic), Nvidia Geforce 930M (Disable)
@@ -62,15 +62,15 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
  - [x] FocalTech TouchPad PS/2 (ApplePS2SmartTouchpad.kext)
  - [x] Battery Indicator (DSDT RehabMan Battery Laptop Patch for ASUS + SMCBatteryManager.kext)
  - [x] Airdrop fully supported to Big Sur (BrcmFirmwareData.kext + BrcmPatchRAM3.kext + BrcmBluetoothInjector.kext)
- - [x] Handoff + Continuity (Set to true "ExtendBTFeatureFlags" Quirks section in config.plist Clover/OC)
+ - [x] Handoff + Continuity fully supported to Big Sur (Set to true "ExtendBTFeatureFlags" Quirks section in config.plist Clover/OC)
  - [x] TRIM support (Set to true "ThirdPartyDrives" Quirks section in config.plist Clover/OC)
  - [x] USB2.0 Ports + USB3.0 Ports + Power/Speed (Disable XhciPortLimit + USBMap.kext/SSDT-UIAC.aml)
  - [x] Native Power Management CPU (Combination from [ssdtPRGen.sh](https://github.com/Piker-Alpha/ssdtPRGen.sh) Pike R. Alpha and [ssdt_data](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md#data-combination) PMheart + CPUFriend.kext + CPUFriendDataProvider.kext)
  - [x] WebCam OOB
  - [x] HDMI, Etc.
- 
+
 --------------------------------------------------------------------------------------------
- 
+
 ### Not Working?
 
  - Nvidia Geforce 930M (Optimus Tech) not supported by hackintosh.
@@ -79,18 +79,19 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 
 ### Bugs?
 
- - Airdrop from Hackintosh to iPhone doesn't work, but iPhone to Hackintosh work, because  Apple has been actively working on the Bluetooth stack (bluetoothd) in macOS Monterey, see [issues](https://github.com/acidanthera/bugtracker/issues/1821).
+ - in Monterey only one side, Airdrop/Handoff/Continuity from Hackintosh to iPhone doesn't work, but iPhone to Hackintosh work, because  Apple has been actively working on the Bluetooth stack (bluetoothd) in macOS Monterey, see [issues](https://github.com/acidanthera/bugtracker/issues/1821).
  - This laptop just have single antenna connector, lol. For pairing bluetooth in chipset DW1550 need dual antenna connectors, so maybe work sometimes not work.
 
 --------------------------------------------------------------------------------------------
 
 ### Not Tested?
- 
+
  - Sidecar
  - Universal Control
- 
+ - Card Reader
+
 --------------------------------------------------------------------------------------------
- 
+
 ### Notes
 
 1. Don't use my patch [DSDT.aml & SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables / BIOS Version & Model / Freq CPU PM</b>.
@@ -105,7 +106,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 7. And many more [apps](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/Tools/Apps).
 
 --------------------------------------------------------------------------------------------
- 
+
 ### Special Thanks and Credits to :
 
 - [Apple](https://www.apple.com)
