@@ -32,8 +32,8 @@ Running Single/Dual/Triple/Multi-Boot macOS and other OS's on ASUS A455LF-WX039D
  - [x] <b>Audio</b> : Conexant CX20751/2
  - [x] <b>Touchpad</b> : FocalTech PS/2
  - [x] <b>Wifi + BT</b> : ~~Qualcomm Atheros QCA9565/AR9565 Wireless Network Adapter + AR3012 (Azurewave Tech)~~ Replaced by Broadcom BCM4352/BCM94352HMB Wireless Network Adapter + BCM20702A0 (DW 1550)
- - [x] <b>Ethernet</b>: Realtek RTL8111GU/8168GU/8411GU PCI Express Gigabit Ethernet
- - [x] <b>Others</b>: USB3.0 + USB2.0 ports WebCam, ports HDMI/VGA, DVD ROM Matshita, Alcor Micro USB Card Reader, etc.
+ - [x] <b>Ethernet</b> : Realtek RTL8111GU/8168GU/8411GU PCI Express Gigabit Ethernet
+ - [x] <b>Others</b> : USB3.0 + USB2.0 ports WebCam, ports HDMI/VGA, DVD ROM Matshita, Alcor Micro USB Card Reader, etc.
 
 --------------------------------------------------------------------------------------------
 
@@ -79,7 +79,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 
 ### Bugs?
 
- - in Monterey only one side, Airdrop/Handoff/Continuity from Hackintosh to iPhone doesn't work, but iPhone to Hackintosh work, because  Apple has been actively working on the Bluetooth stack (bluetoothd) in macOS Monterey, see [issues](https://github.com/acidanthera/bugtracker/issues/1821).
+ - in Monterey only one side, Airdrop/Handoff/Continuity from Hackintosh to iPhone doesn't work, but iPhone to Hackintosh is work, because  Apple has been actively working on the Bluetooth stack (bluetoothd) in macOS Monterey, see [issues](https://github.com/acidanthera/bugtracker/issues/1821).
  - This laptop just have single antenna connector, lol. For pairing bluetooth in chipset DW1550 need dual antenna connectors, so maybe work sometimes not work.
 
 --------------------------------------------------------------------------------------------
@@ -96,7 +96,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 
 1. Don't use my patch [DSDT.aml & SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables / BIOS Version & Model / Freq CPU PM</b>.
 2. Don't install Monterey if you have chipset Atheros, because Apple fully dropped for Atheros on Monterey.
-3. I haven't idea for battery, when rename method battery and landing to [SSDT-BATT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/EFI/OC/ACPI), the indicator only show to 1%.
+3. I haven't idea for battery when using OC, because so many rename methods in device EC0/BAT0, when rename method battery and landing to [SSDT-BATT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/EFI/OC/ACPI), the indicator only show to 1%.
 4. Config OC for Catalina and older, set (MinDate = -1) & (MinVersion = -1) in 'UEFI' -> 'APFS' section, and take from [release page](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/releases/download/v0.0.1/OpenCore_v0.7.7.zip).
 
 <img src="/Images/set-config-oc-for-catalina-and-older.png?raw=true" alt="Set config OC Catalina and older" align="center">
