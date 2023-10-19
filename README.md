@@ -95,7 +95,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 ### Notes
 
 1. Don't use my patch [DSDT.aml & SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables / BIOS Version & Model / Freq CPU PM</b>.
-2. Don't install Monterey if you have chipset Atheros, because Apple fully dropped for Atheros on Monterey.
+2. Don't install Monterey if you have chipset Atheros, because Apple fully dropped for Atheros on Monterey. Just install Big Sur and replace the kexts (AirportBrcm*.kext + Brcm*.kext) from [here](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/kexts/Off).
 3. I haven't idea for battery when using OC, because so many rename methods in device EC0/BAT0, when rename method battery and landing to [SSDT-BATT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/EFI/OC/ACPI), the indicator only show to 1%.
 4. Config OC for Catalina and older, set (MinDate = -1) & (MinVersion = -1) in 'UEFI' -> 'APFS' section, and take from [release page](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/releases/download/v0.0.1/OpenCore_v0.7.7.zip).
 
