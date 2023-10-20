@@ -4,6 +4,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 echo -e "Installing ALCPlugFix Daemon to /usr/local/bin"
 
 sudo mkdir -p /usr/local/bin
+sudo chmod -R 755 /usr/local/bin
+
 sudo cp $DIR/alc-verb /usr/local/bin/
 sudo chmod 755 /usr/local/bin/alc-verb
 sudo chown root:wheel /usr/local/bin/alc-verb
