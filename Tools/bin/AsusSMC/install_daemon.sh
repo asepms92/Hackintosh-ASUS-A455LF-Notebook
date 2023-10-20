@@ -28,6 +28,6 @@ sudo xattr -d com.apple.quarantine /Library/LaunchAgents/com.hieplpvip.AsusSMCDa
 
 sudo launchctl load /Library/LaunchAgents/com.hieplpvip.AsusSMCDaemon.plist
 
-echo -e "BatteryProcessorCoreControl is installed and loaded. Enjoy!"
+echo -e "AsusSMCDaemon is installed and loaded. Enjoy!"
 
 exit 0
