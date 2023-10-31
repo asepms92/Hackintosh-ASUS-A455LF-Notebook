@@ -3083,7 +3083,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>amfi_get_out_of_my_way=1 brcmfx-country=ID -allow_sidecar_ipad</string>
+				<string>amfi_get_out_of_my_way=1 brcmfx-aspm=3</string>
 				<key>csr-active-config</key>
 				<data>
 				ZwAAAA==

@@ -8,8 +8,8 @@
 
 Running Single/Dual/Triple/Multi-Boot macOS and other OS's on ASUS A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
 
-<img src="/Images/screenshot0.png?raw=true" alt="Clover Bootloader" align="center">
-<img src="/Images/Sept-MacBook-Monterey.png?raw=true" alt="macOS Monterey" align="center">
+<img src="/.gitbook/assets/screenshot0.png?raw=true" alt="Clover Bootloader" align="center">
+<img src="/.gitbook/assets/Sept-MacBook-Monterey.png?raw=true" alt="macOS Monterey" align="center">
 
 ### How to Get it?
 
@@ -80,6 +80,7 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 
  - in Monterey only one side, Airdrop/Handoff/Continuity from Hackintosh to iPhone doesn't work, but iPhone to Hackintosh is work, because  Apple has been actively working on the Bluetooth stack (bluetoothd) in macOS Monterey, see [issues](https://github.com/acidanthera/bugtracker/issues/1821).
  - This laptop just have single antenna connector, lol. For pairing bluetooth in chipset DW1550 need dual antenna connectors, so maybe work sometimes not work.
+ - Sidecar won't showing in System Preferences since this [patch](https://github.com/acidanthera/FeatureUnlock/commit/2bb3c5023a9d8f3227bb6577378e68723c56975e).
 
 --------------------------------------------------------------------------------------------
 
@@ -94,11 +95,11 @@ Boot -> Launch CSM | Enabled or Disabled for Resolution Boot OC
 ### Notes
 
 1. Don't use my patch [DSDT.aml & SSDT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/ACPI/patched) if you have different <b>ACPI Tables / BIOS Version & Model / Freq CPU PM</b>.
-2. Don't install Monterey if you have chipset Atheros, because Apple fully dropped for Atheros on Monterey. Just install Big Sur and replace the kexts (AirportBrcm*.kext + Brcm*.kext) take it from [here](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/kexts/Off).
+2. Don't install Monterey if you have chipset Atheros, because Apple fully dropped for Atheros on Monterey. Just install Big Sur and replace the kexts (AirportBrcm*.kext + Brcm*.kext) -> (HS80211Family.kext + Ath3kBT.kext) take it from [here](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/CLOVER/EFI/CLOVER/kexts/Off).
 3. I haven't idea for battery when using OC, because so many rename methods in device EC0/BAT0, when rename method battery and landing to [SSDT-BATT.aml](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/EFI/OC/ACPI), the indicator only show to 1%.
 4. Config OC for Catalina and older, set (MinDate = -1) & (MinVersion = -1) in 'UEFI' -> 'APFS' section, and take from the [release page](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/releases/download/v0.0.1/OpenCore_v0.7.7.zip).
 
-<img src="/Images/set-config-oc-for-catalina-and-older.png?raw=true" alt="Set config OC Catalina and older" align="center">
+<img src="/.gitbook/assets/set-config-oc-for-catalina-and-older.png?raw=true" alt="Set config OC Catalina and older" align="center">
 
 5. For 10.11-11 you need BrcmBluetoothInjector.kext, for 12 (Monterey) you need BluetoolFixup.kext, choose one and not both.
 6. You need regenerate serial number for your mac, use [Clover](https://mackie100projects.altervista.org/download-clover-configurator/)[/OC](https://mackie100projects.altervista.org/download-opencore-configurator/) Configurator or [macserial](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/tree/master/OC/Utilities/macserial) from OC.

@@ -316,7 +316,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>amfi_get_out_of_my_way=1 brcmfx-country=ID -allow_sidecar_ipad</string>
+		<string>amfi_get_out_of_my_way=1 brcmfx-aspm=3</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
