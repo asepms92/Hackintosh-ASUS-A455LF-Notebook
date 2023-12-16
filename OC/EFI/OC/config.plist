@@ -5,7 +5,7 @@
 	<key>#About</key>
 	<string>This file is for ASUS Broadwell notebook that are natively supported</string>
 	<key>#Version</key>
-	<string>0.9.6</string>
+	<string>0.9.8</string>
 	<key>ACPI</key>
 	<dict>
 		<key>Add</key>
@@ -1271,6 +1271,8 @@
 			<true/>
 			<key>EnableWriteUnprotector</key>
 			<true/>
+			<key>FixupAppleEfiImages</key>
+			<false/>
 			<key>ForceBooterSignature</key>
 			<false/>
 			<key>ForceExitBootServices</key>

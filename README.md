@@ -3,8 +3,8 @@
 [![Build Status](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/workflows/CI/badge.svg?branch=master)](https://github.com/asepms92/Hackintosh-ASUS-A455LF-Notebook/actions)
 [![Brand](https://img.shields.io/badge/A455LF-WX039D-yellow?style=flat&logo=asus)](https://www.asus.com/)
 [![macOS](https://img.shields.io/badge/macOS-Monterey_v12.7-red?style=flat&logo=apple)](https://www.apple.com/macos/monterey/)
-[![Clover](https://img.shields.io/badge/Clover-r5155-brightgreen?style=flat&logo=aer-lingus)](https://github.com/CloverHackyColor/CloverBootloader)
-[![OpenCore](https://img.shields.io/badge/OpenCore-v0.9.6-blue?style=flat&logo=okta)](https://github.com/acidanthera/OpenCorePkg)
+[![Clover](https://img.shields.io/badge/Clover-r5156-brightgreen?style=flat&logo=aer-lingus)](https://github.com/CloverHackyColor/CloverBootloader)
+[![OpenCore](https://img.shields.io/badge/OpenCore-v0.9.8-blue?style=flat&logo=okta)](https://github.com/acidanthera/OpenCorePkg)
 
 Running Single/Dual/Triple/Multi-Boot macOS and other OS's on ASUS A455LF-WX039D Series with Clover/OpenCore Legacy or UEFI
 
